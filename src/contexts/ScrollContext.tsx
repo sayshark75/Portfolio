@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { createContext } from "react";
 import ReactGA from "react-ga4";
-import { ContextProviderProps, ScrollContextProps } from "../CONSTANTS";
+import { ContextProviderProps, ScrollContextProps } from "../TYPES";
 
 const ScrollContext = createContext<ScrollContextProps | undefined>(undefined);
 

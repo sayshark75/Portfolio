@@ -1,5 +1,5 @@
 import { Flex, Show } from "@chakra-ui/react";
-import { NavbarButtonProps } from "../../CONSTANTS";
+import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
 import NavIcon from "./NavIcon";
 import React from "react";

@@ -4,36 +4,7 @@ import ContactIcon from "./assets/icons/contact.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
 import SkillsIcon from "./assets/icons/skills.svg";
 import ResumeIcon from "./assets/icons/resume.svg";
-
-export type ScrollContextRefs = {
-  HomeRef: React.MutableRefObject<HTMLDivElement | null>;
-  AboutRef: React.MutableRefObject<HTMLDivElement | null>;
-  SkillsRef: React.MutableRefObject<HTMLDivElement | null>;
-  ProjectsRef: React.MutableRefObject<HTMLDivElement | null>;
-  ContactRef: React.MutableRefObject<HTMLDivElement | null>;
-};
-export type ScrollContextFunctions = {
-  handleHomeRef: () => void;
-  handleAboutRef: () => void;
-  handleSkillsRef: () => void;
-  handleProjectsRef: () => void;
-  handleContactRef: () => void;
-};
-export type ScrollContextProps = ScrollContextRefs & ScrollContextFunctions;
-
-export interface ContextProviderProps {
-  children: React.ReactNode;
-}
-
-export type NavbarButtonProps = {
-  link: string;
-  refFunction: () => void;
-  title: string;
-  icon: string;
-  alt: string;
-  x: string;
-  y: string;
-};
+import { ScrollContextProps } from "./TYPES";
 
 export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
   const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;

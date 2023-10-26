@@ -15,8 +15,8 @@ const NavButton = ({ title, onClick, x, y }: Props) => {
         onClick={onClick}
         bgColor={"#2a2a2a"}
         color={"#FFFFFF"}
-        border={"1px solid #006aff00"}
-        animation={`${borderAnim} 3s ease-in-out infinite`}
+        border={"2px solid #006aff00"}
+        animation={`${borderAnim} 3s ease-in-out `}
         rounded={"full"}
         h={"25px"}
         transition={"200ms"}

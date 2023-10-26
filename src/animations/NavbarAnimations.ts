@@ -33,8 +33,8 @@ export const borderAnim = keyframes`
 `;
 export const runAnim: string = keyframes`
   0%{
-    text-shadow: 16px 0px 32px #009aFF;
-    box-shadow: 16px 0px 32px #009aFF;
+    text-shadow: 16px 0px 32px #009aFF00;
+    box-shadow: 16px 0px 32px #009aFF00;
     border:2px solid #009aff;
   }
   50%{
@@ -43,8 +43,8 @@ export const runAnim: string = keyframes`
     border:2px solid #009aff00;
   }
   100%{
-    text-shadow: 16px 0px 32px #009aFF;
-    box-shadow: 16px 0px 32px #009aFF;
+    text-shadow: 16px 0px 32px #009aFF00;
+    box-shadow: 16px 0px 32px #009aFF00;
     border:2px solid #009aff;
   }
   `;

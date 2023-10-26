@@ -4,9 +4,10 @@ import { useContext } from "react";
 import ReactGA from "react-ga4";
 import { resumeDownload, resumelink } from "../../sources/Links";
 import { ScrollContext } from "../../contexts/ScrollContext";
-import { NavbarButtonProps, getNavbarButtonsData } from "../../CONSTANTS";
+import { getNavbarButtonsData } from "../../CONSTANTS";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
+import { NavbarButtonProps } from "../../TYPES";
 // import ThemeChanger from "./ThemeChanger";
 
 const Navbar = () => {
