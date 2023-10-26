@@ -1,29 +1,13 @@
-import { Flex, Text, keyframes } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { NavbarButtonProps } from "../../CONSTANTS";
 import NavButton from "./NavButton";
+import { runAnim } from "../../animations/NavbarAnimations";
 
 type Props = {
   buttonData: NavbarButtonProps[];
 };
 
 const DesktopNav = ({ buttonData }: Props) => {
-  const runAnim: string = keyframes`
-  0%{
-    text-shadow: 16px 0px 32px #009aFF;
-    box-shadow: 16px 0px 32px #009aFF;
-    border:2px solid #009aff;
-  }
-  50%{
-    text-shadow: 28px 0px 0px #000000;
-    box-shadow: 20px 0px 0px #009aFF;
-    border:2px solid #009aff00;
-  }
-  100%{
-    text-shadow: 16px 0px 32px #009aFF;
-    box-shadow: 16px 0px 32px #009aFF;
-    border:2px solid #009aff;
-  }
-  `;
   return (
     <Flex transition={"500ms"} pos={"fixed"} zIndex={"1"} top={"0px"} left={"0px"} w={"100%"} bgColor={"#2a2a2a"} color={"#FFFFFF"} gap={"2"} py={3}>
       <Flex alignItems={"center"} flex={1}>
