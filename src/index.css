@@ -5,3 +5,6 @@
   font-display: swap;
   font-weight: 200;
 }
+* {
+  -webkit-tap-highlight-color: transparent;
+}
