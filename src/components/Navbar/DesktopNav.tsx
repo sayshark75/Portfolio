@@ -10,14 +10,17 @@ const DesktopNav = ({ buttonData }: Props) => {
   const runAnim: string = keyframes`
   0%{
     text-shadow: 16px 0px 32px #009aFF;
+    box-shadow: 16px 0px 32px #009aFF;
     border:2px solid #009aff;
   }
   50%{
-    text-shadow: 16px 0px 0px #009aFF;
+    text-shadow: 28px 0px 0px #000000;
+    box-shadow: 20px 0px 0px #009aFF;
     border:2px solid #009aff00;
   }
   100%{
     text-shadow: 16px 0px 32px #009aFF;
+    box-shadow: 16px 0px 32px #009aFF;
     border:2px solid #009aff;
   }
   `;
