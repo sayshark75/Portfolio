@@ -1,8 +1,11 @@
 import { Button, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay } from "@chakra-ui/react";
-import React from "react";
-import { mailLink, mailLinkTemplate } from "../Sources/Links";
+import { mailLink, mailLinkTemplate } from "../../sources/Links";
+export type EmailModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
 
-const EmailModal = ({ isOpen, onClose }) => {
+const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
