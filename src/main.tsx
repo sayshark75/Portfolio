@@ -4,16 +4,13 @@ import App from "./App.tsx";
 import { ChakraProvider } from "@chakra-ui/react";
 import ScrollContextProvider from "./contexts/ScrollContext.tsx";
 import "./index.css";
-import ThemeContextProvider from "./contexts/ThemeContext.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <ChakraProvider>
-      <ThemeContextProvider>
-        <ScrollContextProvider>
-          <App />
-        </ScrollContextProvider>
-      </ThemeContextProvider>
+      <ScrollContextProvider>
+        <App />
+      </ScrollContextProvider>
     </ChakraProvider>
   </React.StrictMode>
 );

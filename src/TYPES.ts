@@ -17,6 +17,10 @@ export type ScrollContextProps = ScrollContextRefs & ScrollContextFunctions;
 export interface ContextProviderProps {
   children: React.ReactNode;
 }
+export type EmailModalProps = {
+  isOpen: boolean;
+  onClose: () => void;
+};
 
 export type NavbarButtonProps = {
   link: string;
