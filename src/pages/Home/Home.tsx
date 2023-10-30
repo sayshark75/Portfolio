@@ -7,6 +7,7 @@ import IconButtonComp from "../../components/HomePage/IconButtonComp";
 import HeadingHome from "../../components/HomePage/HeadingHome";
 import DescHome from "../../components/HomePage/DescHome";
 import { socialBtnDataCreator } from "../../CONSTANTS";
+import { nanoid } from "nanoid";
 
 const Home = () => {
   const scrollContext = useContext(ScrollContext);
@@ -36,7 +37,7 @@ const Home = () => {
 
         <Flex my={"8"} mx={"2"} gap={"3"}>
           {SocialButtonsData.map((info) => {
-            return <IconButtonComp icon={info.icon} tooltip={info.tooltip} label={info.label} onClick={info.onClick} link={info.link} />;
+            return <IconButtonComp key={nanoid()} icon={info.icon} tooltip={info.tooltip} label={info.label} onClick={info.onClick} link={info.link} />;
           })}
         </Flex>
       </Flex>

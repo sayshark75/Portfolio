@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar.tsx";
 import Home from "./pages/Home/Home";
 
 import ReactGA from "react-ga4";
+import About from "./pages/About/About.tsx";
 
 const GA_TAG = import.meta.env.VITE_GA_TAG;
 ReactGA.initialize(GA_TAG);
@@ -12,7 +13,7 @@ function App() {
     <Flex transition={"500ms"} direction={"column"} w={"100%"} minH={"100vh"} bgColor={"#2a2a2a"}>
       <Navbar />
       <Home />
-      {/* <About /> */}
+      <About />
       {/* <Certificates /> */}
       {/* <Experience /> */}
       {/* <Projects /> */}
