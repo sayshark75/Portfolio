@@ -4,7 +4,12 @@ import ContactIcon from "./assets/icons/contact.svg";
 import ProjectsIcon from "./assets/icons/projects.svg";
 import SkillsIcon from "./assets/icons/skills.svg";
 import ResumeIcon from "./assets/icons/resume.svg";
-import { ScrollContextProps } from "./TYPES";
+import { ScrollContextProps, SocialBtnType } from "./TYPES";
+import { VscGithub } from "react-icons/vsc";
+import { FaLinkedinIn } from "react-icons/fa";
+import { githubLink, linkedInLink, locationLink, phoneLink, twitterLink } from "./sources/Links";
+import { MdAlternateEmail, MdCall, MdMyLocation } from "react-icons/md";
+import { BsTwitter } from "react-icons/bs";
 
 export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
   const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;
@@ -62,6 +67,53 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       icon: ResumeIcon,
       x: "0px",
       y: "-90px",
+    },
+  ];
+};
+
+export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
+  return [
+    {
+      link: githubLink,
+      icon: <VscGithub />,
+      tooltip: "GitHub",
+      label: "Visit my Link of github",
+      onClick: () => {},
+    },
+    {
+      link: "",
+      icon: <MdAlternateEmail />,
+      tooltip: "Email",
+      label: "Compose an Email to Me?",
+      onClick: onOpen,
+    },
+    {
+      link: phoneLink,
+      icon: <MdCall />,
+      tooltip: "Phone",
+      label: "Call on My Number",
+      onClick: () => {},
+    },
+    {
+      link: linkedInLink,
+      icon: <FaLinkedinIn />,
+      tooltip: "LinkedIn",
+      label: "Visit my LinkedIn Profile",
+      onClick: () => {},
+    },
+    {
+      link: twitterLink,
+      icon: <BsTwitter />,
+      tooltip: "Twitter",
+      label: "Visit my Link of Twitter Profile",
+      onClick: () => {},
+    },
+    {
+      link: locationLink,
+      icon: <MdMyLocation />,
+      tooltip: "Location",
+      label: "Checkout my location on Google Maps",
+      onClick: () => {},
     },
   ];
 };

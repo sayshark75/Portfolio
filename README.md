@@ -5,3 +5,5 @@
 - Day 2: Added Navbar, Converted it to typescript, Added Some Animations.
 
 - Day 3: Added Home page, Converted it to typescript, Added Animations, Removed Themes for now.
+
+- Day 4: Made Different Peices (Components) of Home Page Code.

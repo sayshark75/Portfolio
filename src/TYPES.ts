@@ -31,3 +31,11 @@ export type NavbarButtonProps = {
   x: string;
   y: string;
 };
+
+export type SocialBtnType = {
+  link?: string;
+  icon: JSX.Element;
+  tooltip?: string;
+  label: string;
+  onClick: () => void;
+};
