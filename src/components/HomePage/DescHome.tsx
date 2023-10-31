@@ -10,8 +10,10 @@ const DescHome = () => {
       fontWeight={400}
       fontFamily={"Poppins"}
       textAlign={"justify"}
+      fontSize={["12px", "14px"]}
       textShadow={"2px 2px 0px #006aff"}
       m={["4", "8"]}
+      letterSpacing={"2px"}
       animation={`${TSAnimBlueSmall} 1s ease-out forwards`}
     >
       A Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can develop robust and efficient products.

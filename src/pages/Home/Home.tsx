@@ -4,10 +4,10 @@ import { ScrollContext } from "../../contexts/ScrollContext";
 import EmailModal from "../../components/EmailModal/EmailModal";
 import ReactGA from "react-ga4";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
-import HeadingHome from "../../components/HomePage/HeadingHome";
 import DescHome from "../../components/HomePage/DescHome";
 import { socialBtnDataCreator } from "../../CONSTANTS";
 import { nanoid } from "nanoid";
+import BigHeading from "../../components/Headings/BigHeading";
 
 const Home = () => {
   const scrollContext = useContext(ScrollContext);
@@ -28,9 +28,7 @@ const Home = () => {
   return (
     <>
       <Flex ref={HomeRef} transition={"500ms"} direction={"column"} justifyContent={"center"} alignItems={"center"} w={"100%"} h={"100vh"} gap={"12"}>
-        <Flex direction={{ base: "column", sm: "row" }}>
-          <HeadingHome />
-        </Flex>
+        <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
         <Flex transition={"1000"} w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
           <DescHome />
         </Flex>

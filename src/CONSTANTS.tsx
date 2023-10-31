@@ -71,6 +71,8 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
   ];
 };
 
+export const ContributionData: string[] = ["1800+ Hours of Coding", "830+ DSA Problems Solved", "6+ Ongoing Projects", "1200+ Github Contributions"];
+
 export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
   return [
     {

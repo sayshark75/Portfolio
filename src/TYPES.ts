@@ -39,3 +39,8 @@ export type SocialBtnType = {
   label: string;
   onClick: () => void;
 };
+
+export type HeadingProps = {
+  title1: string;
+  title2: string;
+};

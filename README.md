@@ -9,3 +9,5 @@
 - Day 4: Made Different Peices (Components) of Home Page Code.
 
 - Day 5: Added and Converted About Page to TypeScript.
+
+- Day 6: Seperated, About Page Components, and Added Fade Animations.
