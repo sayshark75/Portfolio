@@ -43,17 +43,7 @@ const CarouselComp = () => {
         {certificates?.map((cert) => {
           return (
             <Flex key={nanoid()} mb={4}>
-              <Flex
-                bgColor={"#3a3a3a"}
-                shadow={"sm"}
-                rounded={"md"}
-                p={4}
-                mx={4}
-                gap={2}
-                direction={"column"}
-                transition={"500ms"}
-                _hover={{ boxShadow: "xl", borderTop: "5px solid", borderTopColor: "#006aff" }}
-              >
+              <Flex bgColor={"#3a3a3a"} shadow={"sm"} rounded={"md"} p={4} mx={4} gap={2} direction={"column"} transition={"500ms"}>
                 <Image m={"auto"} _active={{ animation: `${ScaleCertificate} 2s ease-in-out 2 alternate` }} w={"300px"} maxHeight={"200px"} src={cert.image} alt={cert.tag} />
                 <Text fontFamily={"Poppins"} fontWeight={400} fontSize={"14px"} color={"#fff"} letterSpacing={"2px"} textAlign={"center"}>
                   {cert.tag}
