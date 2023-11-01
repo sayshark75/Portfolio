@@ -35,7 +35,7 @@ const Home = () => {
 
         <Flex my={"8"} mx={"2"} gap={"3"}>
           {SocialButtonsData.map((info) => {
-            return <IconButtonComp key={nanoid()} icon={info.icon} tooltip={info.tooltip} label={info.label} onClick={info.onClick} link={info.link} />;
+            return <IconButtonComp key={nanoid()} icon={info.icon} tooltip={info.tooltip} label={info.label} onClick={info.onClick} link={info.link} delay={info.delay} />;
           })}
         </Flex>
       </Flex>

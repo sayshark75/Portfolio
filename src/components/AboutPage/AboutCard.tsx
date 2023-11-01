@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import ProfilePic from "./ProfilePic";
 import DescAboutPage from "./DescAboutPage";
 import ContributionList from "./ContributionList";
+import { fadeBottom } from "../../animations/FadeAnimations";
 
 const AboutCard = () => {
   return (
@@ -12,24 +13,66 @@ const AboutCard = () => {
       pos={"relative"}
       justifyContent={"center"}
       alignItems={"flex-start"}
+      opacity={0}
+      animation={`${fadeBottom} 1s ease-in forwards`}
       minW={"240px"}
-      direction={["column", "row"]}
+      direction={["column", "column", "row"]}
       w={"100%"}
-      maxW={"1000px"}
+      maxW={{ lg: "900px", xl: "1000px" }}
       mt={"60px"}
       gap={"16px"}
       border={"2px solid #006aff00"}
-      borderTop={["2px solid #006aff", "2px solid #006aff00"]}
+      borderTop={["2px solid #006aff", "2px solid #006aff", "2px solid #006aff00"]}
     >
       <ProfilePic />
       <Flex p={4} direction={["column"]}>
         <DescAboutPage />
         <ContributionList />
       </Flex>
-      <Flex w={"80px"} display={["none", "flex"]} h={"50px"} rounded={"md"} bgColor={"#4a4a4a77"} pos={"absolute"} top={"-35px"} right={"-35px"}></Flex>
-      <Flex w={"80px"} display={["none", "flex"]} h={"50px"} rounded={"md"} bgColor={"#4a4a4a77"} pos={"absolute"} bottom={"-15px"} right={"60px"}></Flex>
-      <Flex w={"80px"} display={["none", "flex"]} h={"50px"} rounded={"md"} bgColor={"#4a4a4a77"} pos={"absolute"} bottom={"35px"} left={"280px"}></Flex>
-      <Flex w={"80px"} display={["none", "flex"]} h={"50px"} rounded={"md"} bgColor={"#4a4a4a77"} pos={"absolute"} top={"15px"} left={"-40px"}></Flex>
+      <Flex
+        w={"80px"}
+        display={["flex", "flex", "flex"]}
+        h={"50px"}
+        rounded={"md"}
+        bgColor={"#4a4a4a77"}
+        pos={"absolute"}
+        transition={"400ms"}
+        top={["-35px", "-35px", "-13%", "-35px"]}
+        right={["25px", "25px", "10%", "-35px"]}
+      ></Flex>
+      <Flex
+        w={"80px"}
+        display={["flex", "flex", "flex"]}
+        h={"50px"}
+        rounded={"md"}
+        bgColor={"#4a4a4a77"}
+        pos={"absolute"}
+        transition={"400ms"}
+        bottom={["93%", "90%", "-4%", "-15px"]}
+        right={["60%", "80%", "86%", "60px"]}
+      ></Flex>
+      <Flex
+        w={"80px"}
+        display={["none", "none", "flex"]}
+        h={"50px"}
+        rounded={"md"}
+        bgColor={"#4a4a4a77"}
+        pos={"absolute"}
+        transition={"400ms"}
+        bottom={["35px", "35px", "-20%", "-35px", "-25"]}
+        left={["280px", "280px", "58%", "58px", "28px"]}
+      ></Flex>
+      <Flex
+        w={"80px"}
+        display={["none", "none", "flex"]}
+        h={"50px"}
+        rounded={"md"}
+        bgColor={"#4a4a4a77"}
+        transition={"400ms"}
+        pos={"absolute"}
+        top={["15px", "15px", "-35%", "15px", "15px"]}
+        left={["-40px", "-40px", "20%", "-40px", "-40px"]}
+      ></Flex>
     </Flex>
   );
 };

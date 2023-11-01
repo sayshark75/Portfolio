@@ -11,3 +11,5 @@
 - Day 5: Added and Converted About Page to TypeScript.
 
 - Day 6: Seperated, About Page Components, and Added Fade Animations.
+
+- Day 7: Added Some Animations and Fixed UI of About Page.

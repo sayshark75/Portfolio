@@ -1,18 +1,24 @@
 import { Flex, Image } from "@chakra-ui/react";
 import { ProfilePicBlue } from "../../sources/Images";
+import { fadeLeft } from "../../animations/FadeAnimations";
 
 const ProfilePic = () => {
   return (
     <Flex>
       <Image
-        rounded={["full", "md"]}
-        pos={["absolute", "static"]}
-        w={["130px", "auto"]}
-        borderX={["2px solid #006aff", "none"]}
+        rounded={["full", "full", "md"]}
+        pos={["absolute", "absolute", "static"]}
+        w={["130px", "130px", "auto"]}
+        border={"2px solid #006aff00"}
+        borderX={["2px solid #006aff", "2px solid #006aff", "none"]}
         top={"0px"}
         left={"50%"}
-        transform={["translate(-50%,-50%)"]}
-        bgColor={["#4a4a4a", "#4a4a4a77"]}
+        transition={"400ms"}
+        animation={`${fadeLeft} 1s ease-in 300ms forwards`}
+        opacity={0}
+        zIndex={5}
+        transform={["translate(-50%,-50%)", "translate(-50%,-50%)", "translate(0%,0%)"]}
+        bgColor={["#4a4a4a", "#4a4a4a", "#4a4a4a77"]}
         src={ProfilePicBlue}
         alt={"Image of Full Stack Web Developer, Sayyed Sharuk"}
       />

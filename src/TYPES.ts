@@ -38,6 +38,7 @@ export type SocialBtnType = {
   tooltip?: string;
   label: string;
   onClick: () => void;
+  delay: string;
 };
 
 export type HeadingProps = {

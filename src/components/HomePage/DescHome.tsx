@@ -1,5 +1,5 @@
 import { Text } from "@chakra-ui/react";
-import { TSAnimBlueSmall } from "../../animations/HomeAnimations";
+import { fadeTop } from "../../animations/FadeAnimations";
 
 const DescHome = () => {
   return (
@@ -10,11 +10,10 @@ const DescHome = () => {
       fontWeight={400}
       fontFamily={"Poppins"}
       textAlign={"justify"}
-      fontSize={["12px", "14px"]}
-      textShadow={"2px 2px 0px #006aff"}
+      fontSize={["12px", "14px", "16px", "18px"]}
       m={["4", "8"]}
       letterSpacing={"2px"}
-      animation={`${TSAnimBlueSmall} 1s ease-out forwards`}
+      animation={`${fadeTop} 1s ease-out forwards`}
     >
       A Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can develop robust and efficient products.
       Keep up with the latest advancements in the field, and work well with teams to deliver the best possible results.

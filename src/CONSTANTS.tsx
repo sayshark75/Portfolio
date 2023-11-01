@@ -71,7 +71,17 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
   ];
 };
 
-export const ContributionData: string[] = ["1800+ Hours of Coding", "830+ DSA Problems Solved", "6+ Ongoing Projects", "1200+ Github Contributions"];
+export type ContributionDataType = {
+  title: string;
+  delay: string;
+};
+
+export const ContributionData: ContributionDataType[] = [
+  { title: "1800+ Hours of Coding Experience", delay: "200ms" },
+  { title: "830+ DSA Problems Solved", delay: "400ms" },
+  { title: "6+ Ongoing Projects", delay: "600ms" },
+  { title: "1200+ Github Contributions", delay: "800ms" },
+];
 
 export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
   return [
@@ -81,6 +91,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "GitHub",
       label: "Visit my Link of github",
       onClick: () => {},
+      delay: "200ms",
     },
     {
       link: "",
@@ -88,6 +99,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "Email",
       label: "Compose an Email to Me?",
       onClick: onOpen,
+      delay: "400ms",
     },
     {
       link: phoneLink,
@@ -95,6 +107,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "Phone",
       label: "Call on My Number",
       onClick: () => {},
+      delay: "600ms",
     },
     {
       link: linkedInLink,
@@ -102,6 +115,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "LinkedIn",
       label: "Visit my LinkedIn Profile",
       onClick: () => {},
+      delay: "800ms",
     },
     {
       link: twitterLink,
@@ -109,6 +123,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "Twitter",
       label: "Visit my Link of Twitter Profile",
       onClick: () => {},
+      delay: "1s",
     },
     {
       link: locationLink,
@@ -116,6 +131,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       tooltip: "Location",
       label: "Checkout my location on Google Maps",
       onClick: () => {},
+      delay: "1.2s",
     },
   ];
 };
