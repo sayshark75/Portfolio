@@ -28,8 +28,7 @@ export type NavbarButtonProps = {
   title: string;
   icon: string;
   alt: string;
-  x: string;
-  y: string;
+  delay: string;
 };
 
 export type SocialBtnType = {

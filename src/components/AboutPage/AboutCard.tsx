@@ -3,6 +3,7 @@ import ProfilePic from "./ProfilePic";
 import DescAboutPage from "./DescAboutPage";
 import ContributionList from "./ContributionList";
 import { fadeBottom } from "../../animations/FadeAnimations";
+import ResumeButton from "./ResumeButton";
 
 const AboutCard = () => {
   return (
@@ -25,10 +26,12 @@ const AboutCard = () => {
       borderTop={["2px solid #006aff", "2px solid #006aff", "2px solid #006aff00"]}
     >
       <ProfilePic />
-      <Flex p={4} direction={["column"]}>
+      <Flex p={4} direction={["column"]} gap={4} justifyContent={"flex-start"} alignItems={["stretch", "stretch", "flex-start"]}>
         <DescAboutPage />
         <ContributionList />
+        <ResumeButton />
       </Flex>
+      {/* Floaters */}
       <Flex
         w={"80px"}
         display={["flex", "flex", "flex"]}

@@ -1,7 +1,7 @@
 import { Flex, Highlight, Text } from "@chakra-ui/react";
 import { HeadingProps } from "../../TYPES";
-import { polishAnim } from "../../animations/NavbarAnimations";
 import { fadeTop } from "../../animations/FadeAnimations";
+import { ScalePing } from "../../animations/ScaleAnimations";
 
 const MdHeading = ({ title1, title2 }: HeadingProps) => {
   return (
@@ -15,8 +15,8 @@ const MdHeading = ({ title1, title2 }: HeadingProps) => {
         my={"4"}
         cursor={"pointer"}
         rounded={"full"}
-        animation={`${fadeTop} 1s cubic-bezier(1, 0.5, 0.25, 0.125) forwards `}
-        _active={{ transform: "translateY(-20px)", animation: `${polishAnim} 100ms` }}
+        animation={`${fadeTop} 1s ease-in forwards `}
+        _active={{ transform: "translateY(-20px)", animation: `${ScalePing} 1s ease-in-out` }}
       >
         <Highlight query={title2} styles={{ color: "#fff" }}>
           {`${title1} ${title2}`}

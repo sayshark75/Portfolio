@@ -1,24 +1,27 @@
 import { Image } from "@chakra-ui/react";
-import { borderAnim, polishAnim } from "../../animations/NavbarAnimations";
+import { fadeBottom } from "../../animations/FadeAnimations";
 
 type Props = {
   icon: string;
   alt: string;
   onClick: () => void;
+  delay: string;
 };
 
-const NavIcon = ({ icon, alt, onClick }: Props) => {
+const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
   return (
     <Image
       src={icon}
       p={2}
+      bg={"#3a3a3a"}
       border={"2px solid #006aff00"}
       rounded={"full"}
-      animation={`${borderAnim} 2s ease-in-out`}
+      opacity={0}
+      animation={`${fadeBottom} 1s ease-in ${delay} forwards`}
       alt={alt}
       onClick={onClick}
-      shadow={"dark-lg"}
-      _active={{ animation: `${polishAnim} 80ms ease-in-out` }}
+      shadow={"xl"}
+      _active={{ transform: "scale(0.8)" }}
     />
   );
 };

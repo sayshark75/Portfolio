@@ -15,19 +15,19 @@ const MobileNav = ({ buttonsData }: Props) => {
         return button.link ? (
           <a key={index} href={button.link} onClick={button.refFunction}>
             <Show above="sm">
-              <NavButton title={button.title} onClick={button.refFunction} />
+              <NavButton title={button.title} onClick={button.refFunction} delay={button.delay} />
             </Show>
             <Show below="sm">
-              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} />
+              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} delay={button.delay} />
             </Show>
           </a>
         ) : (
           <React.Fragment key={index}>
             <Show above="sm">
-              <NavButton title={button.title} onClick={button.refFunction} />
+              <NavButton title={button.title} onClick={button.refFunction} delay={button.delay} />
             </Show>
             <Show below="sm">
-              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} />
+              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} delay={button.delay} />
             </Show>
           </React.Fragment>
         );

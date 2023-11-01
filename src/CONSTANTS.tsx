@@ -20,8 +20,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "Home",
       alt: "Image Icon of Home, Navigate to Home section",
       icon: HomeIcon,
-      x: "0px",
-      y: "-40px",
+      delay: "200ms",
     },
     {
       link: "",
@@ -29,8 +28,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "About",
       alt: "Image Icon of About, Navigate to About section",
       icon: AboutIcon,
-      x: "0px",
-      y: "-50px",
+      delay: "400ms",
     },
     {
       link: "",
@@ -38,8 +36,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "Projects",
       alt: "Image Icon of Projects, Navigate to Projects section",
       icon: ProjectsIcon,
-      x: "0px",
-      y: "-60px",
+      delay: "600ms",
     },
     {
       link: "",
@@ -47,8 +44,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "Skills",
       alt: "Image Icon of Skills, Navigate to Skills section",
       icon: SkillsIcon,
-      x: "0px",
-      y: "-70px",
+      delay: "800ms",
     },
     {
       link: "",
@@ -56,8 +52,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "Contact",
       alt: "Image Icon of Contact, Navigate to Contact section",
       icon: ContactIcon,
-      x: "0px",
-      y: "-80px",
+      delay: "1s",
     },
     {
       link: resumeDownload,
@@ -65,8 +60,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       title: "Resume",
       alt: "Image Icon of Resume, Navigate to Resume section",
       icon: ResumeIcon,
-      x: "0px",
-      y: "-90px",
+      delay: "1.2s",
     },
   ];
 };

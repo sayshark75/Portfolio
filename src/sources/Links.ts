@@ -9,9 +9,9 @@ export const phoneLink: string = "tel:+917588244148";
 
 export const linkedInLink: string = "https://www.linkedin.com/in/sharuk-sayyed-b65a6b137/";
 
-export const resumelink: string = "https://drive.google.com/file/d/1JR1tvkUMpBiSejjOEKKT9B7S2XTZHtpv/view?usp=share_link";
+export const resumelink: string = "https://drive.google.com/file/d/1EzkfQS_Ki31vmlCLA01OdXSa7mdWq91Q/view?usp=drive_link";
 
-export const resumeDownload: string = "https://drive.google.com/uc?export=download&id=1JR1tvkUMpBiSejjOEKKT9B7S2XTZHtpv";
+export const resumeDownload: string = "https://drive.google.com/uc?export=download&id=1EzkfQS_Ki31vmlCLA01OdXSa7mdWq91Q";
 
 export const twitterLink: string = "https://twitter.com/sayyed_sharuk";
 

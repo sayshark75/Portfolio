@@ -32,10 +32,10 @@ const DesktopNav = ({ buttonData }: Props) => {
         {buttonData.map((button, index) => {
           return button.link ? (
             <a key={index} href={button.link} onClick={button.refFunction}>
-              <NavButton title={button.title} onClick={() => {}} x={button.x} y={button.y} />
+              <NavButton title={button.title} onClick={() => {}} delay={button.delay} />
             </a>
           ) : (
-            <NavButton key={index} title={button.title} onClick={button.refFunction} x={button.x} y={button.y} />
+            <NavButton key={index} title={button.title} onClick={button.refFunction} delay={button.delay} />
           );
         })}
       </Flex>

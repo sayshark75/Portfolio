@@ -1,6 +1,5 @@
 import { Flex, Image } from "@chakra-ui/react";
 import { ProfilePicBlue } from "../../sources/Images";
-import { fadeLeft } from "../../animations/FadeAnimations";
 
 const ProfilePic = () => {
   return (
@@ -14,8 +13,6 @@ const ProfilePic = () => {
         top={"0px"}
         left={"50%"}
         transition={"400ms"}
-        animation={`${fadeLeft} 1s ease-in 300ms forwards`}
-        opacity={0}
         zIndex={5}
         transform={["translate(-50%,-50%)", "translate(-50%,-50%)", "translate(0%,0%)"]}
         bgColor={["#4a4a4a", "#4a4a4a", "#4a4a4a77"]}

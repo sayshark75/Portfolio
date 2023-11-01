@@ -4,6 +4,7 @@ import Home from "./pages/Home/Home";
 
 import ReactGA from "react-ga4";
 import About from "./pages/About/About.tsx";
+import Certificates from "./pages/Certificates/Certificates.tsx";
 
 const GA_TAG = import.meta.env.VITE_GA_TAG;
 ReactGA.initialize(GA_TAG);
@@ -14,7 +15,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      {/* <Certificates /> */}
+      <Certificates />
       {/* <Experience /> */}
       {/* <Projects /> */}
       {/* <TechnicalSkills /> */}

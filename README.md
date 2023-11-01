@@ -13,3 +13,5 @@
 - Day 6: Seperated, About Page Components, and Added Fade Animations.
 
 - Day 7: Added Some Animations and Fixed UI of About Page.
+
+- Day 8: Added My Certificates Section, and Added Some Animations to it.
