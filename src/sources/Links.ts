@@ -8,6 +8,15 @@ export const mailLinkTemplate: string =
 export const TopBarLogo: string = "https://www.topbar.in/images/logo.png";
 export const TopBarLinkedIn: string = "https://www.linkedin.com/company/topbar-company";
 export const TopBarWebsite: string = "https://www.topbar.in/";
+export const AutotronLogo: string = "https://www.autotron.tech/logo.png";
+export const AutotronWebsite: string = "https://www.autotron.tech/";
+export const AutotronLinkedIn: string = "";
+export const MasaiLogo: string = "https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png";
+export const MasaiWebsite: string = "https://www.masaischool.com/";
+export const MasaiLinkedIn: string = "https://www.linkedin.com/school/masai-school/";
+export const UOPLogo: string = "https://upload.wikimedia.org/wikipedia/en/f/f6/Savitribai_Phule_Pune_University_Logo.png";
+export const UOPWebsite: string = "http://www.unipune.ac.in/";
+export const UOPLinkedIn: string = "";
 
 export const phoneLink: string = "tel:+917588244148";
 
@@ -48,5 +57,3 @@ export const GadgetRamboLive: string = "https://gadget-rambo.netlify.app/";
 export const KoovsGithub: string = "https://github.com/sukanta255/ordinary-summer-5089";
 
 export const KoovsLive: string = "https://frontend-mohit-6164.vercel.app/";
-
-export const AutotronLive: string = "https://www.autotron.tech/";

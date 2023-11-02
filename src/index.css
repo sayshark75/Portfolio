@@ -4,7 +4,14 @@
   font-family: Poppins, Montserrat, Arial, Helvetica, sans-serif;
   font-display: swap;
   font-weight: 200;
+  margin: 0px;
+  padding: 0px;
 }
+
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+.vertical-timeline-element-content p {
+  margin-top: 0px !important;
 }

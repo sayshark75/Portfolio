@@ -1,3 +1,4 @@
+import { ProjectDataProps } from "../TYPES";
 import {
   project1Dark,
   project1Light,
@@ -15,7 +16,7 @@ import {
 import {
   APrimeGithub,
   APrimeLive,
-  AutotronLive,
+  AutotronWebsite,
   GadgetRamboGithub,
   GadgetRamboLive,
   KoovsGithub,
@@ -28,9 +29,9 @@ import {
 
 // TStack [react,CHakraUI,JS,HTML,CSS,TS,Redux,FIrebase, Node,Express,Mongo]
 
-export const ProjectsData = [
+export const ProjectsData: ProjectDataProps[] = [
   {
-    live: AutotronLive,
+    live: AutotronWebsite,
     github: "",
     imgDark: project7Dark,
     imgLight: project7Light,

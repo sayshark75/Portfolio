@@ -17,3 +17,5 @@
 - Day 8: Added My Certificates Section, and Added Some Animations to it.
 
 - Day 9: Added My Experiences Section, Converted it to TypeScript.
+
+- Day 10: Styled My Experience Section to TimeLine Section, Componentized, and added My projects Section,

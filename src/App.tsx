@@ -1,11 +1,11 @@
 import { Flex } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar.tsx";
 import Home from "./pages/Home/Home";
-
 import ReactGA from "react-ga4";
 import About from "./pages/About/About.tsx";
 import Certificates from "./pages/Certificates/Certificates.tsx";
-import Experience from "./pages/Experience/Experience.tsx";
+import Timeline from "./pages/Timeline/Timeline.tsx";
+import Projects from "./pages/Projects/Projects.tsx";
 
 const GA_TAG = import.meta.env.VITE_GA_TAG;
 ReactGA.initialize(GA_TAG);
@@ -17,8 +17,8 @@ function App() {
       <Home />
       <About />
       <Certificates />
-      <Experience />
-      {/* <Projects /> */}
+      <Timeline />
+      <Projects />
       {/* <TechnicalSkills /> */}
       {/* <Contact /> */}
       {/* <Footer /> */}

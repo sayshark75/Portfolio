@@ -44,3 +44,26 @@ export type HeadingProps = {
   title1: string;
   title2: string;
 };
+
+export type TimelineCardProps = {
+  linkedin: string;
+  website: string;
+  logo: string;
+  title: string;
+  role: string;
+  query: string[];
+  highlight: string;
+  date: string;
+  icon: JSX.Element;
+};
+
+export type ProjectDataProps = {
+  live: string;
+  github: string;
+  imgDark: string;
+  imgLight: string;
+  heading1: string;
+  heading2: string;
+  summary: string;
+  TStack: string[];
+};
