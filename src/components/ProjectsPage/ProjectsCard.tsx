@@ -1,80 +1,101 @@
-import { Button, Flex, Heading, Image, Text, useColorMode } from "@chakra-ui/react";
+import { Button, Flex, Highlight, Text } from "@chakra-ui/react";
 import { ProjectDataProps } from "../../TYPES";
+import SmHeading from "../Headings/SmHeading";
 
-const ProjectsCard = ({ live, github, imgDark, imgLight, heading1, heading2, summary, TStack }: ProjectDataProps) => {
-  const { colorMode } = useColorMode();
-
+const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summary, TStack }: ProjectDataProps) => {
   return (
     <Flex
       transition={"500ms"}
       mb={"8"}
       mx={"4"}
-      bgColor={"cardBg"}
-      gap={"6"}
-      direction={{ base: "column", sm: "column", md: "row" }}
-      borderRadius={"30px"}
-      boxShadow={"xl"}
-      border={"6px double"}
-      borderColor={"cardBorder"}
-      p={"5"}
-      justifyContent={"center"}
+      bgColor={"#3a3a3a"}
+      direction={["column"]}
+      rounded={"lg"}
+      shadow={"xl"}
+      pos={"relative"}
+      p={4}
+      justifyContent={"space-between"}
       alignItems={"center"}
-      _hover={{ boxShadow: "xl", border: "6px double", borderColor: "heartColor" }}
+      alignSelf={"stretch"}
+      minW={"200px"}
+      w={"100%"}
+      maxW={"410px"}
     >
-      <Flex direction={"column"}>
-        <Image src={colorMode === "dark" ? imgDark : imgLight} transition={"500ms"} w={{ base: "auto", sm: "auto", md: "300px", lg: "500px" }} />
-        <Flex transition={"500ms"} p={"2"} borderRadius={"5"} justifyContent={"center"} mt={"2"} alignItems={"center"} gap={"4"}>
+      {/* Image of Project */}
+      <Flex
+        direction={"column"}
+        bgImg={image}
+        bgSize={"cover"}
+        bgRepeat={"no-repeat"}
+        bgPos={"top"}
+        w={"100%"}
+        h={"230px"}
+        mb={4}
+        transition={"7s"}
+        _hover={{ bgPos: "bottom" }}
+      ></Flex>
+      {/* Details of Project */}
+      <Flex transition={"500ms"} direction={"column"} gap={2}>
+        <Flex transition={"500ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
+          <SmHeading title1={heading1} title2={heading2 || ""} />
+        </Flex>
+        <Text transition={"500ms"} as={"b"} fontFamily={"Poppins"} fontWeight={300} letterSpacing={"2px"} color={"#CCC"}>
+          {summary}
+        </Text>
+        <Text transition={"500ms"} justifyContent={"center"} gap={"4"} fontSize={"sm"} fontWeight={"semibold"} color={"textPrimary"}>
+          <Highlight
+            query={TStack}
+            styles={{
+              fontFamily: "Poppins",
+              fontWeight: 300,
+              fontSize: "12px",
+              letterSpacing: "2px",
+              color: "#fff",
+              mr: "2",
+              px: "2",
+              rounded: "full",
+              border: "1px solid #006aff",
+              lineHeight: "28px",
+            }}
+          >
+            {TStack.join(" ")}
+          </Highlight>
+        </Text>
+        <Text
+          fontFamily={"Poppins"}
+          alignSelf={"flex-start"}
+          fontWeight={400}
+          fontSize={"12px"}
+          letterSpacing={"2px"}
+          bgColor={"#006aff"}
+          color={"#fff"}
+          rounded={"full"}
+          px={"12px"}
+          py={"2px"}
+        >
+          {workType}
+        </Text>
+        <Flex transition={"500ms"} p={"2"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"}>
           <a href={live} target={"_blank"} rel="noreferrer">
             <Button
               transition={"500ms"}
               fontSize={"16px"}
               width={"7rem"}
-              color={"buttonText"}
-              _hover={{ bgColor: "buttonBgHover", color: "buttonTextHover" }}
-              bgColor={"buttonBg"}
-              border={"2px solid"}
-              borderColor={"buttonBorder"}
+              color={"#fff"}
+              _hover={{}}
+              _active={{ bgColor: "#006aff", transform: "translateY(10px)" }}
+              bgColor={"#2a2a2a"}
             >
               View Page
             </Button>
           </a>
           {github && (
             <a href={github} target={"_blank"} rel="noreferrer">
-              <Button
-                transition={"500ms"}
-                fontSize={"16px"}
-                width={"7rem"}
-                color={"buttonText"}
-                _hover={{ bgColor: "buttonBgHover", color: "buttonTextHover" }}
-                bgColor={"buttonBg"}
-                border={"2px solid"}
-                borderColor={"buttonBorder"}
-              >
+              <Button transition={"500ms"} fontSize={"16px"} width={"7rem"} color={"#fff"} _hover={{}} _active={{ bgColor: "#006aff" }} bgColor={"#2a2a2a"}>
                 Github
               </Button>
             </a>
           )}
-        </Flex>
-      </Flex>
-
-      <Flex transition={"500ms"} direction={"column"} w={{ base: "auto", sm: "auto", md: "435px" }}>
-        <Flex transition={"500ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
-          <Heading transition={"500ms"} color={"textPrimary"} fontSize={"lg"} my={"2"}>
-            {heading1}&nbsp;
-          </Heading>
-          {heading2 ? (
-            <Heading transition={"500ms"} fontSize={"lg"} color={"textSecondary"} my={"2"}>
-              {heading2}
-            </Heading>
-          ) : null}
-        </Flex>
-        <Text transition={"500ms"} as={"b"} textAlign={"justify"} color={"textPrimary"}>
-          {summary}
-        </Text>
-        <Flex wrap={"wrap"} transition={"500ms"} mt={"8"} justifyContent={"center"} gap={"4"} textAlign={"center"} fontSize={"sm"} fontWeight={"semibold"} color={"textPrimary"}>
-          {TStack.map((el, id) => {
-            return id < TStack.length - 1 ? el + " | " : el;
-          })}
         </Flex>
       </Flex>
     </Flex>

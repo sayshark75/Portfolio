@@ -150,7 +150,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
 };
 
 export const TopBarQuery = ["JavaScript", "React", "Axios", "TypeScript", "Scss", "API's", "Node", "Express", "MongoDB", "ChakraUI", "AWS EC2 ", "AWS S3"];
-export const AutotronQuery = ["JavaScript", "React", "NextJS", "TypeScript", "API's", "Server Components"];
+export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
 export const MasaiQuery = ["JavaScript", "HTML", "CSS", "React", "NextJS", "TypeScript", "Node", "Express", "MongoDB", "Frontend", "Backend", "AWS S3", "AWS EC2"];
 export const UOPQuery = ["Electronics", "Arduino", "Raspberry Pi", "C++", "Embedded C", "Binary", "Hex", "TTL", "Circuits", "PCL", "Gcode"];
 
@@ -167,17 +167,6 @@ export const TimelineData: TimelineCardProps[] = [
     icon: <MdWork />,
   },
   {
-    title: "AutoTron Electronics",
-    logo: AutotronLogo,
-    linkedin: AutotronLinkedIn,
-    website: AutotronWebsite,
-    role: "Fullstack Web Developer",
-    query: AutotronQuery,
-    highlight: AutotronQuery.join(" "),
-    date: "Apr 2023 - Aug 2023",
-    icon: <MdWork />,
-  },
-  {
     title: "Masai School",
     logo: MasaiLogo,
     linkedin: MasaiLinkedIn,
@@ -189,6 +178,17 @@ export const TimelineData: TimelineCardProps[] = [
     icon: <RiGraduationCapFill />,
   },
   {
+    title: "AutoTron Electronics",
+    logo: AutotronLogo,
+    linkedin: AutotronLinkedIn,
+    website: AutotronWebsite,
+    role: "Embedded Developer",
+    query: AutotronQuery,
+    highlight: AutotronQuery.join(" "),
+    date: "Apr 2020 - Aug 2022",
+    icon: <MdWork />,
+  },
+  {
     title: "University of Pune",
     logo: UOPLogo,
     linkedin: UOPLinkedIn,
@@ -196,7 +196,7 @@ export const TimelineData: TimelineCardProps[] = [
     role: "Master of Science - Electronics",
     query: UOPQuery,
     highlight: UOPQuery.join(" "),
-    date: "Aug 2022 - Apr 2023",
+    date: "Aug 2018 - Apr 2020",
     icon: <RiGraduationCapFill />,
   },
 ];

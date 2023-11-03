@@ -60,9 +60,9 @@ export type TimelineCardProps = {
 export type ProjectDataProps = {
   live: string;
   github: string;
-  imgDark: string;
-  imgLight: string;
+  image: string;
   heading1: string;
+  workType: string;
   heading2: string;
   summary: string;
   TStack: string[];

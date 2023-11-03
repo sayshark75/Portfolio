@@ -19,7 +19,13 @@ export const ScaleCertificate: string = keyframes`
 0%{
   transform:scale(1);
 }
-100%{
+10%{
   transform:scale(2);
+}
+90%{
+  transform:scale(2);
+}
+100%{
+  transform:scale(1);
 }
 `;

@@ -19,3 +19,5 @@
 - Day 9: Added My Experiences Section, Converted it to TypeScript.
 
 - Day 10: Styled My Experience Section to TimeLine Section, Componentized, and added My projects Section,
+
+- Day 11: Converted Experience Section to Timeline, and Added Projects Section with Slider.
