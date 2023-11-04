@@ -67,3 +67,5 @@ export type ProjectDataProps = {
   summary: string;
   TStack: string[];
 };
+
+export type SkillsDataProps = string[][];
