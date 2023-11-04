@@ -16,7 +16,7 @@ const Projects = () => {
   const { ProjectsRef } = context;
   return (
     <>
-      <Flex ref={ProjectsRef} transition={"500ms"} justifyContent={"center"} pt={"10"} minH={"100vh"} alignItems={"center"} direction={"column"}>
+      <Flex ref={ProjectsRef} transition={"500ms"} justifyContent={"center"} pt={"10"} minH={"100vh"} alignItems={"center"} direction={"column"} gap={8}>
         <MdHeading title1="My" title2="Projects" />
         <CarouselComp mapperFunction={ProjectMapper} />
         <MdHeading title1="Day's" title2="I Code" />
