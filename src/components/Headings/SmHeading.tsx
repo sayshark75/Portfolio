@@ -8,7 +8,7 @@ const SmHeading = ({ title1, title2 }: HeadingProps) => {
     <Flex>
       <Text
         fontFamily={"Poppins"}
-        fontSize={["12px", "14px", "16px", "16px", "18px"]}
+        fontSize={["14px", "14px", "16px", "16px", "18px"]}
         fontWeight={["300", "400", "500"]}
         transition={"500ms"}
         color={"#006aff"}
