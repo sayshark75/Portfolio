@@ -21,3 +21,5 @@
 - Day 10: Styled My Experience Section to TimeLine Section, Componentized, and added My projects Section,
 
 - Day 11: Converted Experience Section to Timeline, and Added Projects Section with Slider.
+
+- Day 12: Working on GitHub Calendar.
