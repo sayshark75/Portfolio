@@ -73,3 +73,7 @@ export type SkillsDataProps = {
   title2: string;
   skills: string[];
 };
+
+export type CopyButtonProps = {
+  title: string;
+};

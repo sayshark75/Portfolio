@@ -14,7 +14,7 @@ const About = () => {
 
   return (
     <>
-      <Flex ref={AboutRef} transition={"500ms"} direction={"column"} w={"100%"} px={3} minH={"100vh"} h={"100%"} justifyContent={"center"} alignItems={"center"}>
+      <Flex ref={AboutRef} transition={"500ms"} direction={"column"} w={"100%"} px={3} minH={"70vh"} h={"100%"} justifyContent={"center"} alignItems={"center"}>
         {/* Heading */}
         <MdHeading title1="About" title2="Me" />
         {/* My About Card */}

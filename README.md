@@ -27,3 +27,5 @@
 - Day 13: Added Technical Skills Section with TypeScript
 
 - Day 14: Fixed Issues with Technical Skills, and Changed the UI
+
+- Day 15: Added Copy Buttons and Fixed Styling Issues.

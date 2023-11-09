@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <Flex ref={HomeRef} transition={"500ms"} direction={"column"} justifyContent={"center"} alignItems={"center"} w={"100%"} h={"100vh"} gap={"12"}>
+      <Flex ref={HomeRef} transition={"500ms"} direction={"column"} justifyContent={"center"} alignItems={"center"} w={"100%"} minH={"100vh"} gap={"12"}>
         <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
         <Flex transition={"1000"} w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
           <DescHome />

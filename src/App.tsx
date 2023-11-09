@@ -7,6 +7,7 @@ import Certificates from "./pages/Certificates/Certificates.tsx";
 import Timeline from "./pages/Timeline/Timeline.tsx";
 import Projects from "./pages/Projects/Projects.tsx";
 import TechnicalSkills from "./pages/TechnicalSkills/TechnicalSkills.tsx";
+import Contact from "./pages/Contact/Contact.tsx";
 
 const GA_TAG = import.meta.env.VITE_GA_TAG;
 ReactGA.initialize(GA_TAG);
@@ -21,7 +22,7 @@ function App() {
       <Timeline />
       <Projects />
       <TechnicalSkills />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Footer /> */}
     </Flex>
   );
