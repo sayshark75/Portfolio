@@ -5,14 +5,15 @@ import { Box } from "@chakra-ui/react";
 
 export type CarouselTypes = {
   mapperFunction: () => JSX.Element[];
+  slides: number;
 };
 
-const CarouselComp = ({ mapperFunction }: CarouselTypes) => {
+const CarouselComp = ({ mapperFunction, slides }: CarouselTypes) => {
   var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slides,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,

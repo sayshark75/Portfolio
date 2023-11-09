@@ -68,4 +68,8 @@ export type ProjectDataProps = {
   TStack: string[];
 };
 
-export type SkillsDataProps = string[][];
+export type SkillsDataProps = {
+  title1: string;
+  title2: string;
+  skills: string[];
+};

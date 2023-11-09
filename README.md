@@ -23,3 +23,7 @@
 - Day 11: Converted Experience Section to Timeline, and Added Projects Section with Slider.
 
 - Day 12: Working on GitHub Calendar.
+
+- Day 13: Added Technical Skills Section with TypeScript
+
+- Day 14: Fixed Issues with Technical Skills, and Changed the UI

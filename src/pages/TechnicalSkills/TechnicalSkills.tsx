@@ -17,7 +17,7 @@ const TechnicalSkills = () => {
   return (
     <Flex ref={SkillsRef} transition={"500ms"} direction={"column"} minH={"50vh"} justifyContent={"center"} alignItems={"center"} mx={"3"}>
       <MdHeading title1="Technical" title2="Skills" />
-      <CarouselComp mapperFunction={SkillsMapper} />
+      <CarouselComp mapperFunction={SkillsMapper} slides={3} />
     </Flex>
   );
 };
