@@ -24,7 +24,6 @@ const CopyButton = ({ title }: CopyButtonProps) => {
     <Button
       onClick={copyFunction}
       rounded={"base"}
-      size={"xs"}
       minW={"280px"}
       p={"5"}
       gap={"3"}
@@ -35,7 +34,7 @@ const CopyButton = ({ title }: CopyButtonProps) => {
       _hover={{}}
       _active={{ bgColor: "#003aff", color: "#fff" }}
     >
-      <Text transition={"500ms"} as={"b"} fontSize={"sm"} color={"textNormal"} _hover={{ color: "iconBtnHover" }}>
+      <Text transition={"500ms"} as={"b"} fontWeight={"300"} fontSize={["10px", "11px", "12px", "12px", "12px"]} letterSpacing={"2px"} color={"#fff"} _hover={{}}>
         {title}
       </Text>
       {!isCopy ? <MdOutlineContentCopy style={{ fontSize: "22px" }} /> : <MdOutlineCheckCircleOutline style={{ fontSize: "22px" }} />}

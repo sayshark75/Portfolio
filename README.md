@@ -29,3 +29,9 @@
 - Day 14: Fixed Issues with Technical Skills, and Changed the UI
 
 - Day 15: Added Copy Buttons and Fixed Styling Issues.
+
+- Day 16: Added Footer, and changed it's styling.
+
+- Day 17: Removed Unnecessary Files, Design Fixes.
+
+- Day 18: Code Clean up
