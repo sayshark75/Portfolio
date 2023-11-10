@@ -1,4 +1,6 @@
-## Converting Old Legacy React to Latest Vite + TypeScript Build
+## Converting Old Legacy React Portfolio to Latest Vite + TypeScript Build
+
+### Practicing TypeScript
 
 - Day 1: Added Context, Converted it to typescript.
 
@@ -37,3 +39,15 @@
 - Day 18: Another Code Clean up/Fix
 
 - Day 19: Image Compression Done.
+
+## My Learnings
+
+- Basic types
+- Type Aliases
+- Structuring a TypeScript Project
+- Interfaces, and its inheritance with classes / OOPS
+- Generic types
+- Type Combinations using "&", "|"
+- Type Inference
+- Usage of "unknown" type than "any" type.
+- Handling React Components and Contexts with TypeScript.
