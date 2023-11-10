@@ -1,13 +1,13 @@
 import { ProjectDataProps } from "../TYPES";
 
-import truptiImg from "../assets/projects/trupti.png";
-import autotronImg from "../assets/projects/autotron.png";
-import aPrimeImg from "../assets/projects/aprime.png";
-import gRamboImg from "../assets/projects/gadgetRambo.png";
-import koovsImg from "../assets/projects/koovs.png";
-import glamazonImg from "../assets/projects/glamazon.png";
-import indExpImg from "../assets/projects/iexpress.png";
-import equationsImg from "../assets/projects/equations.png";
+import truptiImg from "../assets/projects/trupti.webp";
+import autotronImg from "../assets/projects/autotron.webp";
+import aPrimeImg from "../assets/projects/aprime.webp";
+import gRamboImg from "../assets/projects/gadgetRambo.webp";
+import koovsImg from "../assets/projects/koovs.webp";
+import glamazonImg from "../assets/projects/glamazon.webp";
+import indExpImg from "../assets/projects/iexpress.webp";
+import equationsImg from "../assets/projects/equations.webp";
 
 import {
   APrimeGithub,
@@ -35,7 +35,8 @@ export const ProjectsData: ProjectDataProps[] = [
     heading1: "Equations",
     heading2: "(Virtual CFO)",
     workType: "Team of 3 Members",
-    summary: "Provides financial strategy and accounting solutions for startups.",
+    summary:
+      "Provides financial strategy and accounting solutions for startups.",
     TStack: ["React", "ViteJS", "Express", "ChakraUI"],
   },
   {
@@ -85,7 +86,8 @@ export const ProjectsData: ProjectDataProps[] = [
     heading1: "Gadget360",
     heading2: "(Clone)",
     workType: "Team of 5 members",
-    summary: "A tech gadgets website with specifications of electronic gadgets.",
+    summary:
+      "A tech gadgets website with specifications of electronic gadgets.",
     TStack: ["React", "NextJS", "Firebase", "Redux", "ChakraUI"],
   },
   {
@@ -105,7 +107,8 @@ export const ProjectsData: ProjectDataProps[] = [
     heading1: "IndianExpress",
     heading2: "(Clone)",
     workType: "Individual",
-    summary: "An online and offline news platform with a mix of news and information.",
+    summary:
+      "An online and offline news platform with a mix of news and information.",
     TStack: ["JavaScript", "HTML", "CSS"],
   },
 ];

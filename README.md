@@ -35,3 +35,5 @@
 - Day 17: Removed Unnecessary Files, Design Fixes.
 
 - Day 18: Another Code Clean up/Fix
+
+- Day 19: Image Compression Done.
