@@ -77,3 +77,21 @@ export type SkillsDataProps = {
 export type CopyButtonProps = {
   title: string;
 };
+
+export type ContributionDataType = {
+  title: string;
+  delay: string;
+};
+
+export type CarouselTypes = {
+  mapperFunction: () => JSX.Element[];
+  slides: number;
+};
+
+export type NavButtonProps = {
+  title: string;
+  onClick: () => void;
+  delay: string;
+};
+
+export type DummyDateProps = { date: string; time: string };

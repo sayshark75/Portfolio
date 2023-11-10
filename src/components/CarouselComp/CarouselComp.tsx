@@ -2,11 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Box } from "@chakra-ui/react";
-
-export type CarouselTypes = {
-  mapperFunction: () => JSX.Element[];
-  slides: number;
-};
+import { CarouselTypes } from "../../TYPES";
 
 const CarouselComp = ({ mapperFunction, slides }: CarouselTypes) => {
   var settings = {

@@ -1,11 +1,6 @@
 import { Button } from "@chakra-ui/react";
 import { fadeTop } from "../../animations/FadeAnimations";
-
-export type NavButtonProps = {
-  title: string;
-  onClick: () => void;
-  delay: string;
-};
+import { NavButtonProps } from "../../TYPES";
 
 const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
   return (

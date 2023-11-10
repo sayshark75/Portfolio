@@ -1,4 +1,5 @@
-export type DummyDateProps = { date: string; time: string };
+import { DummyDateProps } from "../TYPES";
+
 const dummyDate = (): DummyDateProps => {
   var today = new Date();
 

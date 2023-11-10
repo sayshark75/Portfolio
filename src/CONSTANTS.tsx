@@ -1,4 +1,9 @@
-import { ScrollContextProps, SocialBtnType, TimelineCardProps } from "./TYPES";
+import {
+  ContributionDataType,
+  ScrollContextProps,
+  SocialBtnType,
+  TimelineCardProps,
+} from "./TYPES";
 import { VscGithub } from "react-icons/vsc";
 import { FaCookieBite, FaCreditCard, FaLinkedinIn } from "react-icons/fa";
 import { RiGraduationCapFill } from "react-icons/ri";
@@ -95,11 +100,6 @@ export const getNavbarButtonsData = (
       delay: "1.2s",
     },
   ];
-};
-
-export type ContributionDataType = {
-  title: string;
-  delay: string;
 };
 
 export const ContributionData: ContributionDataType[] = [
