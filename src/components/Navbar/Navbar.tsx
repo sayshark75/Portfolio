@@ -1,7 +1,6 @@
 import { Show } from "@chakra-ui/react";
 import { useContext } from "react";
 
-import ReactGA from "react-ga4";
 import { resumeDownload, resumelink } from "../../sources/Links";
 import { ScrollContext } from "../../contexts/ScrollContext";
 import { getNavbarButtonsData } from "../../CONSTANTS";
@@ -18,13 +17,13 @@ const Navbar = () => {
 
   const handleClick = () => {
     window.open(resumelink, "_blank");
-    ReactGA.event({
-      category: "Resume",
-      action: "Downloaded the Resume",
-    });
   };
 
-  const NavButtonsData: NavbarButtonProps[] = getNavbarButtonsData(context, resumeDownload, handleClick);
+  const NavButtonsData: NavbarButtonProps[] = getNavbarButtonsData(
+    context,
+    resumeDownload,
+    handleClick
+  );
 
   return (
     <>

@@ -1,18 +1,16 @@
 import { Button, Text } from "@chakra-ui/react";
-import ReactGA from "react-ga4";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
-import { MdOutlineCheckCircleOutline, MdOutlineContentCopy } from "react-icons/md";
+import {
+  MdOutlineCheckCircleOutline,
+  MdOutlineContentCopy,
+} from "react-icons/md";
 import { CopyButtonProps } from "../../TYPES";
 
 const CopyButton = ({ title }: CopyButtonProps) => {
   const [isCopy, setIsCopy] = useState(false);
 
   const copyFunction = () => {
-    ReactGA.event({
-      category: "PhoneCopy",
-      action: "Copied the Number",
-    });
     copy(title);
     setIsCopy(true);
     setTimeout(() => {
@@ -34,10 +32,22 @@ const CopyButton = ({ title }: CopyButtonProps) => {
       _hover={{}}
       _active={{ bgColor: "#003aff", color: "#fff" }}
     >
-      <Text transition={"500ms"} as={"b"} fontWeight={"300"} fontSize={["10px", "11px", "12px", "12px", "12px"]} letterSpacing={"2px"} color={"#fff"} _hover={{}}>
+      <Text
+        transition={"500ms"}
+        as={"b"}
+        fontWeight={"300"}
+        fontSize={["10px", "11px", "12px", "12px", "12px"]}
+        letterSpacing={"2px"}
+        color={"#fff"}
+        _hover={{}}
+      >
         {title}
       </Text>
-      {!isCopy ? <MdOutlineContentCopy style={{ fontSize: "22px" }} /> : <MdOutlineCheckCircleOutline style={{ fontSize: "22px" }} />}
+      {!isCopy ? (
+        <MdOutlineContentCopy style={{ fontSize: "22px" }} />
+      ) : (
+        <MdOutlineCheckCircleOutline style={{ fontSize: "22px" }} />
+      )}
     </Button>
   );
 };
