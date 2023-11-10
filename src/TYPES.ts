@@ -26,7 +26,7 @@ export type NavbarButtonProps = {
   link: string;
   refFunction: () => void;
   title: string;
-  icon: string;
+  icon: JSX.Element;
   alt: string;
   delay: string;
 };

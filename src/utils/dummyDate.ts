@@ -1,4 +1,5 @@
-const dummyDate = () => {
+export type DummyDateProps = { date: string; time: string };
+const dummyDate = (): DummyDateProps => {
   var today = new Date();
 
   // Add 3 days to the current date

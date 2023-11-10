@@ -1,12 +1,6 @@
-import HomeIcon from "./assets/icons/home.svg";
-import AboutIcon from "./assets/icons/about.svg";
-import ContactIcon from "./assets/icons/contact.svg";
-import ProjectsIcon from "./assets/icons/projects.svg";
-import SkillsIcon from "./assets/icons/skills.svg";
-import ResumeIcon from "./assets/icons/resume.svg";
 import { ScrollContextProps, SocialBtnType, TimelineCardProps } from "./TYPES";
 import { VscGithub } from "react-icons/vsc";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaCookieBite, FaCreditCard, FaLinkedinIn } from "react-icons/fa";
 import { RiGraduationCapFill } from "react-icons/ri";
 import {
   AutotronLinkedIn,
@@ -27,18 +21,37 @@ import {
   phoneLink,
   twitterLink,
 } from "./sources/Links";
-import { MdAlternateEmail, MdCall, MdMyLocation, MdWork } from "react-icons/md";
+import {
+  MdAlternateEmail,
+  MdCall,
+  MdContacts,
+  MdHome,
+  MdInfo,
+  MdMyLocation,
+  MdQuestionAnswer,
+  MdWork,
+} from "react-icons/md";
 import { BsTwitter } from "react-icons/bs";
 
-export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
-  const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;
+export const getNavbarButtonsData = (
+  context: ScrollContextProps,
+  resumeDownload: string,
+  handleClick: () => void
+) => {
+  const {
+    handleHomeRef,
+    handleAboutRef,
+    handleSkillsRef,
+    handleProjectsRef,
+    handleContactRef,
+  } = context;
   return [
     {
       link: "",
       refFunction: handleHomeRef,
       title: "Home",
       alt: "Image Icon of Home, Navigate to Home section",
-      icon: HomeIcon,
+      icon: <MdHome />,
       delay: "200ms",
     },
     {
@@ -46,7 +59,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       refFunction: handleAboutRef,
       title: "About",
       alt: "Image Icon of About, Navigate to About section",
-      icon: AboutIcon,
+      icon: <MdInfo />,
       delay: "400ms",
     },
     {
@@ -54,7 +67,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       refFunction: handleProjectsRef,
       title: "Projects",
       alt: "Image Icon of Projects, Navigate to Projects section",
-      icon: ProjectsIcon,
+      icon: <FaCreditCard />,
       delay: "600ms",
     },
     {
@@ -62,7 +75,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       refFunction: handleSkillsRef,
       title: "Skills",
       alt: "Image Icon of Skills, Navigate to Skills section",
-      icon: SkillsIcon,
+      icon: <FaCookieBite />,
       delay: "800ms",
     },
     {
@@ -70,7 +83,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       refFunction: handleContactRef,
       title: "Contact",
       alt: "Image Icon of Contact, Navigate to Contact section",
-      icon: ContactIcon,
+      icon: <MdQuestionAnswer />,
       delay: "1s",
     },
     {
@@ -78,7 +91,7 @@ export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload
       refFunction: handleClick,
       title: "Resume",
       alt: "Image Icon of Resume, Navigate to Resume section",
-      icon: ResumeIcon,
+      icon: <MdContacts />,
       delay: "1.2s",
     },
   ];
@@ -149,10 +162,59 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
   ];
 };
 
-export const TopBarQuery = ["JavaScript", "React", "Axios", "TypeScript", "Scss", "API's", "Node", "Express", "MongoDB", "ChakraUI", "AWS EC2 ", "AWS S3"];
-export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
-export const MasaiQuery = ["JavaScript", "HTML", "CSS", "React", "NextJS", "TypeScript", "Node", "Express", "MongoDB", "Frontend", "Backend", "AWS S3", "AWS EC2"];
-export const UOPQuery = ["Electronics", "Arduino", "Raspberry Pi", "C++", "Embedded C", "Binary", "Hex", "TTL", "Circuits", "PCL", "Gcode"];
+export const TopBarQuery = [
+  "JavaScript",
+  "React",
+  "Axios",
+  "TypeScript",
+  "Scss",
+  "API's",
+  "Node",
+  "Express",
+  "MongoDB",
+  "ChakraUI",
+  "AWS EC2 ",
+  "AWS S3",
+];
+export const AutotronQuery = [
+  "Programming",
+  "C++",
+  "Circuits",
+  "GCode",
+  "Arduino",
+  "MicroC",
+  "RaspberryPI",
+  "Projects",
+  "Seller",
+];
+export const MasaiQuery = [
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "React",
+  "NextJS",
+  "TypeScript",
+  "Node",
+  "Express",
+  "MongoDB",
+  "Frontend",
+  "Backend",
+  "AWS S3",
+  "AWS EC2",
+];
+export const UOPQuery = [
+  "Electronics",
+  "Arduino",
+  "Raspberry Pi",
+  "C++",
+  "Embedded C",
+  "Binary",
+  "Hex",
+  "TTL",
+  "Circuits",
+  "PCL",
+  "Gcode",
+];
 
 export const TimelineData: TimelineCardProps[] = [
   {

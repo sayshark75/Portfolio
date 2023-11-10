@@ -34,4 +34,4 @@
 
 - Day 17: Removed Unnecessary Files, Design Fixes.
 
-- Day 18: Code Clean up
+- Day 18: Another Code Clean up/Fix
