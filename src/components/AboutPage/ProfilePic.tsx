@@ -15,7 +15,7 @@ const ProfilePic = () => {
         transition={"400ms"}
         zIndex={5}
         transform={[
-          "translate(20px,40px)",
+          "translate(-50%,-50%)",
           "translate(-50%,-50%)",
           "translate(0%,0%)",
         ]}
