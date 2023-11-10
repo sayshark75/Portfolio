@@ -44,7 +44,7 @@
 
 - Basic types
 - Type Aliases
-- Structuring a TypeScript Project
+- Structuring a TypeScript Project, with "tsconfig.json" file
 - Interfaces, and its inheritance with classes / OOPS
 - Generic types
 - Type Combinations using "&", "|"
