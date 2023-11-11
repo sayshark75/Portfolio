@@ -2,6 +2,7 @@ import { List, ListItem } from "@chakra-ui/react";
 import { polishAnim } from "../../animations/NavbarAnimations";
 import { ContributionData } from "../../CONSTANTS";
 import { fadeRight } from "../../animations/FadeAnimations";
+import { nanoid } from "nanoid";
 
 const ContributionList = () => {
   return (
@@ -9,6 +10,7 @@ const ContributionList = () => {
       {ContributionData.map((info) => {
         return (
           <ListItem
+            key={nanoid()}
             transition={"400ms"}
             rounded={"full"}
             border={"2px solid #006aff00"}

@@ -40,6 +40,8 @@
 
 - Day 19: Image Compression Done.
 
+- Day 20: Contact Form Service Added, and added Validations.
+
 ## My Learnings
 
 - Basic types

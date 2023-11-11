@@ -28,36 +28,34 @@ const GithubStats = () => {
           username="sayshark75"
         />
       </Flex>
-      <Text align={"center"}>
-        <Flex
-          w={{ base: "280px", sm: "320px", md: "440px", lg: "560px" }}
-          gap={5}
-          mt={6}
-          direction={"column"}
-          justifyContent={"center"}
-        >
-          <Image
-            transition={"750ms"}
-            _hover={{ shadow: "2xl" }}
-            borderRadius={"12"}
-            src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api?username=sayshark75&show_icons=true&locale=en&custom_title=My Statistics&bg_color=2a2a2a&hide_border=true&title_color=006aff&text_color=006aff`}
-            alt={"Github Card"}
-          />
-          <Image
-            _hover={{ shadow: "2xl" }}
-            transition={"750ms"}
-            borderRadius={"12"}
-            src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api/top-langs?username=sayshark75&show_icons=true&locale=en&layout=compact&bg_color=2a2a2a&hide_border=true&title_color=006aff&text_color=006aff`}
-            alt={"Github Language"}
-          />
-          <Image
-            _hover={{ shadow: "2xl" }}
-            transition={"750ms"}
-            borderRadius={"12"}
-            src={`https://streak-stats.demolab.com?user=sayshark75&theme=transparent&hide_border=true&background=2a2a2a&currStreakLabel=006aff&currStreakNum=006aff&sideNums=006aff&dates=006aff&stroke=006aff&sideLabels=006aff&icon_color=006aff`}
-          />
-        </Flex>
-      </Text>
+      <Flex
+        w={{ base: "280px", sm: "320px", md: "440px", lg: "560px" }}
+        gap={5}
+        mt={6}
+        direction={"column"}
+        justifyContent={"center"}
+      >
+        <Image
+          transition={"750ms"}
+          _hover={{ shadow: "2xl" }}
+          borderRadius={"12"}
+          src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api?username=sayshark75&show_icons=true&locale=en&custom_title=My Statistics&bg_color=2a2a2a&hide_border=true&title_color=006aff&text_color=006aff`}
+          alt={"Github Card"}
+        />
+        <Image
+          _hover={{ shadow: "2xl" }}
+          transition={"750ms"}
+          borderRadius={"12"}
+          src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api/top-langs?username=sayshark75&show_icons=true&locale=en&layout=compact&bg_color=2a2a2a&hide_border=true&title_color=006aff&text_color=006aff`}
+          alt={"Github Language"}
+        />
+        <Image
+          _hover={{ shadow: "2xl" }}
+          transition={"750ms"}
+          borderRadius={"12"}
+          src={`https://streak-stats.demolab.com?user=sayshark75&theme=transparent&hide_border=true&background=2a2a2a&currStreakLabel=006aff&currStreakNum=006aff&sideNums=006aff&dates=006aff&stroke=006aff&sideLabels=006aff&icon_color=006aff`}
+        />
+      </Flex>
     </>
   );
 };

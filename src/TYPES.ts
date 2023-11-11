@@ -95,3 +95,5 @@ export type NavButtonProps = {
 };
 
 export type DummyDateProps = { date: string; time: string };
+
+export type mailDataType = { name: string; email: string; message: string };
