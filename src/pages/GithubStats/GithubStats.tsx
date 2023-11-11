@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import GitHubCalendar from "react-github-calendar";
 import { fadeTop } from "../../animations/FadeAnimations";
 
