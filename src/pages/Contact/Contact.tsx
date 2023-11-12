@@ -130,7 +130,7 @@ const Contact = () => {
               _placeholder={{ color: "#aaa" }}
               type="email"
               value={data.email}
-              placeholder="Your Email (Kept private)"
+              placeholder="Your Email"
               required
               onChange={handleChange}
             />
