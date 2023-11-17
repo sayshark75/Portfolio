@@ -4,18 +4,23 @@ import DescAboutPage from "./DescAboutPage";
 import ContributionList from "./ContributionList";
 import { fadeBottom } from "../../animations/FadeAnimations";
 import ResumeButton from "./ResumeButton";
+import { RefObject, useRef } from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObs";
 
 const AboutCard = () => {
+  const animRef: RefObject<HTMLDivElement> = useRef(null);
+  const isIntersecting = useIntersectionObserver(animRef);
   return (
     <Flex
       rounded={"md"}
       shadow={"xl"}
+      ref={animRef}
       bgColor={"#3a3a3a"}
       pos={"relative"}
       justifyContent={"center"}
       alignItems={"flex-start"}
       opacity={0}
-      animation={`${fadeBottom} 1s ease-in forwards`}
+      animation={isIntersecting ? `${fadeBottom} 1s ease-in forwards` : "none"}
       minW={"240px"}
       direction={["column", "column", "row"]}
       w={"100%"}

@@ -2,8 +2,12 @@ import { Flex, Highlight, Text } from "@chakra-ui/react";
 import { HeadingProps } from "../../TYPES";
 import { fadeTop } from "../../animations/FadeAnimations";
 import { ScalePing } from "../../animations/ScaleAnimations";
+import { RefObject, useRef } from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObs";
 
 const MdHeading = ({ title1, title2 }: HeadingProps) => {
+  const animRef: RefObject<HTMLParagraphElement> = useRef(null);
+  const isIntersecting = useIntersectionObserver(animRef);
   return (
     <Flex>
       <Text
@@ -13,10 +17,11 @@ const MdHeading = ({ title1, title2 }: HeadingProps) => {
         transition={"500ms"}
         color={"#006aff"}
         my={"4"}
+        ref={animRef}
         cursor={"pointer"}
         rounded={"full"}
-        animation={`${fadeTop} 1s ease-in forwards `}
-        _active={{ transform: "translateY(-20px)", animation: `${ScalePing} 1s ease-in-out` }}
+        animation={isIntersecting ? `${fadeTop} 1s ease-in forwards` : "none"}
+        _active={{ transform: "translateY(-20px)", animation: isIntersecting ? `${ScalePing} 1s ease-in-out` : "none" }}
       >
         <Highlight query={title2} styles={{ color: "#fff" }}>
           {`${title1} ${title2}`}

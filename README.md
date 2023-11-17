@@ -42,6 +42,8 @@
 
 - Day 20: Contact Form Service Added, and added Validations.
 
+- Day 21: Added Intersection Observer Hook, now we re-animate elements.
+
 ## My Learnings
 
 - Basic types
@@ -50,6 +52,8 @@
 - Interfaces, and its inheritance with classes / OOPS
 - Generic types
 - Type Combinations using "&", "|"
+- Classes, Abstraction, Inheritance, Encapsulation using TypeScript features.
 - Type Inference
 - Usage of "unknown" type than "any" type.
 - Handling React Components and Contexts with TypeScript.
+- Handling Ref's with TypeScript
