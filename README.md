@@ -44,6 +44,8 @@
 
 - Day 21: Added Intersection Observer Hook, now we re-animate elements.
 
+- Day 22 Added Blue theme and maintaining it in overall project.
+
 ## My Learnings
 
 - Basic types
