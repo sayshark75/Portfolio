@@ -1,3 +1,5 @@
+import { ThemeConfig } from "@chakra-ui/react";
+
 export type ScrollContextRefs = {
   HomeRef: React.MutableRefObject<HTMLDivElement | null>;
   AboutRef: React.MutableRefObject<HTMLDivElement | null>;
@@ -12,7 +14,18 @@ export type ScrollContextFunctions = {
   handleProjectsRef: () => void;
   handleContactRef: () => void;
 };
+
 export type ScrollContextProps = ScrollContextRefs & ScrollContextFunctions;
+
+export type ThemeFunction = (config: ThemeConfig) => void;
+
+export type ThemeContextProps = {
+  theme: ThemeConfig;
+  handleTheme: ThemeFunction;
+};
+export type ThemeIconsProps = {
+  color: string;
+};
 
 export interface ContextProviderProps {
   children: React.ReactNode;

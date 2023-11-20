@@ -1,9 +1,4 @@
-import {
-  ContributionDataType,
-  ScrollContextProps,
-  SocialBtnType,
-  TimelineCardProps,
-} from "./TYPES";
+import { ContributionDataType, ScrollContextProps, SocialBtnType, ThemeIconsProps, TimelineCardProps } from "./TYPES";
 import { VscGithub } from "react-icons/vsc";
 import { FaCookieBite, FaCreditCard, FaLinkedinIn } from "react-icons/fa";
 import { RiGraduationCapFill } from "react-icons/ri";
@@ -26,30 +21,11 @@ import {
   phoneLink,
   twitterLink,
 } from "./sources/Links";
-import {
-  MdAlternateEmail,
-  MdCall,
-  MdContacts,
-  MdHome,
-  MdInfo,
-  MdMyLocation,
-  MdQuestionAnswer,
-  MdWork,
-} from "react-icons/md";
+import { MdAlternateEmail, MdCall, MdContacts, MdHome, MdInfo, MdMyLocation, MdQuestionAnswer, MdWork } from "react-icons/md";
 import { BsTwitter } from "react-icons/bs";
 
-export const getNavbarButtonsData = (
-  context: ScrollContextProps,
-  resumeDownload: string,
-  handleClick: () => void
-) => {
-  const {
-    handleHomeRef,
-    handleAboutRef,
-    handleSkillsRef,
-    handleProjectsRef,
-    handleContactRef,
-  } = context;
+export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
+  const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;
   return [
     {
       link: "",
@@ -176,17 +152,7 @@ export const TopBarQuery = [
   "AWS EC2 ",
   "AWS S3",
 ];
-export const AutotronQuery = [
-  "Programming",
-  "C++",
-  "Circuits",
-  "GCode",
-  "Arduino",
-  "MicroC",
-  "RaspberryPI",
-  "Projects",
-  "Seller",
-];
+export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
 export const MasaiQuery = [
   "JavaScript",
   "HTML",
@@ -202,19 +168,7 @@ export const MasaiQuery = [
   "AWS S3",
   "AWS EC2",
 ];
-export const UOPQuery = [
-  "Electronics",
-  "Arduino",
-  "Raspberry Pi",
-  "C++",
-  "Embedded C",
-  "Binary",
-  "Hex",
-  "TTL",
-  "Circuits",
-  "PCL",
-  "Gcode",
-];
+export const UOPQuery = ["Electronics", "Arduino", "Raspberry Pi", "C++", "Embedded C", "Binary", "Hex", "TTL", "Circuits", "PCL", "Gcode"];
 
 export const TimelineData: TimelineCardProps[] = [
   {
@@ -260,5 +214,26 @@ export const TimelineData: TimelineCardProps[] = [
     highlight: UOPQuery.join(" "),
     date: "Aug 2018 - Apr 2020",
     icon: <RiGraduationCapFill />,
+  },
+];
+
+export const ThemeIconsData: ThemeIconsProps[] = [
+  {
+    color: "themeBlue",
+  },
+  {
+    color: "themeRed",
+  },
+  {
+    color: "themeGreen",
+  },
+  {
+    color: "themeViolet",
+  },
+  {
+    color: "themeOrange",
+  },
+  {
+    color: "themeYellow",
   },
 ];

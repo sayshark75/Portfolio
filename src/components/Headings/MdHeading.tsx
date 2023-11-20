@@ -15,7 +15,7 @@ const MdHeading = ({ title1, title2 }: HeadingProps) => {
         fontSize={["36px", "38px", "42px", "48px", "58px"]}
         fontWeight={["500", "600"]}
         transition={"500ms"}
-        color={"#006aff"}
+        color={"accent"}
         my={"4"}
         ref={animRef}
         cursor={"pointer"}

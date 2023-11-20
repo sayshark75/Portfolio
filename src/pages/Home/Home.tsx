@@ -7,6 +7,7 @@ import DescHome from "../../components/HomePage/DescHome";
 import { socialBtnDataCreator } from "../../CONSTANTS";
 import { nanoid } from "nanoid";
 import BigHeading from "../../components/Headings/BigHeading";
+import ThemeContainer from "../../components/ThemesComponent/ThemeContainer";
 
 const Home = () => {
   const scrollContext = useContext(ScrollContext);
@@ -33,12 +34,10 @@ const Home = () => {
         gap={"12"}
       >
         <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
-        <Flex
-          transition={"1000"}
-          w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}
-        >
+        <Flex transition={"1000"} w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
           <DescHome />
         </Flex>
+        <ThemeContainer />
 
         <Flex my={"8"} mx={"2"} gap={"3"}>
           {SocialButtonsData.map((info) => {

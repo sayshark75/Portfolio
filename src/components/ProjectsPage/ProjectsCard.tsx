@@ -34,10 +34,26 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
         <Flex transition={"500ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
           <SmHeading title1={heading1} title2={heading2 || ""} />
         </Flex>
-        <Text transition={"500ms"} fontSize={["10px", "14px", "12px", "10px", "16px"]} as={"b"} fontFamily={"Poppins"} fontWeight={300} letterSpacing={"2px"} color={"#CCC"}>
+        <Text
+          transition={"500ms"}
+          fontSize={["10px", "14px", "12px", "10px", "16px"]}
+          as={"b"}
+          fontFamily={"Poppins"}
+          fontWeight={300}
+          letterSpacing={"2px"}
+          color={"#CCC"}
+        >
           {summary}
         </Text>
-        <Text transition={"500ms"} justifyContent={"center"} gap={"4"} fontSize={["10px", "12px", "12px", "10px", "12px"]} fontWeight={"semibold"} color={"textPrimary"} h={"60px"}>
+        <Text
+          transition={"500ms"}
+          justifyContent={"center"}
+          gap={"4"}
+          fontSize={["10px", "12px", "12px", "10px", "12px"]}
+          fontWeight={"semibold"}
+          color={"#fff"}
+          h={"60px"}
+        >
           <Highlight
             query={TStack}
             styles={{

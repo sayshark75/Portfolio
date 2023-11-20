@@ -51,7 +51,7 @@
 - Structuring a TypeScript Project, with "tsconfig.json" file
 - Interfaces, and its inheritance with classes / OOPS
 - Generic types
-- Type Combinations using "&", "|"
+- Type Combinations using Intersection and Union Operators - "&", "|"
 - Classes, Abstraction, Inheritance, Encapsulation using TypeScript features.
 - Type Inference
 - Usage of "unknown" type than "any" type.

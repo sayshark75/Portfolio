@@ -14,12 +14,12 @@ const ResumeButton = () => {
         fontWeight={400}
         letterSpacing={"2px"}
         animation={`${ScalePing} 1s ease-in 2s forwards`}
-        bgColor={"#006aff"}
+        bgColor={"accent"}
         opacity={0}
-        color={"#fff"}
+        color={"light"}
         transition={"200ms"}
         _hover={{}}
-        _active={{ bgColor: "#000" }}
+        _active={{ bgColor: "dark" }}
       >
         View Resume
       </Button>

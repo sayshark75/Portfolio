@@ -16,9 +16,9 @@ const BigHeading = ({ title1, title2 }: HeadingProps) => {
         transition={"500ms"}
         opacity={0}
         animation={isIntersecting ? `${fadeLeft} 1s ease-out forwards` : "none"}
-        textShadow={["none", "3px 3px 0px #006aff", "4px 4px 0px #006aff"]}
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
-        color={"#fffffd"}
+        color={"light"}
+        textShadow={"4px 4px 0px #4a4a4a"}
         letterSpacing={"2px"}
       >
         {title1}&nbsp;
@@ -30,10 +30,10 @@ const BigHeading = ({ title1, title2 }: HeadingProps) => {
         opacity={0}
         transition={"500ms"}
         animation={isIntersecting ? `${fadeRight} 1s ease-out 500ms forwards` : "none"}
-        textShadow={["none", "3px 3px 0px #fff", "4px 4px 0px #fff"]}
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
-        color={"#006aFF"}
+        color={"accent"}
         letterSpacing={"2px"}
+        textShadow={"4px 4px 0px #fff"}
       >
         {title2}
       </Text>

@@ -13,20 +13,21 @@ const ContributionList = () => {
             key={nanoid()}
             transition={"400ms"}
             rounded={"full"}
-            border={"2px solid #006aff00"}
+            border={"2px solid"}
+            borderColor={"transparent"}
             px={4}
             py={1}
             opacity={0}
             fontFamily={"Poppins"}
             fontSize={"12px"}
             fontWeight={"300"}
-            color={"#fff"}
+            color={"light"}
             mt={1}
             shadow={"xl"}
             cursor={"pointer"}
-            bgColor={"#4a4a4a"}
+            bgColor={"primaryLighter"}
             animation={`${fadeRight} 1s ease-in forwards ${info.delay}`}
-            _hover={{ bgColor: "black", color: "white" }}
+            _hover={{ bgColor: "dark", color: "light" }}
             _active={{ animation: `${polishAnim} 80ms ease-in-out` }}
           >
             {info.title}

@@ -15,7 +15,7 @@ const AboutCard = () => {
       rounded={"md"}
       shadow={"xl"}
       ref={animRef}
-      bgColor={"#3a3a3a"}
+      bgColor={"primaryLight"}
       pos={"relative"}
       justifyContent={"center"}
       alignItems={"flex-start"}
@@ -27,8 +27,10 @@ const AboutCard = () => {
       maxW={{ lg: "900px", xl: "1000px" }}
       mt={"60px"}
       gap={"16px"}
-      border={"2px solid #006aff00"}
-      borderTop={["2px solid #006aff", "2px solid #006aff", "2px solid #006aff00"]}
+      border={"2px solid"}
+      borderColor={["transparent"]}
+      borderTop={["2px solid", "2px solid", "2px solid"]}
+      borderTopColor={["accent", "accent", "transparent"]}
     >
       <ProfilePic />
       <Flex p={4} direction={["column"]} gap={4} justifyContent={"flex-start"} alignItems={["stretch", "stretch", "flex-start"]}>
@@ -42,7 +44,8 @@ const AboutCard = () => {
         display={["flex", "flex", "flex"]}
         h={"50px"}
         rounded={"md"}
-        bgColor={"#4a4a4a77"}
+        bgColor={"primaryLighter"}
+        opacity={"0.4"}
         pos={"absolute"}
         transition={"400ms"}
         top={["-35px", "-35px", "-13%", "-35px"]}
@@ -53,7 +56,8 @@ const AboutCard = () => {
         display={["flex", "flex", "flex"]}
         h={"50px"}
         rounded={"md"}
-        bgColor={"#4a4a4a77"}
+        bgColor={"primaryLighter"}
+        opacity={"0.4"}
         pos={"absolute"}
         transition={"400ms"}
         bottom={["93%", "90%", "-4%", "-15px"]}
@@ -64,7 +68,8 @@ const AboutCard = () => {
         display={["none", "none", "flex"]}
         h={"50px"}
         rounded={"md"}
-        bgColor={"#4a4a4a77"}
+        bgColor={"primaryLighter"}
+        opacity={"0.4"}
         pos={"absolute"}
         transition={"400ms"}
         bottom={["35px", "35px", "-20%", "-35px", "-25"]}
@@ -75,7 +80,8 @@ const AboutCard = () => {
         display={["none", "none", "flex"]}
         h={"50px"}
         rounded={"md"}
-        bgColor={"#4a4a4a77"}
+        bgColor={"primaryLighter"}
+        opacity={"0.4"}
         transition={"400ms"}
         pos={"absolute"}
         top={["15px", "15px", "-35%", "15px", "15px"]}

@@ -10,7 +10,17 @@ type Props = {
 
 const MobileNav = ({ buttonsData }: Props) => {
   return (
-    <Flex transition={"500ms"} pos={"fixed"} bottom={8} alignItems={"center"} zIndex={"1"} w={"100%"} bgColor={"iconBtn"} color={"iconBtnBg"} justifyContent={"space-evenly"}>
+    <Flex
+      transition={"500ms"}
+      pos={"fixed"}
+      bottom={8}
+      alignItems={"center"}
+      zIndex={"1"}
+      w={"100%"}
+      bgColor={"transparent"}
+      color={"#fff"}
+      justifyContent={"space-evenly"}
+    >
       {buttonsData.map((button, index) => {
         return button.link ? (
           <a key={index} href={button.link} onClick={button.refFunction}>

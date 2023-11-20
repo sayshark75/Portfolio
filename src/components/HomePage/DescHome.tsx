@@ -11,7 +11,7 @@ const DescHome = () => {
       as={"b"}
       ref={animRef}
       transition={"500ms"}
-      color={"#FFFFFF"}
+      color={"light"}
       fontWeight={400}
       fontFamily={"Poppins"}
       textAlign={"justify"}
