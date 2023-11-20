@@ -4,7 +4,7 @@ import { ThemeIconsData } from "../../CONSTANTS";
 
 const ThemeContainer = () => {
   return (
-    <Flex border={"1px solid red"} justifyContent={"center"} alignItems={"center"} gap={"32px"}>
+    <Flex justifyContent={"center"} alignItems={"center"} gap={"32px"}>
       {ThemeIconsData.map((icon) => {
         return (
           <IconButton
