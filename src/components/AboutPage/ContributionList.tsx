@@ -27,7 +27,7 @@ const ContributionList = () => {
             cursor={"pointer"}
             bgColor={"primaryLighter"}
             animation={`${fadeRight} 1s ease-in forwards ${info.delay}`}
-            _hover={{ bgColor: "dark", color: "light" }}
+            _hover={{ bgColor: "darker", color: "light" }}
             _active={{ animation: `${polishAnim} 80ms ease-in-out` }}
           >
             {info.title}

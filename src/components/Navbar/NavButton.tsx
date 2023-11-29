@@ -6,25 +6,28 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
   return (
     <Button
       onClick={onClick}
-      bgColor={"#3a3a3a"}
-      color={"#FFFFFF"}
+      bgColor={"primaryLight"}
+      color={"light"}
       shadow={"xl"}
-      border={"2px solid #006aff00"}
+      border={"2px solid"}
+      borderColor={"transparent"}
       opacity={0}
       animation={`${fadeTop} 1s ease-in ${delay} forwards`}
       rounded={"full"}
       h={"25px"}
       transition={"200ms"}
       fontSize={"12px"}
-      fontFamily={"Montserrat"}
+      fontWeight={"200"}
+      letterSpacing={"1.4px"}
+      fontFamily={"Poppins"}
       _hover={{
         backgroundColor: "transparent",
       }}
       _active={{
         transform: "translateY(4px)",
         backgroundColor: "transparent",
-        color: "#fff",
-        borderColor: "#006aff",
+        color: "light",
+        borderColor: "accent",
         boxShadow: "0px 0px 8px #ffffff77",
       }}
     >

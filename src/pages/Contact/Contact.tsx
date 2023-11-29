@@ -1,12 +1,4 @@
-import {
-  Button,
-  Flex,
-  Input,
-  Spinner,
-  Text,
-  Textarea,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Button, Flex, Input, Spinner, Text, Textarea, useDisclosure } from "@chakra-ui/react";
 
 import { MdOutlineCheckCircle, MdOutlineSend } from "react-icons/md";
 
@@ -55,11 +47,7 @@ const Contact = () => {
     }
   };
 
-  const handleChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
   };
@@ -99,7 +87,7 @@ const Contact = () => {
             maxW={"480px"}
             p={4}
             shadow={"2xl"}
-            color={"#fff"}
+            color={"light"}
             rounded={"xl"}
             direction={"column"}
             gap={4}
@@ -111,8 +99,9 @@ const Contact = () => {
               fontWeight={"300"}
               fontSize={["10px", "12px", "14px", "14px", "16px"]}
               letterSpacing={"2px"}
-              border={"2px solid #006aff"}
-              _placeholder={{ color: "#aaa" }}
+              border={"2px solid"}
+              borderColor={"accent"}
+              _placeholder={{ color: "placeholder" }}
               type="text"
               value={data.name}
               placeholder="Your Name"
@@ -126,8 +115,9 @@ const Contact = () => {
               fontSize={["10px", "12px", "14px", "14px", "16px"]}
               letterSpacing={"2px"}
               variant={"outline"}
-              border={"2px solid #006aff"}
-              _placeholder={{ color: "#aaa" }}
+              border={"2px solid"}
+              borderColor={"accent"}
+              _placeholder={{ color: "placeholder" }}
               type="email"
               value={data.email}
               placeholder="Your Email"
@@ -142,34 +132,25 @@ const Contact = () => {
               pl={4}
               value={data.message}
               variant={"outline"}
-              border={"2px solid #006aff"}
-              _placeholder={{ color: "#aaa" }}
+              border={"2px solid"}
+              borderColor={"accent"}
+              _placeholder={{ color: "placeholder" }}
               placeholder="Please don't hesitate to say something, say 'hi', 'hello','bad work', 'good work', 'testing',etc..."
               rows={5}
               required
               onChange={handleChange}
             />
             <Button
-              isDisabled={
-                status === "success" ||
-                status === "failed" ||
-                status === "loading"
-              }
+              isDisabled={status === "success" || status === "failed" || status === "loading"}
               _disabled={{ cursor: "not-allowed" }}
-              bgColor={
-                status === "success"
-                  ? "#15A409"
-                  : status === "failed"
-                  ? "#FF1E1E"
-                  : "#006aff"
-              }
+              bgColor={status === "success" ? "#15A409" : status === "failed" ? "#FF1E1E" : "accent"}
               rounded={"base"}
               outline={"none"}
               border={"none"}
-              color={"#fff"}
+              color={"light"}
               gap={1}
               _hover={{}}
-              _active={{ bgColor: "#003aff", color: "#fff" }}
+              _active={{ bgColor: "accentDark", color: "light" }}
               type="submit"
               fontWeight={"300"}
               fontSize={["10px", "12px", "14px", "14px", "16px"]}
@@ -203,7 +184,7 @@ const Contact = () => {
           <CopyButton title="7588244148" />
           <CopyButton title="sayyedsharuk75@gmail.com" />
         </Flex>
-        <Flex my={"8"} mx={"2"} gap={"3"}>
+        <Flex mb={"12"} mx={"2"} gap={["2", "3"]}>
           {SocialButtonsData.map((info) => {
             return (
               <IconButtonComp

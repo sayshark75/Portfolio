@@ -39,7 +39,7 @@ const Home = () => {
         </Flex>
         <ThemeContainer />
 
-        <Flex my={"8"} mx={"2"} gap={"3"}>
+        <Flex mb={"12"} mx={"2"} gap={["2", "3"]}>
           {SocialButtonsData.map((info) => {
             return (
               <IconButtonComp

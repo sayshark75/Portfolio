@@ -6,21 +6,15 @@ import { nanoid } from "nanoid";
 const SkillsMapper = () => {
   return SkillsData.map((data) => {
     return (
-      <Flex
-        w={"100%"}
-        key={nanoid()}
-        minH={"200px"}
-        p={["8px", "10px", "12px", "14px", "16px"]}
-        gap={"24px"}
-        direction={"column"}
-      >
+      <Flex w={"100%"} key={nanoid()} minH={"200px"} p={["8px", "10px", "12px", "14px", "16px"]} gap={"24px"} direction={"column"}>
         <SmHeading title1={data.title1} title2={data.title2} />
         <Text mt={["10px", "10px", "12px", "14px", "16px"]}>
           <Highlight
             query={data.skills}
             styles={{
-              color: "#fff",
-              border: "1px solid #006aff",
+              color: "light",
+              border: "1px solid",
+              borderColor: "accent",
               fontWeight: "500",
               rounded: "full",
               px: "12px",

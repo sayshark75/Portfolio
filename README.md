@@ -44,7 +44,9 @@
 
 - Day 21: Added Intersection Observer Hook, now we re-animate elements.
 
-- Day 22 Added Blue theme and maintaining it in overall project.
+- Day 22: Added Blue theme and maintaining it in overall project.
+
+- Day 23: Colors Maintained across project using theme.
 
 ## My Learnings
 

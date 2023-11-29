@@ -18,8 +18,8 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
       <Flex flex={1} gap={2} direction={["column", "row"]}>
         {/* Logo of Company */}
         <Flex flex={4} justifyContent={"flex-start"} alignItems={"center"} gap={4}>
-          <Image w={["35px", "50px"]} bgColor={"#fff"} p={[1, 2]} rounded={"full"} src={logo} alt="Autotron Tech Website Logo" />
-          <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"#fff"}>
+          <Image w={["35px", "50px"]} bgColor={"light"} p={[1, 2]} rounded={"full"} src={logo} alt="Autotron Tech Website Logo" />
+          <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"light"}>
             {title}
           </Text>
         </Flex>
@@ -29,9 +29,9 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
             <IconButton
               size={"xs"}
               rounded={"full"}
-              bgColor={"#2a2a2a"}
-              color={"#006aff"}
-              _active={{ color: "#fff", bgColor: "#006aff" }}
+              bgColor={"primary"}
+              color={"accent"}
+              _active={{ color: "light", bgColor: "accent" }}
               _hover={{}}
               icon={<FaLinkedinIn />}
               onClick={() => handleVisitLinkedIn("linkedin")}
@@ -42,9 +42,9 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
             <IconButton
               size={"xs"}
               rounded={"full"}
-              bgColor={"#2a2a2a"}
-              color={"#006aff"}
-              _active={{ color: "#fff", bgColor: "#006aff" }}
+              bgColor={"primary"}
+              color={"accent"}
+              _active={{ color: "light", bgColor: "accent" }}
               _hover={{}}
               icon={<BsGlobeAmericas />}
               onClick={() => handleVisitLinkedIn("website")}
@@ -55,25 +55,26 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
       </Flex>
       {/* My role */}
       <Flex flex={1} direction={"column"}>
-        <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"#fff"}>
+        <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"light"}>
           {role}
         </Text>
         <Flex direction={"column"}>
-          <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"#fff"}>
+          <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 300 }} color={"light"}>
             Skills:
           </Text>
           <Text fontFamily={"Poppins"} fontSize={"12px"} letterSpacing={"2px"} fontWeight={400}>
             <Highlight
               query={query}
               styles={{
-                border: "1px solid #006aff",
+                border: "1px solid",
+                borderColor: "accent",
                 fontSize: ["10px", "12px"],
                 fontWeight: "300",
                 lineHeight: "22px",
                 rounded: "full",
                 px: ["4px", "12px"],
                 mr: ["0px", "8px"],
-                color: "#fff",
+                color: "light",
               }}
             >
               {highlight}

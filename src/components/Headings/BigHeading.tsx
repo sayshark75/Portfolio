@@ -18,7 +18,7 @@ const BigHeading = ({ title1, title2 }: HeadingProps) => {
         animation={isIntersecting ? `${fadeLeft} 1s ease-out forwards` : "none"}
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
         color={"light"}
-        textShadow={"4px 4px 0px #4a4a4a"}
+        textShadow={["none", "none", "4px 4px 0px #4a4a4a"]}
         letterSpacing={"2px"}
       >
         {title1}&nbsp;
@@ -33,7 +33,7 @@ const BigHeading = ({ title1, title2 }: HeadingProps) => {
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
         color={"accent"}
         letterSpacing={"2px"}
-        textShadow={"4px 4px 0px #fff"}
+        textShadow={["none", "none", "4px 4px 0px #fff"]}
       >
         {title2}
       </Text>

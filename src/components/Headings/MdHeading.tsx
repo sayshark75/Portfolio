@@ -23,7 +23,7 @@ const MdHeading = ({ title1, title2 }: HeadingProps) => {
         animation={isIntersecting ? `${fadeTop} 1s ease-in forwards` : "none"}
         _active={{ transform: "translateY(-20px)", animation: isIntersecting ? `${ScalePing} 1s ease-in-out` : "none" }}
       >
-        <Highlight query={title2} styles={{ color: "#fff" }}>
+        <Highlight query={title2} styles={{ color: "light" }}>
           {`${title1} ${title2}`}
         </Highlight>
       </Text>

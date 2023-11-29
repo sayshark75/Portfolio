@@ -8,7 +8,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
       transition={"500ms"}
       mb={["2", "4", "2", "8"]}
       mx={["1", "4", "1"]}
-      bgColor={"#3a3a3a"}
+      bgColor={"primaryLight"}
       direction={["column"]}
       rounded={"lg"}
       shadow={"xl"}
@@ -27,7 +27,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
         h={["130px", "230px", "160px", "170px", "230px"]}
         mb={4}
         transition={"7s"}
-        _hover={{ bgPos: "bottom", boxShadow: "0px 0px 8px #006aff" }}
+        _hover={{ bgPos: "bottom" }}
       ></Flex>
       {/* Details of Project */}
       <Flex transition={"500ms"} direction={"column"} gap={2}>
@@ -41,7 +41,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           fontFamily={"Poppins"}
           fontWeight={300}
           letterSpacing={"2px"}
-          color={"#CCC"}
+          color={"text"}
         >
           {summary}
         </Text>
@@ -51,7 +51,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           gap={"4"}
           fontSize={["10px", "12px", "12px", "10px", "12px"]}
           fontWeight={"semibold"}
-          color={"#fff"}
+          color={"light"}
           h={"60px"}
         >
           <Highlight
@@ -60,11 +60,12 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
               fontFamily: "Poppins",
               fontWeight: 300,
               letterSpacing: "2px",
-              color: "#fff",
+              color: "light",
               mr: "2",
               px: "2",
               rounded: "full",
-              border: "1px solid #006aff",
+              border: "1px solid",
+              borderColor: "accent",
               lineHeight: "28px",
             }}
           >
@@ -77,8 +78,8 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           fontWeight={400}
           fontSize={["10px", "12px"]}
           letterSpacing={"2px"}
-          bgColor={"#006aff"}
-          color={"#fff"}
+          bgColor={"accent"}
+          color={"light"}
           rounded={"full"}
           px={"12px"}
           py={"2px"}
@@ -95,8 +96,8 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
               color={"#fff"}
               letterSpacing={"2px"}
               _hover={{}}
-              _active={{ bgColor: "#006aff", transform: "translateY(10px)" }}
-              bgColor={"#2a2a2a"}
+              _active={{ bgColor: "accent", transform: "translateY(10px)" }}
+              bgColor={"primary"}
             >
               View Page
             </Button>
@@ -108,11 +109,11 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
                 fontSize={["14px", "16px"]}
                 width={"7rem"}
                 fontWeight={["300", "400"]}
-                color={"#fff"}
+                color={"light"}
                 letterSpacing={"2px"}
                 _hover={{}}
-                _active={{ bgColor: "#006aff", transform: "translateY(10px)" }}
-                bgColor={"#2a2a2a"}
+                _active={{ bgColor: "accent", transform: "translateY(10px)" }}
+                bgColor={"primary"}
               >
                 Github
               </Button>

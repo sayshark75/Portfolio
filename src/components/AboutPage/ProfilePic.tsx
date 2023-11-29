@@ -18,7 +18,8 @@ const ProfilePic = () => {
         transition={"400ms"}
         zIndex={5}
         transform={["translate(-50%,-50%)", "translate(-50%,-50%)", "translate(0%,0%)"]}
-        bgColor={["#4a4a4a", "#4a4a4a", "#4a4a4a77"]}
+        bgColor={["primaryLighter", "primaryLighter", "primaryLighter"]}
+        opacity={[1, 1, 0.7]}
         src={ProfileImage}
         alt={"Image of Full Stack Web Developer, Sayyed Sharuk"}
       />

@@ -13,10 +13,11 @@ const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
     <IconButton
       icon={icon}
       p={2}
-      bg={"#3a3a3a"}
-      border={"2px solid #006aff00"}
+      bg={"primaryLight"}
+      border={"2px solid "}
+      borderColor={"transparent"}
       rounded={"full"}
-      color={"#fff"}
+      color={"light"}
       opacity={0}
       animation={`${fadeBottom} 1s ease-in ${delay} forwards`}
       aria-label={alt}

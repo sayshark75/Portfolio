@@ -19,7 +19,7 @@ const ResumeButton = () => {
         color={"light"}
         transition={"200ms"}
         _hover={{}}
-        _active={{ bgColor: "dark" }}
+        _active={{ bgColor: "darker" }}
       >
         View Resume
       </Button>
