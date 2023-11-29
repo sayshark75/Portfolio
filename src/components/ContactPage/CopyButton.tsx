@@ -1,10 +1,7 @@
 import { Button, Text } from "@chakra-ui/react";
 import copy from "copy-to-clipboard";
 import { useState } from "react";
-import {
-  MdOutlineCheckCircleOutline,
-  MdOutlineContentCopy,
-} from "react-icons/md";
+import { MdOutlineCheckCircleOutline, MdOutlineContentCopy } from "react-icons/md";
 import { CopyButtonProps } from "../../TYPES";
 
 const CopyButton = ({ title }: CopyButtonProps) => {
@@ -26,8 +23,8 @@ const CopyButton = ({ title }: CopyButtonProps) => {
       p={"5"}
       gap={"3"}
       justifyContent={"space-between"}
-      color={"#fff"}
-      bgColor={"#006aff"}
+      color={"white"}
+      bgColor={"accent"}
       transition={"500ms"}
       _hover={{}}
       _active={{ bgColor: "#003aff", color: "#fff" }}
@@ -43,11 +40,7 @@ const CopyButton = ({ title }: CopyButtonProps) => {
       >
         {title}
       </Text>
-      {!isCopy ? (
-        <MdOutlineContentCopy style={{ fontSize: "22px" }} />
-      ) : (
-        <MdOutlineCheckCircleOutline style={{ fontSize: "22px" }} />
-      )}
+      {!isCopy ? <MdOutlineContentCopy style={{ fontSize: "22px" }} /> : <MdOutlineCheckCircleOutline style={{ fontSize: "22px" }} />}
     </Button>
   );
 };

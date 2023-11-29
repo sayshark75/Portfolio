@@ -147,7 +147,7 @@ const Contact = () => {
               rounded={"base"}
               outline={"none"}
               border={"none"}
-              color={"light"}
+              color={"white"}
               gap={1}
               _hover={{}}
               _active={{ bgColor: "accentDark", color: "light" }}

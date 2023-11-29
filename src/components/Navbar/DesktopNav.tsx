@@ -1,7 +1,6 @@
 import { Flex, Text, useColorModeValue, useTheme } from "@chakra-ui/react";
 import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
-import { runAnim } from "../../animations/NavbarAnimations";
 
 type Props = {
   buttonData: NavbarButtonProps[];
@@ -35,8 +34,9 @@ const DesktopNav = ({ buttonData }: Props) => {
           transition={"500ms"}
           color={"text"}
           rounded={"full"}
-          animation={`${runAnim} 3s ease-in-out infinite`}
           cursor={"pointer"}
+          border={`3px solid`}
+          borderColor={`accent`}
           _hover={{ textShadow: `${_text} 3px 1px 2px` }}
           ml={3}
           as={"b"}

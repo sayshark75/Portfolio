@@ -23,6 +23,12 @@ import {
 } from "./sources/Links";
 import { MdAlternateEmail, MdCall, MdContacts, MdHome, MdInfo, MdMyLocation, MdQuestionAnswer, MdWork } from "react-icons/md";
 import { BsTwitter } from "react-icons/bs";
+import { blueTheme } from "./themes/BlueTheme";
+import { redTheme } from "./themes/RedTheme";
+import { greenTheme } from "./themes/GreenTheme";
+import { violetTheme } from "./themes/VioletTheme";
+import { orangeTheme } from "./themes/OrangeTheme";
+import { yellowTheme } from "./themes/yellowTheme";
 
 export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
   const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;
@@ -220,20 +226,26 @@ export const TimelineData: TimelineCardProps[] = [
 export const ThemeIconsData: ThemeIconsProps[] = [
   {
     color: "themeBlue",
+    theme: blueTheme,
   },
   {
     color: "themeRed",
+    theme: redTheme,
   },
   {
     color: "themeGreen",
+    theme: greenTheme,
   },
   {
     color: "themeViolet",
+    theme: violetTheme,
   },
   {
     color: "themeOrange",
+    theme: orangeTheme,
   },
   {
     color: "themeYellow",
+    theme: yellowTheme,
   },
 ];

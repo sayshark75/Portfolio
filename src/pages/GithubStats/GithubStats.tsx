@@ -45,7 +45,7 @@ const GithubStats = () => {
           _hover={{ shadow: "2xl" }}
           transition={"750ms"}
           borderRadius={"12"}
-          src={`https://streak-stats.demolab.com?user=sayshark75&theme=transparent&hide_border=true&background=${__primary}&currStreakLabel=${__accent}&currStreakNum=${__accent}&sideNums=${__accent}&dates=${__accent}&stroke=${__accent}&sideLabels=${__accent}&icon_color=${__accent}`}
+          src={`https://streak-stats.demolab.com?user=sayshark75&theme=transparent&hide_border=true&background=${__primary}&currStreakLabel=${__accent}&currStreakNum=${__accent}&sideNums=${__accent}&dates=${__accent}&stroke=${__accent}&sideLabels=${__accent}&icon_color=${__accent}&ring=${__accent}&fire=${__accent}`}
         />
       </Flex>
     </>

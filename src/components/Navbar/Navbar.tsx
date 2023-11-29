@@ -7,7 +7,7 @@ import { getNavbarButtonsData } from "../../CONSTANTS";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { NavbarButtonProps } from "../../TYPES";
-// import ThemeChanger from "./ThemeChanger";
+import ThemeChanger from "./ThemeChanger";
 
 const Navbar = () => {
   const context = useContext(ScrollContext);
@@ -19,11 +19,7 @@ const Navbar = () => {
     window.open(resumelink, "_blank");
   };
 
-  const NavButtonsData: NavbarButtonProps[] = getNavbarButtonsData(
-    context,
-    resumeDownload,
-    handleClick
-  );
+  const NavButtonsData: NavbarButtonProps[] = getNavbarButtonsData(context, resumeDownload, handleClick);
 
   return (
     <>
@@ -31,7 +27,7 @@ const Navbar = () => {
         <DesktopNav buttonData={NavButtonsData} />
       </Show>
       {/* Theme Preferences */}
-      {/* <ThemeChanger /> */}
+      <ThemeChanger />
 
       {/* Mobile Navbar */}
       <Show below="768px">

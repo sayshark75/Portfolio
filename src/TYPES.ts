@@ -25,6 +25,7 @@ export type ThemeContextProps = {
 };
 export type ThemeIconsProps = {
   color: string;
+  theme: ThemeConfig;
 };
 
 export interface ContextProviderProps {
