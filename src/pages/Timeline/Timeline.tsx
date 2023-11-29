@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue } from "@chakra-ui/react";
+import { Flex, useColorModeValue, useTheme } from "@chakra-ui/react";
 import MdHeading from "../../components/Headings/MdHeading";
 import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
@@ -6,11 +6,10 @@ import "react-vertical-timeline-component/style.min.css";
 import TimelineCard from "../../components/TimelinePage/TimelineCard";
 import { TimelineData } from "../../CONSTANTS";
 import { nanoid } from "nanoid";
-import { useTheme } from "@emotion/react";
 
 const Timeline = () => {
   const theme = useTheme();
-  if (!theme.hasOwnProperty("semanticTokens")) {
+  if (!theme.semanticTokens) {
     return null;
   }
   const { primaryLight, accent } = theme?.semanticTokens?.colors;
