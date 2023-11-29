@@ -93,6 +93,7 @@ const Contact = () => {
             gap={4}
           >
             <Input
+              color={"text"}
               name="name"
               pl={4}
               variant={"outline"}
@@ -109,6 +110,7 @@ const Contact = () => {
               onChange={handleChange}
             />
             <Input
+              color={"text"}
               name="email"
               pl={4}
               fontWeight={"300"}
@@ -125,6 +127,7 @@ const Contact = () => {
               onChange={handleChange}
             />
             <Textarea
+              color={"text"}
               name="message"
               fontWeight={"300"}
               fontSize={["10px", "12px", "14px", "14px", "16px"]}
