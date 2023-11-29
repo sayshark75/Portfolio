@@ -28,7 +28,7 @@ import { redTheme } from "./themes/RedTheme";
 import { greenTheme } from "./themes/GreenTheme";
 import { violetTheme } from "./themes/VioletTheme";
 import { orangeTheme } from "./themes/OrangeTheme";
-import { yellowTheme } from "./themes/yellowTheme";
+import { yellowTheme } from "./themes/YellowTheme";
 
 export const getNavbarButtonsData = (context: ScrollContextProps, resumeDownload: string, handleClick: () => void) => {
   const { handleHomeRef, handleAboutRef, handleSkillsRef, handleProjectsRef, handleContactRef } = context;

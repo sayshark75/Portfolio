@@ -61,7 +61,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
               fontWeight: 400,
               letterSpacing: "2px",
               color: "text",
-              mr: "2",
+              mr: "1",
               px: "2",
               rounded: "full",
               border: "1px solid",
