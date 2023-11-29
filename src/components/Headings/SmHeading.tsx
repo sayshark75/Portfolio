@@ -17,7 +17,7 @@ const SmHeading = ({ title1, title2 }: HeadingProps) => {
         animation={`${fadeTop} 1s ease-in forwards `}
         _active={{ transform: "translateY(-20px)", animation: `${ScalePing} 1s ease-in-out` }}
       >
-        <Highlight query={title2} styles={{ color: "light" }}>
+        <Highlight query={title2} styles={{ color: "text" }}>
           {`${title1} ${title2}`}
         </Highlight>
       </Text>

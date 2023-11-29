@@ -18,7 +18,7 @@ const MobileNav = ({ buttonsData }: Props) => {
       zIndex={"1"}
       w={"100%"}
       bgColor={"transparent"}
-      color={"#fff"}
+      color={"text"}
       justifyContent={"space-evenly"}
     >
       {buttonsData.map((button, index) => {

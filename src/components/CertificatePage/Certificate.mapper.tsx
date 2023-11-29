@@ -17,7 +17,7 @@ const CertificateMapper = () => {
             src={cert.image}
             alt={cert.tag}
           />
-          <Text fontFamily={"Poppins"} fontWeight={400} fontSize={"14px"} color={"light"} letterSpacing={"2px"} textAlign={"center"}>
+          <Text fontFamily={"Poppins"} fontWeight={400} fontSize={"14px"} color={"text"} letterSpacing={"2px"} textAlign={"center"}>
             {cert.tag}
           </Text>
         </Flex>

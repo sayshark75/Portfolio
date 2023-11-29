@@ -15,7 +15,7 @@ const GithubStats = () => {
   return (
     <>
       <Flex
-        color={"light"}
+        color={"text"}
         p={["2", "6"]}
         borderRadius={"md"}
         _hover={{ shadow: "2xl" }}

@@ -21,7 +21,7 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
   const isIntersecting = useIntersectionObserver(animRef);
   return (
     <Tooltip
-      bg={"light"}
+      bg={"text"}
       color={"darker"}
       fontFamily={"Poppins"}
       fontWeight={"600"}
@@ -36,12 +36,12 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
         size={["sm", "sm", "md", "md", "lg"]}
         opacity={0}
         mx={["1px", "2", "3", "5", "6"]}
-        color={"light"}
+        color={"text"}
         bgColor={"primaryLighter"}
         animation={isIntersecting ? `${fadeTop} 1s ease-in-out ${delay} forwards` : "none"}
         shadow={"dark-lg"}
         transition={"700ms"}
-        _hover={{ bgColor: "darker", color: "light" }}
+        _hover={{ bgColor: "darker", color: "text" }}
         border={"2px solid"}
         borderColor={"transparent"}
         _active={{ opacity: "0.5", transform: "translateY(5px)" }}

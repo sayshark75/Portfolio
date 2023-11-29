@@ -5,30 +5,34 @@ export const blueTheme: ThemeConfig = extendTheme({
     colors: {
       darker: {
         default: "#000",
-        _dark: "#000",
-      },
-      light: {
-        default: "#000",
         _dark: "#fff",
       },
-      text: {
+      white: {
         default: "#fff",
+        _dark: "#eee",
+      },
+      light: {
+        default: "#fff",
+        _dark: "#000",
+      },
+      text: {
+        default: "#000",
         _dark: "#CCC",
       },
       placeholder: {
-        default: "#aaa",
+        default: "#4a4a4a",
         _dark: "#aaa",
       },
       primary: {
-        default: "#ccc",
+        default: "#fff",
         _dark: "#2a2a2a",
       },
       primaryLight: {
-        default: "#bbb",
+        default: "#fff",
         _dark: "#3a3a3a",
       },
       primaryLighter: {
-        default: "#aaa",
+        default: "#ddd",
         _dark: "#4a4a4a",
       },
       accent: {

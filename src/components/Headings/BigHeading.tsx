@@ -17,7 +17,7 @@ const BigHeading = ({ title1, title2 }: HeadingProps) => {
         opacity={0}
         animation={isIntersecting ? `${fadeLeft} 1s ease-out forwards` : "none"}
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
-        color={"light"}
+        color={"text"}
         textShadow={["none", "none", "4px 4px 0px #4a4a4a"]}
         letterSpacing={"2px"}
       >

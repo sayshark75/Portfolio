@@ -39,7 +39,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           fontSize={["10px", "14px", "12px", "10px", "16px"]}
           as={"b"}
           fontFamily={"Poppins"}
-          fontWeight={300}
+          fontWeight={400}
           letterSpacing={"2px"}
           color={"text"}
         >
@@ -51,16 +51,16 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           gap={"4"}
           fontSize={["10px", "12px", "12px", "10px", "12px"]}
           fontWeight={"semibold"}
-          color={"light"}
+          color={"text"}
           h={"60px"}
         >
           <Highlight
             query={TStack}
             styles={{
               fontFamily: "Poppins",
-              fontWeight: 300,
+              fontWeight: 400,
               letterSpacing: "2px",
-              color: "light",
+              color: "text",
               mr: "2",
               px: "2",
               rounded: "full",
@@ -93,11 +93,11 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
               fontSize={["14px", "16px"]}
               width={"7rem"}
               fontWeight={["300", "400"]}
-              color={"#fff"}
+              color={"light"}
               letterSpacing={"2px"}
               _hover={{}}
               _active={{ bgColor: "accent", transform: "translateY(10px)" }}
-              bgColor={"primary"}
+              bgColor={"accent"}
             >
               View Page
             </Button>
@@ -113,7 +113,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
                 letterSpacing={"2px"}
                 _hover={{}}
                 _active={{ bgColor: "accent", transform: "translateY(10px)" }}
-                bgColor={"primary"}
+                bgColor={"accent"}
               >
                 Github
               </Button>

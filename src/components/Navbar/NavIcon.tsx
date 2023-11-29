@@ -17,7 +17,7 @@ const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
       border={"2px solid "}
       borderColor={"transparent"}
       rounded={"full"}
-      color={"light"}
+      color={"text"}
       opacity={0}
       animation={`${fadeBottom} 1s ease-in ${delay} forwards`}
       aria-label={alt}

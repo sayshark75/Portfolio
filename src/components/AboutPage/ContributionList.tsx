@@ -20,14 +20,14 @@ const ContributionList = () => {
             opacity={0}
             fontFamily={"Poppins"}
             fontSize={"12px"}
-            fontWeight={"300"}
-            color={"light"}
+            fontWeight={"400"}
+            color={"text"}
             mt={1}
             shadow={"xl"}
             cursor={"pointer"}
             bgColor={"primaryLighter"}
             animation={`${fadeRight} 1s ease-in forwards ${info.delay}`}
-            _hover={{ bgColor: "darker", color: "light" }}
+            _hover={{ bgColor: "light", color: "text" }}
             _active={{ animation: `${polishAnim} 80ms ease-in-out` }}
           >
             {info.title}

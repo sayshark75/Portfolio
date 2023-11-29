@@ -23,7 +23,7 @@ const DesktopNav = ({ buttonData }: Props) => {
       left={"0px"}
       w={"100%"}
       bgColor={"primary"}
-      color={"light"}
+      color={"text"}
       gap={"2"}
       py={3}
     >

@@ -12,8 +12,9 @@ const DescAboutPage = () => {
       opacity={0}
       ref={animRef}
       animation={isIntersecting ? `${fadeTop} 1s ease-in forwards 1s` : "none"}
-      color={"light"}
+      color={"text"}
       letterSpacing={"2px"}
+      fontWeight={"400"}
       fontFamily={"Poppins"}
       textAlign={["justify"]}
       fontSize={["12px", "14px"]}

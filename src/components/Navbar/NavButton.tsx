@@ -7,7 +7,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
     <Button
       onClick={onClick}
       bgColor={"primaryLight"}
-      color={"light"}
+      color={"text"}
       shadow={"xl"}
       border={"2px solid"}
       borderColor={"transparent"}
@@ -17,7 +17,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
       h={"25px"}
       transition={"200ms"}
       fontSize={"12px"}
-      fontWeight={"200"}
+      fontWeight={"300"}
       letterSpacing={"1.4px"}
       fontFamily={"Poppins"}
       _hover={{
@@ -26,7 +26,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
       _active={{
         transform: "translateY(4px)",
         backgroundColor: "transparent",
-        color: "light",
+        color: "text",
         borderColor: "accent",
         boxShadow: "0px 0px 8px #ffffff77",
       }}
