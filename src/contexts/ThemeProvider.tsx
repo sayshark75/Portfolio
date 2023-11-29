@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { ContextProviderProps, ThemeContextProps, ThemeFunction } from "../TYPES";
 import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
 import { blueTheme } from "../themes/BlueTheme";
+import changeThemeMeta from "../helpers/MobileChromeTheme";
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
@@ -12,8 +13,9 @@ const ThemeContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setTheme(blueTheme);
   }, []);
 
-  const handleTheme: ThemeFunction = (config) => {
+  const handleTheme: ThemeFunction = (config, metaColor) => {
     setTheme(config);
+    changeThemeMeta(metaColor);
   };
 
   return (

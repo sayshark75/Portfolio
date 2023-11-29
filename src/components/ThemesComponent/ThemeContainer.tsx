@@ -23,7 +23,7 @@ const ThemeContainer = () => {
             icon={<BiSolidColor style={{ color: "#fff" }} />}
             fontSize={"32px"}
             rounded={"full"}
-            onClick={() => handleTheme(icon.theme)}
+            onClick={() => handleTheme(icon.theme, icon.metaColor)}
             _active={{ opacity: "0.5", transform: "translateY(5px)" }}
             bgColor={icon.color}
             _hover={{}}

@@ -226,26 +226,32 @@ export const TimelineData: TimelineCardProps[] = [
 export const ThemeIconsData: ThemeIconsProps[] = [
   {
     color: "themeBlue",
+    metaColor: "#0954BD",
     theme: blueTheme,
   },
   {
     color: "themeRed",
+    metaColor: "#E10202",
     theme: redTheme,
   },
   {
     color: "themeGreen",
+    metaColor: "#11C402",
     theme: greenTheme,
   },
   {
     color: "themeViolet",
+    metaColor: "#8406C3",
     theme: violetTheme,
   },
   {
     color: "themeOrange",
+    metaColor: "#C44201",
     theme: orangeTheme,
   },
   {
     color: "themeYellow",
+    metaColor: "#DBBA03",
     theme: yellowTheme,
   },
 ];

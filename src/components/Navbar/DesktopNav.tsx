@@ -21,7 +21,7 @@ const DesktopNav = ({ buttonData }: Props) => {
       top={"0px"}
       left={"0px"}
       w={"100%"}
-      bgColor={"primary"}
+      bgColor={"transparent"}
       color={"text"}
       gap={"2"}
       py={3}

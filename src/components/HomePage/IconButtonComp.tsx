@@ -22,7 +22,7 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
   return (
     <Tooltip
       bg={"text"}
-      color={"darker"}
+      color={"light"}
       fontFamily={"Poppins"}
       fontWeight={"600"}
       letterSpacing={"1.4px"}
@@ -41,7 +41,7 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
         animation={isIntersecting ? `${fadeTop} 1s ease-in-out ${delay} forwards` : "none"}
         shadow={"dark-lg"}
         transition={"700ms"}
-        _hover={{ bgColor: "darker", color: "text" }}
+        _hover={{ bgColor: "light", color: "text" }}
         border={"2px solid"}
         borderColor={"transparent"}
         _active={{ opacity: "0.5", transform: "translateY(5px)" }}
