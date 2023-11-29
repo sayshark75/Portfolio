@@ -11,13 +11,7 @@ import Footer from "./components/Footer/Footer.tsx";
 
 function App() {
   return (
-    <Flex
-      transition={"500ms"}
-      direction={"column"}
-      w={"100%"}
-      minH={"100vh"}
-      bgColor={"#2a2a2a"}
-    >
+    <Flex transition={"500ms"} direction={"column"} w={"100%"} minH={"100vh"} bgColor={"primary"}>
       <Navbar />
       <Home />
       <About />

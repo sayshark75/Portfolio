@@ -13,7 +13,7 @@ const Timeline = () => {
   if (!theme.hasOwnProperty("semanticTokens")) {
     return null;
   }
-  const { primaryLight, accent } = theme.semanticTokens.colors;
+  const { primaryLight, accent } = theme?.semanticTokens?.colors;
   const _primaryLight = useColorModeValue(primaryLight.default, primaryLight._dark);
   const _accent = useColorModeValue(accent.default, accent._dark);
 

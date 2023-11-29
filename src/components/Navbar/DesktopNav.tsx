@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useColorModeValue, useTheme } from "@chakra-ui/react";
 import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
 import { runAnim } from "../../animations/NavbarAnimations";
@@ -8,19 +8,36 @@ type Props = {
 };
 
 const DesktopNav = ({ buttonData }: Props) => {
+  const theme = useTheme();
+  if (!theme.semanticTokens) {
+    return null;
+  }
+  const { text } = theme.semanticTokens.colors;
+  const _text = useColorModeValue(text.default, text._dark);
   return (
-    <Flex transition={"500ms"} pos={"fixed"} zIndex={"1"} top={"0px"} left={"0px"} w={"100%"} bgColor={"#2a2a2a"} color={"#FFFFFF"} gap={"2"} py={3}>
+    <Flex
+      transition={"500ms"}
+      pos={"fixed"}
+      zIndex={"1"}
+      top={"0px"}
+      left={"0px"}
+      w={"100%"}
+      bgColor={"primary"}
+      color={"light"}
+      gap={"2"}
+      py={3}
+    >
       <Flex alignItems={"center"} flex={1}>
         <Text
           w={"40px"}
           h={"40px"}
           textAlign={"center"}
           transition={"500ms"}
-          color={"textPrimary"}
+          color={"text"}
           rounded={"full"}
           animation={`${runAnim} 3s ease-in-out infinite`}
           cursor={"pointer"}
-          _hover={{ textShadow: "#0064FF 3px 1px 2px" }}
+          _hover={{ textShadow: `${_text} 3px 1px 2px` }}
           ml={3}
           as={"b"}
           fontSize={"2xl"}

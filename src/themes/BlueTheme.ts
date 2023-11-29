@@ -8,11 +8,11 @@ export const blueTheme: ThemeConfig = extendTheme({
         _dark: "#000",
       },
       light: {
-        default: "#fff",
+        default: "#000",
         _dark: "#fff",
       },
       text: {
-        default: "#CCC",
+        default: "#fff",
         _dark: "#CCC",
       },
       placeholder: {
@@ -20,15 +20,15 @@ export const blueTheme: ThemeConfig = extendTheme({
         _dark: "#aaa",
       },
       primary: {
-        default: "#2a2a2a",
+        default: "#ccc",
         _dark: "#2a2a2a",
       },
       primaryLight: {
-        default: "#3a3a3a",
+        default: "#bbb",
         _dark: "#3a3a3a",
       },
       primaryLighter: {
-        default: "#4a4a4a",
+        default: "#aaa",
         _dark: "#4a4a4a",
       },
       accent: {
