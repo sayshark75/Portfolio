@@ -5,7 +5,7 @@ import { Box } from "@chakra-ui/react";
 import { CarouselTypes } from "../../TYPES";
 
 const CarouselComp = ({ mapperFunction, slides }: CarouselTypes) => {
-  var settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,

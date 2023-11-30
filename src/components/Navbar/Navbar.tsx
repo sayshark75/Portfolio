@@ -3,11 +3,11 @@ import { useContext } from "react";
 
 import { resumeDownload, resumelink } from "../../sources/Links";
 import { ScrollContext } from "../../contexts/ScrollContext";
-import { getNavbarButtonsData } from "../../CONSTANTS";
 import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
 import { NavbarButtonProps } from "../../TYPES";
 import ThemeChanger from "./ThemeChanger";
+import { getNavbarButtonsData } from "../../sources/NavbarButtonDataGen";
 
 const Navbar = () => {
   const context = useContext(ScrollContext);

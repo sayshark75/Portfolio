@@ -4,10 +4,10 @@ import { ScrollContext } from "../../contexts/ScrollContext";
 import EmailModal from "../../components/EmailModal/EmailModal";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
 import DescHome from "../../components/HomePage/DescHome";
-import { socialBtnDataCreator } from "../../CONSTANTS";
 import { nanoid } from "nanoid";
 import BigHeading from "../../components/Headings/BigHeading";
 import ThemeContainer from "../../components/ThemesComponent/ThemeContainer";
+import { socialBtnDataCreator } from "../../sources/SocialButtonsDataGen";
 
 const Home = () => {
   const scrollContext = useContext(ScrollContext);

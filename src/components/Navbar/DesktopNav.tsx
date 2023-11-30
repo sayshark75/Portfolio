@@ -1,18 +1,18 @@
-import { Flex, Text, useColorModeValue, useTheme } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
+import useCustomTheme from "../../hooks/useCustomTheme";
 
 type Props = {
   buttonData: NavbarButtonProps[];
 };
 
 const DesktopNav = ({ buttonData }: Props) => {
-  const theme = useTheme();
-  if (!theme.semanticTokens) {
+  const themeData = useCustomTheme();
+  if (!themeData) {
     return null;
   }
-  const { text } = theme.semanticTokens.colors;
-  const _text = useColorModeValue(text.default, text._dark);
+  const { _text } = themeData;
   return (
     <Flex
       transition={"500ms"}

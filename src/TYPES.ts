@@ -112,3 +112,17 @@ export type NavButtonProps = {
 export type DummyDateProps = { date: string; time: string };
 
 export type mailDataType = { name: string; email: string; message: string };
+
+export type ThemeInput =
+  | {
+      light: ColorScale | [from: string, to: string];
+      dark?: ColorScale | [from: string, to: string] | undefined;
+    }
+  | {
+      light?: ColorScale | [from: string, to: string] | undefined;
+      dark: ColorScale | [from: string, to: string];
+    };
+
+export type ColorScale = [level0: Color, level1: Color, level2: Color, level3: Color, level4: Color];
+
+export type Color = string;

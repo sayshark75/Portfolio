@@ -9,10 +9,10 @@ import MdHeading from "../../components/Headings/MdHeading";
 import CopyButton from "../../components/ContactPage/CopyButton";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
 import { nanoid } from "nanoid";
-import { socialBtnDataCreator } from "../../CONSTANTS";
 import { sendMail } from "../../api/mail.api";
 import { VscError } from "react-icons/vsc";
 import { mailDataType } from "../../TYPES";
+import { socialBtnDataCreator } from "../../sources/SocialButtonsDataGen";
 
 const Contact = () => {
   const context = useContext(ScrollContext);
@@ -24,9 +24,22 @@ const Contact = () => {
   });
   const [status, setStatus] = useState<string>("idle");
 
+  useEffect(() => {
+    let id: number;
+    if (status === "failed") {
+      id = setTimeout(() => {
+        setStatus("idle");
+      }, 3000);
+    }
+    return () => {
+      clearTimeout(id);
+    };
+  }, [status]);
+
   if (!context) {
     return;
   }
+
   const SocialButtonsData = socialBtnDataCreator(onOpen);
 
   const { ContactRef } = context;
@@ -51,18 +64,6 @@ const Contact = () => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
   };
-
-  useEffect(() => {
-    let id: number;
-    if (status === "failed") {
-      id = setTimeout(() => {
-        setStatus("idle");
-      }, 3000);
-    }
-    return () => {
-      clearTimeout(id);
-    };
-  }, [status]);
 
   return (
     <>

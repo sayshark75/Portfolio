@@ -1,16 +1,16 @@
-import { Flex, IconButton, useColorMode, useColorModeValue, useTheme } from "@chakra-ui/react";
+import { Flex, IconButton, useColorMode } from "@chakra-ui/react";
 import changeThemeMeta from "../../helpers/MobileChromeTheme";
 import { MdNightsStay } from "react-icons/md";
 import { FaSun } from "react-icons/fa";
+import useCustomTheme from "../../hooks/useCustomTheme";
 
 const ThemeChanger = () => {
-  const theme = useTheme();
-  if (!theme.semanticTokens) {
+  const themeData = useCustomTheme();
+  const { colorMode, toggleColorMode } = useColorMode();
+  if (!themeData) {
     return null;
   }
-  const { accent } = theme.semanticTokens.colors;
-  const _accent = useColorModeValue(accent.default, accent._dark);
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { _accent } = themeData;
 
   const handleColorMode = () => {
     toggleColorMode();

@@ -1,4 +1,4 @@
-import { Flex, useColorModeValue, useTheme } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import MdHeading from "../../components/Headings/MdHeading";
 import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
@@ -6,15 +6,15 @@ import "react-vertical-timeline-component/style.min.css";
 import TimelineCard from "../../components/TimelinePage/TimelineCard";
 import { TimelineData } from "../../CONSTANTS";
 import { nanoid } from "nanoid";
+import useCustomTheme from "../../hooks/useCustomTheme";
 
 const Timeline = () => {
-  const theme = useTheme();
-  if (!theme.semanticTokens) {
+  const themeData = useCustomTheme();
+  if (!themeData) {
     return null;
   }
-  const { primaryLight, accent } = theme?.semanticTokens?.colors;
-  const _primaryLight = useColorModeValue(primaryLight.default, primaryLight._dark);
-  const _accent = useColorModeValue(accent.default, accent._dark);
+
+  const { _primaryLight, _accent } = themeData;
 
   return (
     <Flex justify={"center"} alignItems={"center"} direction={"column"} w={"100%"} m={"auto"} gap={"4"} pt={"5"} mt={"5"}>

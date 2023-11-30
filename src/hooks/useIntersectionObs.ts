@@ -18,7 +18,7 @@ const useIntersectionObserver = (ref: React.RefObject<Element>, options = {}) =>
         }
       };
     }
-  }, [ref, options]);
+  }, [ref, isIntersecting, options]);
 
   return isIntersecting;
 };

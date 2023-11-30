@@ -1,4 +1,4 @@
-let themeMeta = document.querySelector(`meta[name="theme-color"]`);
+const themeMeta = document.querySelector(`meta[name="theme-color"]`);
 
 const changeThemeMeta = (color: string) => {
   if (themeMeta) {
