@@ -48,6 +48,8 @@
 
 - Day 23: Colors Maintained across project using theme.
 
+- Day 24: Fixed Eslint Errors
+
 ## My Learnings
 
 - Basic types
