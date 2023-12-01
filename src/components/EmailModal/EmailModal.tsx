@@ -14,12 +14,12 @@ const EmailModal = ({ isOpen, onClose }: EmailModalProps) => {
 
           <ModalFooter>
             <a href={mailLinkTemplate} target={"_blank"} rel="noreferrer">
-              <Button colorScheme="telegram" mr={3} onClick={onClose}>
+              <Button bgColor={"accent"} color={"white"} mr={3} onClick={onClose}>
                 Yes
               </Button>
             </a>
             <a href={mailLink} target={"_blank"} rel="noreferrer">
-              <Button colorScheme="telegram" onClick={onClose}>
+              <Button bgColor={"accent"} color={"white"} onClick={onClose}>
                 No
               </Button>
             </a>
