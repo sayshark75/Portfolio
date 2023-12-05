@@ -19,11 +19,11 @@ const ThemeContainer = () => {
         return (
           <IconButton
             key={nanoid()}
-            aria-label={`A Button to Change the Theme to color: ${icon.color}`}
+            aria-label={`A Button to Change the Theme to color: ${icon.themeName}`}
             icon={<BiSolidColor style={{ color: "#fff" }} />}
             fontSize={"32px"}
             rounded={"full"}
-            onClick={() => handleTheme(icon.theme, icon.metaColor)}
+            onClick={() => handleTheme(icon.theme, icon.metaColor, icon.themeName)}
             _active={{ opacity: "0.5", transform: "translateY(5px)" }}
             bgColor={icon.color}
             _hover={{}}

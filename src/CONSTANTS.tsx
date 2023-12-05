@@ -114,30 +114,36 @@ export const ThemeIconsData: ThemeIconsProps[] = [
     color: "themeBlue",
     metaColor: "#0954BD",
     theme: blueTheme,
+    themeName: "blue",
   },
   {
     color: "themeRed",
     metaColor: "#E10202",
     theme: redTheme,
+    themeName: "red",
   },
   {
     color: "themeGreen",
     metaColor: "#11C402",
     theme: greenTheme,
+    themeName: "green",
   },
   {
     color: "themeViolet",
     metaColor: "#8406C3",
     theme: violetTheme,
+    themeName: "violet",
   },
   {
     color: "themeOrange",
     metaColor: "#C44201",
     theme: orangeTheme,
+    themeName: "orange",
   },
   {
     color: "themeYellow",
     metaColor: "#DBBA03",
     theme: yellowTheme,
+    themeName: "yellow",
   },
 ];

@@ -13,9 +13,8 @@ const AboutCard = () => {
   return (
     <Flex
       rounded={"md"}
-      shadow={"xl"}
       ref={animRef}
-      bgColor={"primaryLight"}
+      bgColor={"transparent"}
       pos={"relative"}
       justifyContent={"center"}
       alignItems={"flex-start"}

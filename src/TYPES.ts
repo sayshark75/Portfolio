@@ -17,16 +17,18 @@ export type ScrollContextFunctions = {
 
 export type ScrollContextProps = ScrollContextRefs & ScrollContextFunctions;
 
-export type ThemeFunction = (config: ThemeConfig, metaColor: string) => void;
+export type ThemeFunction = (config: ThemeConfig, metaColor: string, name: string) => void;
 
 export type ThemeContextProps = {
   theme: ThemeConfig;
   handleTheme: ThemeFunction;
+  themeName: string;
 };
 export type ThemeIconsProps = {
   color: string;
   theme: ThemeConfig;
   metaColor: string;
+  themeName: string;
 };
 
 export interface ContextProviderProps {

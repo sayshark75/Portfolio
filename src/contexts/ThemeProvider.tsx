@@ -8,18 +8,21 @@ const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 const ThemeContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<ThemeConfig>({});
+  const [themeName, setThemeName] = useState<string>("blue");
 
   useEffect(() => {
     setTheme(blueTheme);
+    setThemeName("blue");
   }, []);
 
-  const handleTheme: ThemeFunction = (config, metaColor) => {
+  const handleTheme: ThemeFunction = (config, metaColor, name = "blue") => {
     setTheme(config);
     changeThemeMeta(metaColor);
+    setThemeName(name);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, handleTheme }}>
+    <ThemeContext.Provider value={{ theme, themeName, handleTheme }}>
       <ChakraProvider theme={theme}>{children}</ChakraProvider>
     </ThemeContext.Provider>
   );
