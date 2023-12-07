@@ -14,7 +14,7 @@ const Timeline = () => {
     return null;
   }
 
-  const { _primaryLight, _accent } = themeData;
+  const { _primaryLight, _accent, _darker } = themeData;
 
   return (
     <Flex justify={"center"} alignItems={"center"} direction={"column"} w={"100%"} m={"auto"} gap={"4"} pt={"5"} mt={"5"}>
@@ -25,7 +25,7 @@ const Timeline = () => {
           return (
             <VerticalTimelineElement
               key={nanoid()}
-              contentStyle={{ background: _primaryLight, color: "#fff" }}
+              contentStyle={{ background: _primaryLight, color: _darker }}
               contentArrowStyle={{ borderRight: `7px solid ${_primaryLight}` }}
               date={timeline.date}
               iconStyle={{ background: _accent, color: "#fff" }}

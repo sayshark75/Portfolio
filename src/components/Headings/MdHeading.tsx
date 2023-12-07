@@ -20,6 +20,7 @@ const MdHeading = ({ title1, title2 }: HeadingProps) => {
         ref={animRef}
         cursor={"pointer"}
         rounded={"full"}
+        opacity={0}
         animation={isIntersecting ? `${fadeTop} 1s ease-in forwards` : "none"}
         _active={{ transform: "translateY(-20px)", animation: isIntersecting ? `${ScalePing} 1s ease-in-out` : "none" }}
       >

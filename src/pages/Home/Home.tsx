@@ -34,7 +34,7 @@ const Home = () => {
         gap={"12"}
       >
         <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
-        <Flex transition={"1000"} w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
+        <Flex w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
           <DescHome />
         </Flex>
         <ThemeContainer />

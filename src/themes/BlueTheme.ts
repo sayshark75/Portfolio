@@ -8,7 +8,7 @@ export const blueTheme: ThemeConfig = extendTheme({
         _dark: "#fff",
       },
       white: {
-        default: "#fff",
+        default: "#ccc",
         _dark: "#eee",
       },
       light: {
@@ -24,7 +24,7 @@ export const blueTheme: ThemeConfig = extendTheme({
         _dark: "#aaa",
       },
       primary: {
-        default: "#fff",
+        default: "#fefefe",
         _dark: "#2a2a2a",
       },
       primaryLight: {

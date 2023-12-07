@@ -16,7 +16,7 @@ const ResumeButton = () => {
         animation={`${ScalePing} 1s ease-in 2s forwards`}
         bgColor={"accent"}
         opacity={0}
-        color={"white"}
+        color={"light"}
         transition={"200ms"}
         _hover={{}}
         _active={{ bgColor: "darker" }}

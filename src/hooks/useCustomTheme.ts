@@ -1,5 +1,5 @@
 import { useColorModeValue, useTheme } from "@chakra-ui/react";
-import { ThemeInput } from "../TYPES";
+import { CustomThemeType } from "../TYPES";
 
 const useCustomTheme = () => {
   const theme = useTheme();
@@ -8,7 +8,7 @@ const useCustomTheme = () => {
     return null;
   }
 
-  const { primary, accent, text, primaryLight } = theme.semanticTokens.colors;
+  const { primary, accent, text, primaryLight, darker } = theme.semanticTokens.colors;
   //! We cannot proceed without theme.semanticTokens present.
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -18,20 +18,14 @@ const useCustomTheme = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const _text = useColorModeValue(text.default, text._dark);
   // eslint-disable-next-line react-hooks/rules-of-hooks
+  const _darker = useColorModeValue(darker.default, darker._dark);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const _primaryLight = useColorModeValue(primaryLight.default, primaryLight._dark);
 
   const __primary = _primary.split("#")[1];
   const __accent = _accent.split("#")[1];
 
-  // Resolve type in Future
-  const resObj: {
-    customTheme: ThemeInput;
-    __primary: string;
-    __accent: string;
-    _accent: string;
-    _text: string;
-    _primaryLight: string;
-  } = {
+  const resObj: CustomThemeType = {
     customTheme: {
       light: [_primary, _accent],
     },
@@ -40,6 +34,7 @@ const useCustomTheme = () => {
     __primary,
     __accent,
     _primaryLight,
+    _darker,
   };
   return resObj;
 };

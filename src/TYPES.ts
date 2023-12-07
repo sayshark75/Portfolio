@@ -128,3 +128,13 @@ export type ThemeInput =
 export type ColorScale = [level0: Color, level1: Color, level2: Color, level3: Color, level4: Color];
 
 export type Color = string;
+
+export type CustomThemeType = {
+  customTheme: ThemeInput;
+  __primary: string;
+  __accent: string;
+  _accent: string;
+  _text: string;
+  _primaryLight: string;
+  _darker: string;
+};
