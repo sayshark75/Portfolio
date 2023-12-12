@@ -74,6 +74,12 @@ export type TimelineCardProps = {
   icon: JSX.Element;
 };
 
+export enum ProjectStatus {
+  Building = "In Progress",
+  Development = "In Development",
+  Completed = "Completed",
+}
+
 export type ProjectDataProps = {
   live: string;
   github: string;
@@ -82,6 +88,7 @@ export type ProjectDataProps = {
   workType: string;
   heading2: string;
   summary: string;
+  status: ProjectStatus;
   TStack: string[];
 };
 

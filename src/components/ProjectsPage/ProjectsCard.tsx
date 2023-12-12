@@ -2,7 +2,7 @@ import { Button, Flex, Highlight, Text } from "@chakra-ui/react";
 import { ProjectDataProps } from "../../TYPES";
 import SmHeading from "../Headings/SmHeading";
 
-const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summary, TStack }: ProjectDataProps) => {
+const ProjectsCard = ({ live, github, image, workType, heading1, heading2, status, summary, TStack }: ProjectDataProps) => {
   return (
     <Flex
       transition={"500ms"}
@@ -79,12 +79,26 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
           fontSize={["10px", "12px"]}
           letterSpacing={"2px"}
           bgColor={"accent"}
-          color={"white"}
+          color={"#fff"}
           rounded={"full"}
           px={"12px"}
           py={"2px"}
         >
           {workType}
+        </Text>
+        <Text
+          fontFamily={"Poppins"}
+          alignSelf={"flex-start"}
+          fontWeight={400}
+          fontSize={["10px", "12px"]}
+          letterSpacing={"2px"}
+          bgColor={"accentLight"}
+          color={"#fff"}
+          rounded={"full"}
+          px={"12px"}
+          py={"2px"}
+        >
+          {status}
         </Text>
         <Flex transition={"500ms"} p={"2"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"}>
           <a href={live} target={"_blank"} rel="noreferrer">
@@ -93,7 +107,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
               fontSize={["14px", "16px"]}
               width={"7rem"}
               fontWeight={["300", "400"]}
-              color={"white"}
+              color={"#fff"}
               letterSpacing={"2px"}
               _hover={{}}
               _active={{ bgColor: "accent", transform: "translateY(10px)" }}
@@ -109,7 +123,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, summa
                 fontSize={["14px", "16px"]}
                 width={"7rem"}
                 fontWeight={["300", "400"]}
-                color={"white"}
+                color={"#fff"}
                 letterSpacing={"2px"}
                 _hover={{}}
                 _active={{ bgColor: "accent", transform: "translateY(10px)" }}

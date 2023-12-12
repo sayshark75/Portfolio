@@ -10,8 +10,6 @@ export const TopBarLinkedIn: string = "https://www.linkedin.com/company/topbar-c
 export const TopBarWebsite: string = "https://www.topbar.in/";
 export const AutotronLogo: string = "https://www.autotron.tech/logo.png";
 export const AutotronWebsite: string = "https://www.autotron.tech/";
-export const EquationsLLCWebsite: string = "https://equations-llc.vercel.app/";
-export const TruptiWebsite: string = "https://www.trupti.co.in/";
 export const AutotronLinkedIn: string = "";
 export const MasaiLogo: string = "https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png";
 export const MasaiWebsite: string = "https://www.masaischool.com/";
@@ -59,3 +57,9 @@ export const GadgetRamboLive: string = "https://gadget-rambo.netlify.app/";
 export const KoovsGithub: string = "https://github.com/sukanta255/ordinary-summer-5089";
 
 export const KoovsLive: string = "https://frontend-mohit-6164.vercel.app/";
+
+export const EquationsLLCWebsite: string = "https://equations-llc.vercel.app/";
+
+export const TruptiWebsite: string = "https://www.trupti.co.in/";
+
+export const yogiInternationalWebsite: string = "https://yogis-international.myshopify.com/";
