@@ -31,7 +31,7 @@ const GithubStats = () => {
           transition={"750ms"}
           _hover={{ shadow: "2xl" }}
           borderRadius={"12"}
-          src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api?username=sayshark75&show_icons=true&locale=en&custom_title=My Statistics&bg_color=${__primary}&hide_border=true&title_color=${__accent}&text_color=${__accent}`}
+          src={`https://github-readme-stats-git-master-sayshark75.vercel.app/api?username=sayshark75&show_icons=true&locale=en&custom_title=My Statistics&bg_color=${__primary}&hide_border=true&title_color=${__accent}&text_color=${__accent}&icon_color=${__accent}`}
           alt={"Github Card"}
         />
         <Image
