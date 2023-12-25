@@ -47,7 +47,7 @@ const ProfilePic = () => {
       <Image
         rounded={["full"]}
         pos={["absolute", "absolute", "static"]}
-        w={["130px", "130px", "auto"]}
+        w={["130px", "130px", "480px"]}
         border={"2px solid"}
         borderColor={"transparent"}
         borderX={["2px solid", "2px solid", "none"]}
