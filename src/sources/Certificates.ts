@@ -7,11 +7,13 @@ import cert_ProgWebApps from "../assets/certificates/ProgWebAppDev.jpg";
 import cert_MongoDB from "../assets/certificates/MDB.jpg";
 import cert_JSAdvanced from "../assets/certificates/JSAdv.jpg";
 import cert_TypeScript from "../assets/certificates/Typescript.jpg";
+import cert_FSWDev from "../assets/certificates/FSWDev.jpg";
 
 export const certificates = [
   { image: cert_CSS, tag: "CSS" },
   { image: cert_AIHealthCare, tag: "AI Health Care" },
   { image: cert_Express, tag: "Express JS" },
+  { image: cert_FSWDev, tag: "Full Stack Web Developement" },
   { image: cert_HTML5, tag: "HTML5" },
   { image: cert_ProgWebApps, tag: "Progressive Web-Apps" },
   { image: cert_JSAdvanced, tag: "JS Advanced" },
