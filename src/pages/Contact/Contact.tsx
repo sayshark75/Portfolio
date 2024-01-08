@@ -108,6 +108,7 @@ const Contact = () => {
               value={data.name}
               placeholder="Your Name"
               required
+              autoComplete="name"
               onChange={handleChange}
             />
             <Input
@@ -125,6 +126,7 @@ const Contact = () => {
               value={data.email}
               placeholder="Your Email"
               required
+              autoComplete="email"
               onChange={handleChange}
             />
             <Textarea
