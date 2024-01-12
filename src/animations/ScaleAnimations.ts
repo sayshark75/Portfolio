@@ -14,18 +14,3 @@ export const ScalePing: string = keyframes`
   transform:scale(1);
 }
 `;
-
-export const ScaleCertificate: string = keyframes`
-0%{
-  transform:scale(1);
-}
-10%{
-  transform:scale(2);
-}
-90%{
-  transform:scale(2);
-}
-100%{
-  transform:scale(1);
-}
-`;
