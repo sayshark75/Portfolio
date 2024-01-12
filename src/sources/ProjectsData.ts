@@ -48,9 +48,9 @@ export const ProjectsData: ProjectDataProps[] = [
     heading1: "Equations",
     heading2: "(Virtual CFO)",
     status: ProjectStatus.Development,
-    workType: "Team of 3 Members",
+    workType: "Team of 2 Members",
     summary: "Provides financial strategy and accounting solutions for startups.",
-    TStack: ["React", "ViteJS", "Express", "ChakraUI"],
+    TStack: ["React", "NextJs", "SSR", "Express", "ChakraUI"],
   },
   {
     live: TruptiWebsite,
