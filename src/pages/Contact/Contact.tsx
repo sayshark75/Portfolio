@@ -8,7 +8,6 @@ import EmailModal from "../../components/EmailModal/EmailModal";
 import MdHeading from "../../components/Headings/MdHeading";
 import CopyButton from "../../components/ContactPage/CopyButton";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
-import { nanoid } from "nanoid";
 import { sendMail } from "../../api/mail.api";
 import { VscError } from "react-icons/vsc";
 import { mailDataType } from "../../TYPES";
@@ -87,7 +86,7 @@ const Contact = () => {
             m={"auto"}
             maxW={"480px"}
             p={4}
-            shadow={"2xl"}
+            shadow={"lg"}
             color={"light"}
             rounded={"xl"}
             direction={"column"}
@@ -146,43 +145,71 @@ const Contact = () => {
               required
               onChange={handleChange}
             />
-            <Button
-              isDisabled={status === "success" || status === "failed" || status === "loading"}
-              _disabled={{ cursor: "not-allowed" }}
-              bgColor={status === "success" ? "#15A409" : status === "failed" ? "#FF1E1E" : "accent"}
-              rounded={"base"}
-              outline={"none"}
-              border={"none"}
-              color={"white"}
-              gap={1}
-              _hover={{}}
-              _active={{ bgColor: "accentDark", color: "light" }}
-              type="submit"
-              fontWeight={"300"}
-              fontSize={["10px", "12px", "14px", "14px", "16px"]}
-              letterSpacing={"2px"}
-            >
-              {status === "loading" ? (
-                <>
-                  <Text>Loading</Text> <Spinner size={"md"} />
-                </>
-              ) : status === "failed" ? (
-                <>
-                  <Text>Oops...</Text>
-                  <VscError />
-                </>
-              ) : status === "success" ? (
-                <>
-                  <Text>Thank You!</Text>
-                  <MdOutlineCheckCircle />
-                </>
-              ) : (
-                <>
-                  <Text>Send</Text>
-                  <MdOutlineSend />
-                </>
-              )}
-            </Button>
+            <Flex w={"100%"} pos={"relative"}>
+              <Button
+                w={"100%"}
+                pos={"relative"}
+                zIndex={1}
+                isDisabled={status === "success" || status === "failed" || status === "loading"}
+                _disabled={{ cursor: "not-allowed" }}
+                bgColor={status === "success" ? "#15A409" : status === "failed" ? "#FF1E1E" : "accent"}
+                rounded={"base"}
+                outline={"none"}
+                border={"none"}
+                color={"white"}
+                gap={1}
+                _hover={{
+                  color: "darker",
+                  _after: {
+                    w: "100%",
+                    border: "1px solid",
+                    borderColor: "accent",
+                    left: "0px",
+                  },
+                }}
+                _active={{ bgColor: "accentDark", color: "light" }}
+                type="submit"
+                fontWeight={"300"}
+                fontSize={["10px", "12px", "14px", "14px", "16px"]}
+                letterSpacing={"2px"}
+                _after={{
+                  content: '"."',
+                  w: "0px",
+                  minH: "100%",
+                  rounded: "base",
+                  transition: "500ms cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+                  color: "transparent",
+                  pos: "absolute",
+                  bgColor: "primary",
+                  top: "0px",
+                  right: "0px",
+                  zIndex: -1,
+                  border: "0px solid",
+                  borderColor: "transparent",
+                }}
+              >
+                {status === "loading" ? (
+                  <>
+                    <Text>Loading</Text> <Spinner size={"md"} />
+                  </>
+                ) : status === "failed" ? (
+                  <>
+                    <Text>Oops...</Text>
+                    <VscError />
+                  </>
+                ) : status === "success" ? (
+                  <>
+                    <Text>Thank You!</Text>
+                    <MdOutlineCheckCircle />
+                  </>
+                ) : (
+                  <>
+                    <Text>Send</Text>
+                    <MdOutlineSend />
+                  </>
+                )}
+              </Button>
+            </Flex>
           </Flex>
         </form>
 
@@ -191,10 +218,10 @@ const Contact = () => {
           <CopyButton title="sayyedsharuk75@gmail.com" />
         </Flex>
         <Flex mb={"12"} mx={"2"} gap={["2", "3"]}>
-          {SocialButtonsData.map((info) => {
+          {SocialButtonsData.map((info, index) => {
             return (
               <IconButtonComp
-                key={nanoid()}
+                key={`social-btn-contact-${index}`}
                 icon={info.icon}
                 tooltip={info.tooltip}
                 label={info.label}

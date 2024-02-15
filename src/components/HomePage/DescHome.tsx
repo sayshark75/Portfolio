@@ -19,7 +19,7 @@ const DescHome = () => {
       m={["4", "8"]}
       letterSpacing={"2px"}
       opacity={0}
-      animation={isIntersecting ? `${fadeTop} 1s ease-out forwards` : "none"}
+      animation={isIntersecting ? `${fadeTop} 500ms ease forwards` : "none"}
     >
       A Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can
       develop robust and efficient products. Keep up with the latest advancements in the field, and work well with teams to deliver the best

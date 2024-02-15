@@ -2,7 +2,6 @@ import { Flex } from "@chakra-ui/react";
 import Navbar from "./components/Navbar/Navbar.tsx";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About.tsx";
-import Certificates from "./pages/Certificates/Certificates.tsx";
 import Timeline from "./pages/Timeline/Timeline.tsx";
 import Projects from "./pages/Projects/Projects.tsx";
 import TechnicalSkills from "./pages/TechnicalSkills/TechnicalSkills.tsx";
@@ -15,7 +14,6 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Certificates />
       <Timeline />
       <Projects />
       <TechnicalSkills />

@@ -43,6 +43,7 @@ export const TopBarQuery = [
   "ChakraUI",
   "AWS EC2 ",
   "AWS S3",
+  "Docker",
 ];
 export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
 export const MasaiQuery = [
@@ -71,7 +72,8 @@ export const TimelineData: TimelineCardProps[] = [
     role: "Fullstack Web Developer",
     query: TopBarQuery,
     highlight: TopBarQuery.join(" "),
-    date: "Aug 2023 - Present",
+    dateStart: "Aug 2023",
+    dateEnd: "Present",
     icon: <MdWork />,
   },
   {
@@ -82,7 +84,8 @@ export const TimelineData: TimelineCardProps[] = [
     role: "Learning Full Stack Web Developement",
     query: MasaiQuery,
     highlight: MasaiQuery.join(" "),
-    date: "Aug 2022 - Apr 2023",
+    dateStart: "Aug 2022",
+    dateEnd: "Apr 2023",
     icon: <RiGraduationCapFill />,
   },
   {
@@ -93,7 +96,8 @@ export const TimelineData: TimelineCardProps[] = [
     role: "Embedded Developer",
     query: AutotronQuery,
     highlight: AutotronQuery.join(" "),
-    date: "Apr 2020 - Aug 2022",
+    dateStart: "Apr 2020",
+    dateEnd: "Aug 2022",
     icon: <MdWork />,
   },
   {
@@ -104,7 +108,8 @@ export const TimelineData: TimelineCardProps[] = [
     role: "Master of Science - Electronics",
     query: UOPQuery,
     highlight: UOPQuery.join(" "),
-    date: "Aug 2018 - Apr 2020",
+    dateStart: "Aug 2018",
+    dateEnd: "Apr 2020",
     icon: <RiGraduationCapFill />,
   },
 ];

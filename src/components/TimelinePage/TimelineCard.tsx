@@ -2,8 +2,11 @@ import { Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { TimelineCardProps } from "../../TYPES";
+import { RefObject, useRef } from "react";
+import useIntersectionObserver from "../../hooks/useIntersectionObs";
+import { fadeBottom, fadeLeft } from "../../animations/FadeAnimations";
 
-const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }: TimelineCardProps) => {
+const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, dateStart, dateEnd }: TimelineCardProps) => {
   const handleVisitLinkedIn = (type: string) => {
     if (type === "linkedin") {
       window.open(linkedin, "_blank");
@@ -12,8 +15,54 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
     }
   };
 
+  const animRef: RefObject<HTMLParagraphElement> = useRef(null);
+  const isIntersecting = useIntersectionObserver(animRef);
+
   return (
-    <Flex gap={3} rounded={"md"} direction={"column"} minW={"200px"} w={"100%"} maxW={"750px"}>
+    <Flex
+      gap={3}
+      rounded={"md"}
+      ref={animRef}
+      direction={"column"}
+      minW={"200px"}
+      w={"100%"}
+      animation={isIntersecting ? `${fadeBottom} 500ms ease 600ms forwards` : "none"}
+      opacity={0}
+      maxW={"600px"}
+      shadow={"lg"}
+      borderBottom={"3px solid"}
+      borderBottomColor={"accent"}
+      p={["12px", "40px"]}
+    >
+      {/* Time and Date */}
+      <Flex w={"max-content"} animation={isIntersecting ? `${fadeLeft} 500ms ease 1.2s forwards` : "none"} opacity={0} pos={"relative"}>
+        <Text
+          fontSize={"12px"}
+          fontWeight={"500"}
+          color={"text"}
+          letterSpacing={"2px"}
+          mb={"2px"}
+          _after={{
+            content: '"."',
+            w: "0px",
+            h: "1px",
+            transition: "500ms cubic-bezier(0.6, -0.28, 0.74, 0.05)",
+            color: "transparent",
+            bgColor: "accent",
+            pos: "absolute",
+            bottom: "0px",
+            left: "-6px",
+          }}
+          _hover={{
+            _after: {
+              h: "1px",
+              w: "110%",
+            },
+          }}
+        >
+          <Highlight query={dateEnd} styles={{ color: "accent" }}>{`${dateStart} - ${dateEnd}`}</Highlight>
+        </Text>
+      </Flex>
       {/* Company info */}
       <Flex flex={1} gap={2} direction={["column", "row"]}>
         {/* Logo of Company */}
@@ -68,11 +117,12 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight }
               styles={{
                 border: "1px solid",
                 borderColor: "accent",
-                fontSize: ["10px", "12px"],
+                fontSize: ["11px", "12px"],
                 fontWeight: "400",
-                lineHeight: "22px",
+                lineHeight: ["32px", "32px"],
                 rounded: "full",
-                px: ["4px", "12px"],
+                px: ["8px", "12px"],
+                py: ["2px", "3px"],
                 mr: ["0px", "8px"],
                 color: "text",
               }}

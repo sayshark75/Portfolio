@@ -11,10 +11,9 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
       bgColor={"primaryLight"}
       direction={["column"]}
       rounded={"lg"}
+      overflow={"hidden"}
       shadow={"xl"}
-      p={[2, 4]}
-      justifyContent={"space-between"}
-      alignSelf={"stretch"}
+      minH={"100%"}
     >
       {/* Image of Project */}
       <Flex
@@ -24,13 +23,13 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
         bgRepeat={"no-repeat"}
         bgPos={"top"}
         w={"100%"}
-        h={["130px", "230px", "160px", "170px", "230px"]}
+        h={["160px", "230px", "160px", "170px", "230px"]}
         mb={4}
         transition={"7s"}
         _hover={{ bgPos: "bottom" }}
       ></Flex>
       {/* Details of Project */}
-      <Flex transition={"500ms"} direction={"column"} gap={2}>
+      <Flex transition={"500ms"} direction={"column"} gap={1} p={["8px 16px", 4]}>
         <Flex transition={"500ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
           <SmHeading title1={heading1} title2={heading2 || ""} />
         </Flex>
@@ -48,11 +47,11 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
         <Text
           transition={"500ms"}
           justifyContent={"center"}
-          gap={"4"}
+          gap={"2"}
           fontSize={["10px", "12px", "12px", "10px", "12px"]}
           fontWeight={"semibold"}
           color={"text"}
-          h={"60px"}
+          minH={"70px"}
         >
           <Highlight
             query={TStack}
@@ -100,21 +99,24 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
         >
           {status}
         </Text>
-        <Flex transition={"500ms"} p={"2"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"}>
+        <Flex transition={"500ms"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"} mb={"8px"}>
           <a href={live} target={"_blank"} rel="noreferrer">
-            <Button
-              transition={"500ms"}
-              fontSize={["14px", "16px"]}
-              width={"7rem"}
-              fontWeight={["300", "400"]}
-              color={"#fff"}
-              letterSpacing={"2px"}
-              _hover={{}}
-              _active={{ bgColor: "accent", transform: "translateY(10px)" }}
-              bgColor={"accent"}
-            >
-              View Page
-            </Button>
+            <Flex pos={"relative"}>
+              <Button
+                pos={"relative"}
+                transition={"500ms"}
+                fontSize={["14px", "16px"]}
+                width={"7rem"}
+                fontWeight={["300", "400"]}
+                color={"#fff"}
+                letterSpacing={"2px"}
+                _hover={{}}
+                _active={{ bgColor: "accent", transform: "translateY(10px)" }}
+                bgColor={"accent"}
+              >
+                View Page
+              </Button>
+            </Flex>
           </a>
           {github && (
             <a href={github} target={"_blank"} rel="noreferrer">

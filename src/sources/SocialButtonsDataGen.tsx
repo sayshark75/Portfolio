@@ -2,7 +2,7 @@ import { VscGithub } from "react-icons/vsc";
 import { githubLink, linkedInLink, locationLink, phoneLink, twitterLink } from "./Links";
 import { MdAlternateEmail, MdCall, MdMyLocation } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
-import { BsTwitter } from "react-icons/bs";
+import { BsTwitterX } from "react-icons/bs";
 import { SocialBtnType } from "../TYPES";
 
 export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
@@ -41,7 +41,7 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
     },
     {
       link: twitterLink,
-      icon: <BsTwitter />,
+      icon: <BsTwitterX />,
       tooltip: "Twitter",
       label: "Visit my Link of Twitter Profile",
       onClick: () => {},

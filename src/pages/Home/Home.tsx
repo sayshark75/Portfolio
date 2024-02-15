@@ -4,7 +4,6 @@ import { ScrollContext } from "../../contexts/ScrollContext";
 import EmailModal from "../../components/EmailModal/EmailModal";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
 import DescHome from "../../components/HomePage/DescHome";
-import { nanoid } from "nanoid";
 import BigHeading from "../../components/Headings/BigHeading";
 import ThemeContainer from "../../components/ThemesComponent/ThemeContainer";
 import { socialBtnDataCreator } from "../../sources/SocialButtonsDataGen";
@@ -31,7 +30,7 @@ const Home = () => {
         alignItems={"center"}
         w={"100%"}
         minH={"100vh"}
-        gap={"12"}
+        gap={["6", "12"]}
       >
         <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
         <Flex w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>
@@ -40,10 +39,10 @@ const Home = () => {
         <ThemeContainer />
 
         <Flex mb={"12"} mx={"2"} gap={["2", "3"]}>
-          {SocialButtonsData.map((info) => {
+          {SocialButtonsData.map((info, index) => {
             return (
               <IconButtonComp
-                key={nanoid()}
+                key={`social-button-key-${index}`}
                 icon={info.icon}
                 tooltip={info.tooltip}
                 label={info.label}

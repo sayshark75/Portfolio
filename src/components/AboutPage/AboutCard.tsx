@@ -19,7 +19,7 @@ const AboutCard = () => {
       justifyContent={"center"}
       alignItems={"flex-start"}
       opacity={0}
-      animation={isIntersecting ? `${fadeBottom} 1s ease-in forwards` : "none"}
+      animation={isIntersecting ? `${fadeBottom} 500ms ease forwards` : "none"}
       minW={"240px"}
       direction={["column", "column", "row"]}
       w={"100%"}

@@ -11,7 +11,7 @@ const DescAboutPage = () => {
       transition={"400ms"}
       opacity={0}
       ref={animRef}
-      animation={isIntersecting ? `${fadeTop} 1s ease-in forwards 1s` : "none"}
+      animation={isIntersecting ? `${fadeTop} 500ms ease forwards 500ms` : "none"}
       color={"text"}
       letterSpacing={"2px"}
       fontWeight={"400"}

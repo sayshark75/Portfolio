@@ -15,7 +15,7 @@ const MobileNav = ({ buttonsData }: Props) => {
       pos={"fixed"}
       bottom={8}
       alignItems={"center"}
-      zIndex={"1"}
+      zIndex={100}
       w={"100%"}
       bgColor={"transparent"}
       color={"text"}

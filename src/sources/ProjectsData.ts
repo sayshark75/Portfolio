@@ -27,8 +27,6 @@ import {
   yogiInternationalWebsite,
 } from "./Links";
 
-// TStack [react,CHakraUI,JS,HTML,CSS,TS,Redux,FIrebase, Node,Express,Mongo]
-
 export const ProjectsData: ProjectDataProps[] = [
   {
     live: yogiInternationalWebsite,
@@ -94,7 +92,7 @@ export const ProjectsData: ProjectDataProps[] = [
     heading2: "(Youtube App)",
     workType: "Individual",
     summary: "A simple video platform to watch YouTube videos Online.",
-    TStack: ["React", "TypeScript", "YouTube API", "Redux", "ChakraUI"],
+    TStack: ["React", "TypeScript", "Redux", "YouTube API", "ChakraUI"],
   },
   {
     live: GadgetRamboLive,

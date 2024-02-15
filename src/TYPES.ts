@@ -70,7 +70,8 @@ export type TimelineCardProps = {
   role: string;
   query: string[];
   highlight: string;
-  date: string;
+  dateStart: string;
+  dateEnd: string;
   icon: JSX.Element;
 };
 

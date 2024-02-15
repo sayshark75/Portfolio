@@ -17,7 +17,7 @@ const DesktopNav = ({ buttonData }: Props) => {
     <Flex
       transition={"500ms"}
       pos={"fixed"}
-      zIndex={"1"}
+      zIndex={100}
       top={"0px"}
       left={"0px"}
       w={"100%"}

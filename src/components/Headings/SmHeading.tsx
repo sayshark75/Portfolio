@@ -9,13 +9,13 @@ const SmHeading = ({ title1, title2 }: HeadingProps) => {
       <Text
         fontFamily={"Poppins"}
         fontSize={["14px", "14px", "16px", "16px", "18px"]}
-        fontWeight={["300", "400", "500"]}
+        fontWeight={["500", "400", "500"]}
         transition={"500ms"}
         color={"accent"}
         cursor={"pointer"}
         rounded={"full"}
-        animation={`${fadeTop} 1s ease-in forwards `}
-        _active={{ transform: "translateY(-20px)", animation: `${ScalePing} 1s ease-in-out` }}
+        animation={`${fadeTop} 500ms ease forwards `}
+        _active={{ transform: "translateY(-20px)", animation: `${ScalePing} 500ms ease` }}
       >
         <Highlight query={title2} styles={{ color: "text" }}>
           {`${title1} ${title2}`}
