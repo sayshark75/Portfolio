@@ -15,7 +15,15 @@ const TechnicalSkills = () => {
   }
   const { SkillsRef } = context;
   return (
-    <Flex ref={SkillsRef} transition={"500ms"} direction={"column"} minH={"50vh"} justifyContent={"center"} alignItems={"center"} mx={"3"}>
+    <Flex
+      ref={SkillsRef}
+      transition={"500ms"}
+      direction={"column"}
+      minH={["40vh"]}
+      justifyContent={"center"}
+      alignItems={"center"}
+      mx={"3"}
+    >
       <MdHeading title1="Technical" title2="Skills" />
       <CarouselComp mapperFunction={SkillsMapper} slides={3} />
     </Flex>

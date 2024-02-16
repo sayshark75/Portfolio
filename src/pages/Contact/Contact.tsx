@@ -75,7 +75,7 @@ const Contact = () => {
         alignItems={"center"}
         minH={"100vh"}
         gap={["3", "4", "6", "8", "10"]}
-        pt={"12"}
+        pt={[0, 12]}
         fontFamily={"Poppins"}
       >
         <MdHeading title1="Get In" title2="Touch" />
