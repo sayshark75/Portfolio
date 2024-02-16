@@ -1,4 +1,4 @@
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import GitHubCalendar from "react-github-calendar";
 import { fadeTop } from "../../animations/FadeAnimations";
 import useCustomTheme from "../../hooks/useCustomTheme";
@@ -10,7 +10,7 @@ const GithubStats = () => {
     return null;
   }
 
-  const { customTheme, __primary, __accent } = themeData;
+  const { customTheme } = themeData;
 
   return (
     <>
@@ -28,7 +28,7 @@ const GithubStats = () => {
       >
         <GitHubCalendar fontSize={16} theme={customTheme} blockSize={15} blockMargin={5} hideTotalCount username="sayshark75" />
       </Flex>
-      <Flex w={{ base: "280px", sm: "320px", md: "440px", lg: "560px" }} gap={5} mt={6} direction={"column"} justifyContent={"center"}>
+      {/* <Flex w={{ base: "280px", sm: "320px", md: "440px", lg: "560px" }} gap={5} mt={6} direction={"column"} justifyContent={"center"}>
         <Image
           transition={"750ms"}
           borderRadius={"12"}
@@ -46,7 +46,7 @@ const GithubStats = () => {
           borderRadius={"12"}
           src={`https://streak-stats.demolab.com?user=sayshark75&theme=transparent&hide_border=true&background=${__primary}&currStreakLabel=${__accent}&currStreakNum=${__accent}&sideNums=${__accent}&dates=${__accent}&stroke=${__accent}&sideLabels=${__accent}&icon_color=${__accent}&ring=${__accent}&fire=${__accent}`}
         />
-      </Flex>
+      </Flex> */}
     </>
   );
 };

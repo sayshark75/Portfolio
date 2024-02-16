@@ -4,14 +4,19 @@ import { NavButtonProps } from "../../TYPES";
 
 const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
   return (
-    <Flex pos={"relative"} w={"min-content"}>
+    <Flex
+      pos={"relative"}
+      w={"min-content"}
+      animation={`${fadeTop} 500ms ease ${delay} forwards`}
+      overflow={"hidden"}
+      opacity={0}
+      rounded={"full"}
+      shadow={"xl"}
+    >
       <Button
         onClick={onClick}
         bgColor={"primaryLight"}
         color={"text"}
-        shadow={"xl"}
-        opacity={0}
-        animation={`${fadeTop} 500ms ease ${delay} forwards`}
         rounded={"full"}
         h={"25px"}
         transition={"200ms"}
@@ -21,7 +26,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
         fontFamily={"Poppins"}
         _hover={{
           bgColor: "transparent",
-          color: "primary",
+          color: "#fff",
           _after: {
             w: "100%",
             left: "0px",
@@ -30,7 +35,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
         _after={{
           content: '"."',
           w: "0px",
-          transition: "300ms",
+          transition: "500ms",
           minH: "100%",
           rounded: "full",
           color: "transparent",

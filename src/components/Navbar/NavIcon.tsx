@@ -1,4 +1,4 @@
-import { IconButton } from "@chakra-ui/react";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { fadeBottom } from "../../animations/FadeAnimations";
 
 type Props = {
@@ -10,22 +10,44 @@ type Props = {
 
 const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
   return (
-    <IconButton
-      icon={icon}
-      p={2}
-      bg={"primaryLight"}
-      border={"2px solid "}
-      borderColor={"transparent"}
-      rounded={"full"}
-      color={"text"}
-      opacity={0}
-      animation={`${fadeBottom} 500ms ease ${delay} forwards`}
-      aria-label={alt}
-      onClick={onClick}
-      shadow={"xl"}
-      _hover={{}}
-      _active={{ transform: "scale(0.8)" }}
-    />
+    <Flex pos={"relative"}>
+      <IconButton
+        pos={"relative"}
+        icon={icon}
+        p={2}
+        bg={"primaryLight"}
+        border={"2px solid "}
+        borderColor={"transparent"}
+        rounded={"full"}
+        color={"text"}
+        opacity={0}
+        animation={`${fadeBottom} 500ms ease ${delay} forwards`}
+        aria-label={alt}
+        onClick={onClick}
+        shadow={"xl"}
+        _hover={{
+          bgColor: "transparent",
+          color: "primary",
+          _after: {
+            minH: "100%",
+          },
+        }}
+        _active={{ transform: "scale(0.8)" }}
+        _after={{
+          content: '"."',
+          w: "100%",
+          h: "0px",
+          transition: "5000ms ease",
+          rounded: "full",
+          pos: "absolute",
+          bottom: "0px",
+          left: "0px",
+          color: "transparent",
+          bgColor: "accent",
+          zIndex: -1,
+        }}
+      />
+    </Flex>
   );
 };
 

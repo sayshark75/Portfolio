@@ -3,10 +3,12 @@ import changeThemeMeta from "../../helpers/MobileChromeTheme";
 import { MdNightsStay } from "react-icons/md";
 import { FaSun } from "react-icons/fa";
 import useCustomTheme from "../../hooks/useCustomTheme";
+import useScrolling from "../../hooks/useScrolling";
 
 const ThemeChanger = () => {
   const themeData = useCustomTheme();
   const { colorMode, toggleColorMode } = useColorMode();
+  const { isScrolling } = useScrolling();
   if (!themeData) {
     return null;
   }
@@ -25,6 +27,7 @@ const ThemeChanger = () => {
       right={[0]}
       justifyContent={"center"}
       alignItems={"center"}
+      transform={isScrolling ? "translateX(100%)" : "none"}
       zIndex={100}
       roundedStart={"full"}
       overflow={"hidden"}

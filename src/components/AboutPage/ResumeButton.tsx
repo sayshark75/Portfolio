@@ -25,6 +25,7 @@ const ResumeButton = () => {
             _after: {
               w: "100%",
               left: "0px",
+              border: "1px solid",
               borderColor: "accent",
             },
           }}
@@ -41,7 +42,8 @@ const ResumeButton = () => {
             top: "0px",
             right: "0px",
             zIndex: -1,
-            border: "1px solid",
+            border: "0px solid",
+            borderColor: "transparent",
           }}
         >
           View Resume

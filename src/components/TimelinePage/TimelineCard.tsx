@@ -22,6 +22,7 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, 
     <Flex
       gap={3}
       rounded={"md"}
+      pos={"relative"}
       ref={animRef}
       direction={"column"}
       minW={"200px"}
@@ -33,6 +34,24 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, 
       borderBottom={"3px solid"}
       borderBottomColor={"accent"}
       p={["12px", "40px"]}
+      _hover={{
+        _after: {
+          w: "100%",
+          minH: "100%",
+        },
+      }}
+      _after={{
+        content: '"."',
+        w: "0px",
+        minH: "0px",
+        color: "transparent",
+        transition: "500ms",
+        bgColor: "primaryLight",
+        pos: "absolute",
+        bottom: "0px",
+        left: "0px",
+        zIndex: -1,
+      }}
     >
       {/* Time and Date */}
       <Flex w={"max-content"} animation={isIntersecting ? `${fadeLeft} 500ms ease 1.2s forwards` : "none"} opacity={0} pos={"relative"}>

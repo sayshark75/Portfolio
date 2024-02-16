@@ -7,11 +7,29 @@ const SkillsMapper = () => {
     return (
       <Flex
         w={"100%"}
+        pos={"relative"}
         key={`skill-data-${index}`}
         minH={"200px"}
         p={["8px", "10px", "12px", "14px", "16px"]}
         gap={"24px"}
         direction={"column"}
+        _hover={{
+          _after: {
+            top: "0px",
+          },
+        }}
+        _after={{
+          content: '"."',
+          w: "100%",
+          minH: "100%",
+          color: "transparent",
+          transition: "500ms",
+          bgColor: "primaryLight",
+          pos: "absolute",
+          top: "-100%",
+          left: "0px",
+          zIndex: -1,
+        }}
       >
         <SmHeading title1={data.title1} title2={data.title2} />
         <Text mt={["10px", "10px", "12px", "14px", "16px"]}>

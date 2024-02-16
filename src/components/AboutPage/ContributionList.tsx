@@ -23,11 +23,9 @@ const ContributionList = () => {
             color={"text"}
             mt={1}
             shadow={"xl"}
-            cursor={"pointer"}
             bgColor={"primaryLighter"}
             animation={`${fadeRight} 300ms ease forwards ${info.delay}`}
-            _hover={{ bgColor: "light", color: "text" }}
-            _active={{ animation: `${polishAnim} 80ms ease` }}
+            _hover={{}}
           >
             {info.title}
           </ListItem>

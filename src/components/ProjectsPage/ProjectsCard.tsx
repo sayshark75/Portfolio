@@ -5,15 +5,34 @@ import SmHeading from "../Headings/SmHeading";
 const ProjectsCard = ({ live, github, image, workType, heading1, heading2, status, summary, TStack }: ProjectDataProps) => {
   return (
     <Flex
+      pos={"relative"}
       transition={"500ms"}
       mb={["2", "4", "2", "8"]}
       mx={["1", "4", "1"]}
-      bgColor={"primaryLight"}
       direction={["column"]}
       rounded={"lg"}
       overflow={"hidden"}
-      shadow={"xl"}
       minH={"100%"}
+      _hover={{
+        _after: {
+          w: "100%",
+          minH: "100%",
+          rounded: "none",
+        },
+      }}
+      _after={{
+        content: '"."',
+        w: "0px",
+        minH: "0px",
+        color: "transparent",
+        transition: "500ms",
+        bgColor: "primaryLight",
+        rounded: "full",
+        pos: "absolute",
+        bottom: "0px",
+        left: "0px",
+        zIndex: -1,
+      }}
     >
       {/* Image of Project */}
       <Flex
@@ -104,15 +123,40 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
             <Flex pos={"relative"}>
               <Button
                 pos={"relative"}
+                zIndex={2}
                 transition={"500ms"}
+                rounded={"base"}
                 fontSize={["14px", "16px"]}
                 width={"7rem"}
                 fontWeight={["300", "400"]}
                 color={"#fff"}
                 letterSpacing={"2px"}
-                _hover={{}}
-                _active={{ bgColor: "accent", transform: "translateY(10px)" }}
+                _active={{ transform: "translateY(10px)" }}
                 bgColor={"accent"}
+                _hover={{
+                  color: "accent",
+                  _after: {
+                    w: "100%",
+                    left: "0px",
+                    border: "1px solid",
+                    borderColor: "accent",
+                  },
+                }}
+                _after={{
+                  content: '"."',
+                  color: "transparent",
+                  w: "0px",
+                  minH: "100%",
+                  pos: "absolute",
+                  top: "0px",
+                  right: "0px",
+                  zIndex: -1,
+                  transition: "500ms",
+                  bgColor: "primary",
+                  rounded: "base",
+                  border: "0px solid",
+                  borderColor: "accent",
+                }}
               >
                 View Page
               </Button>
@@ -120,19 +164,47 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
           </a>
           {github && (
             <a href={github} target={"_blank"} rel="noreferrer">
-              <Button
-                transition={"500ms"}
-                fontSize={["14px", "16px"]}
-                width={"7rem"}
-                fontWeight={["300", "400"]}
-                color={"#fff"}
-                letterSpacing={"2px"}
-                _hover={{}}
-                _active={{ bgColor: "accent", transform: "translateY(10px)" }}
-                bgColor={"accent"}
-              >
-                Github
-              </Button>
+              <Flex pos={"relative"}>
+                <Button
+                  pos={"relative"}
+                  zIndex={2}
+                  transition={"500ms"}
+                  rounded={"base"}
+                  fontSize={["14px", "16px"]}
+                  width={"7rem"}
+                  fontWeight={["300", "400"]}
+                  color={"#fff"}
+                  letterSpacing={"2px"}
+                  _active={{ transform: "translateY(10px)" }}
+                  bgColor={"accent"}
+                  _hover={{
+                    color: "accent",
+                    _after: {
+                      w: "100%",
+                      left: "0px",
+                      border: "1px solid",
+                      borderColor: "accent",
+                    },
+                  }}
+                  _after={{
+                    content: '"."',
+                    color: "transparent",
+                    w: "0px",
+                    minH: "100%",
+                    pos: "absolute",
+                    top: "0px",
+                    right: "0px",
+                    zIndex: -1,
+                    transition: "500ms",
+                    bgColor: "primary",
+                    rounded: "base",
+                    border: "0px solid",
+                    borderColor: "accent",
+                  }}
+                >
+                  Github
+                </Button>
+              </Flex>
             </a>
           )}
         </Flex>

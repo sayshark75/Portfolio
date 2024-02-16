@@ -3,12 +3,14 @@ import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
 import NavIcon from "./NavIcon";
 import React from "react";
+import useScrolling from "../../hooks/useScrolling";
 
 type Props = {
   buttonsData: NavbarButtonProps[];
 };
 
 const MobileNav = ({ buttonsData }: Props) => {
+  const { isScrolling } = useScrolling();
   return (
     <Flex
       transition={"500ms"}
@@ -17,6 +19,7 @@ const MobileNav = ({ buttonsData }: Props) => {
       alignItems={"center"}
       zIndex={100}
       w={"100%"}
+      transform={isScrolling ? "translateY(200%)" : "none"}
       bgColor={"transparent"}
       color={"text"}
       justifyContent={"space-evenly"}

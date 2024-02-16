@@ -17,7 +17,7 @@ const IconButtonComp = ({ link, tooltip, label, icon, onClick, delay }: SocialBt
 export default IconButtonComp;
 
 const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType) => {
-  const animRef: RefObject<HTMLButtonElement> = useRef(null);
+  const animRef: RefObject<HTMLDivElement> = useRef(null);
   const isIntersecting = useIntersectionObserver(animRef);
   return (
     <Tooltip
@@ -30,25 +30,28 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
       transition={"500ms"}
       label={tooltip}
     >
-      <Flex pos={"relative"}>
+      <Flex
+        ref={animRef}
+        mx={["1px", "2", "3", "5", "6"]}
+        pos={"relative"}
+        rounded={"full"}
+        overflow={"hidden"}
+        animation={isIntersecting ? `${fadeTop} 500ms ease ${delay} forwards` : "none"}
+        shadow={"lg"}
+        opacity={0}
+      >
         <IconButton
-          ref={animRef}
           pos={"relative"}
           zIndex={2}
           rounded={"full"}
           size={["sm", "sm", "md", "md", "lg"]}
-          opacity={0}
-          mx={["1px", "2", "3", "5", "6"]}
           color={"accent"}
           bgColor={"light"}
-          animation={isIntersecting ? `${fadeTop} 500ms ease ${delay} forwards` : "none"}
-          shadow={"lg"}
           transition={"700ms"}
           _hover={{
             color: "light",
             _after: {
               w: "100%",
-              bgColor: "accent",
               left: "0px",
             },
           }}
@@ -63,7 +66,8 @@ const IconButtonHome = ({ label, icon, onClick, tooltip, delay }: SocialBtnType)
             minH: "100%",
             rounded: "full",
             color: "transparent",
-            transition: "300ms",
+            bgColor: "accent",
+            transition: "500ms",
             pos: "absolute",
             zIndex: -1,
             top: "0px",
