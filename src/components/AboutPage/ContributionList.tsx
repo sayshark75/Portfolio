@@ -1,5 +1,4 @@
 import { List, ListItem } from "@chakra-ui/react";
-import { polishAnim } from "../../animations/NavbarAnimations";
 import { ContributionData } from "../../CONSTANTS";
 import { fadeRight } from "../../animations/FadeAnimations";
 
