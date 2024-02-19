@@ -4,6 +4,7 @@ import { MdAlternateEmail, MdCall, MdMyLocation } from "react-icons/md";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { SocialBtnType } from "../TYPES";
+import ReactGA from "react-ga4";
 
 export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
   return [
@@ -12,7 +13,12 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       icon: <VscGithub />,
       tooltip: "GitHub",
       label: "Visit my Link of github",
-      onClick: () => {},
+      onClick: () => {
+        ReactGA.event({
+          category: "socialLinks",
+          action: "Visited my Github",
+        });
+      },
       delay: "200ms",
     },
     {
@@ -28,7 +34,12 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       icon: <MdCall />,
       tooltip: "Phone",
       label: "Call on My Number",
-      onClick: () => {},
+      onClick: () => {
+        ReactGA.event({
+          category: "socialLinks",
+          action: "Tried to call me",
+        });
+      },
       delay: "600ms",
     },
     {
@@ -36,7 +47,12 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       icon: <FaLinkedinIn />,
       tooltip: "LinkedIn",
       label: "Visit my LinkedIn Profile",
-      onClick: () => {},
+      onClick: () => {
+        ReactGA.event({
+          category: "socialLinks",
+          action: "Visited my LinkedIn",
+        });
+      },
       delay: "800ms",
     },
     {
@@ -44,7 +60,12 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       icon: <BsTwitterX />,
       tooltip: "Twitter",
       label: "Visit my Link of Twitter Profile",
-      onClick: () => {},
+      onClick: () => {
+        ReactGA.event({
+          category: "socialLinks",
+          action: "Visited my Twitter",
+        });
+      },
       delay: "1s",
     },
     {
@@ -52,7 +73,12 @@ export const socialBtnDataCreator = (onOpen: () => void): SocialBtnType[] => {
       icon: <MdMyLocation />,
       tooltip: "Location",
       label: "Checkout my location on Google Maps",
-      onClick: () => {},
+      onClick: () => {
+        ReactGA.event({
+          category: "socialLinks",
+          action: "Checked my Mp Location",
+        });
+      },
       delay: "1.2s",
     },
   ];

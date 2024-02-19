@@ -7,6 +7,9 @@ import Projects from "./pages/Projects/Projects.tsx";
 import TechnicalSkills from "./pages/TechnicalSkills/TechnicalSkills.tsx";
 import Contact from "./pages/Contact/Contact.tsx";
 import Footer from "./components/Footer/Footer.tsx";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize(import.meta.env.VITE_EMAIL_SERVICE);
 
 function App() {
   return (

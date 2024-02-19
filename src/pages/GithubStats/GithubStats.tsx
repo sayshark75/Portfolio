@@ -2,6 +2,7 @@ import { Flex } from "@chakra-ui/react";
 import GitHubCalendar from "react-github-calendar";
 import { fadeTop } from "../../animations/FadeAnimations";
 import useCustomTheme from "../../hooks/useCustomTheme";
+import ReactGA from "react-ga4";
 
 const GithubStats = () => {
   const themeData = useCustomTheme();
@@ -11,6 +12,11 @@ const GithubStats = () => {
   }
 
   const { customTheme } = themeData;
+
+  ReactGA.event({
+    category: "pagevisit",
+    action: `Viewed Github Stats Page`,
+  });
 
   return (
     <>

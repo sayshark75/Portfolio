@@ -6,6 +6,7 @@ import { useContext } from "react";
 import MdHeading from "../../components/Headings/MdHeading";
 import CarouselComp from "../../components/CarouselComp/CarouselComp";
 import SkillsMapper from "../../components/TechnicalSkillPage/SkillsMapper";
+import ReactGA from "react-ga4";
 
 const TechnicalSkills = () => {
   const context = useContext(ScrollContext);
@@ -14,6 +15,11 @@ const TechnicalSkills = () => {
     return;
   }
   const { SkillsRef } = context;
+
+  ReactGA.event({
+    category: "pagevisit",
+    action: `Viewed Technical Skills Page`,
+  });
   return (
     <Flex
       ref={SkillsRef}

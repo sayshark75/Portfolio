@@ -1087,6 +1087,7 @@
   version "11.11.3"
   resolved "https://registry.yarnpkg.com/@emotion/react/-/react-11.11.3.tgz#96b855dc40a2a55f52a72f518a41db4f69c31a25"
   integrity sha512-Cnn0kuq4DoONOMcnoVsTOR8E+AdnKFf//6kUWc4LCdnxj31pZWn7rIULd6Y7/Js1PiPHzn7SKCM9vB/jBni8eA==
+  dependencies:
     "@babel/runtime" "^7.18.3"
     "@emotion/babel-plugin" "^11.11.0"
     "@emotion/cache" "^11.11.0"
@@ -1417,6 +1418,7 @@
   version "4.14.202"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.202.tgz#f09dbd2fb082d507178b2f2a5c7e74bd72ff98f8"
   integrity sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==
+
 "@types/parse-json@^4.0.0":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.2.tgz#5950e50960793055845e956c427fc2b0d70c5239"
@@ -1449,9 +1451,9 @@
     "@types/react" "*"
 
 "@types/react@*", "@types/react@^18.2.15":
-  version "18.2.55"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.55.tgz#38141821b7084404b5013742bc4ae08e44da7a67"
-  integrity sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==
+  version "18.2.56"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.56.tgz#2d3e9021a0b6eb5bfc227761cc61b1c6dc6e0cd8"
+  integrity sha512-NpwHDMkS/EFZF2dONFQHgkPRwhvgq/OAvIaGQzxGSBmaeR++kTg6njr15Vatz0/2VcCEwJQFi6Jf4Q0qBu0rLA==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -1536,6 +1538,7 @@
   version "6.21.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/utils/-/utils-6.21.0.tgz#4714e7a6b39e773c1c8e97ec587f520840cd8134"
   integrity sha512-NfWVaC8HP9T8cbKQxHcsJBY5YE1O33+jpMwN45qzWWaPDZgLIbo12toGMWnmhvCpd3sIxkpDw3Wv1B3dYrbDQQ==
+  dependencies:
     "@eslint-community/eslint-utils" "^4.4.0"
     "@types/json-schema" "^7.0.12"
     "@types/semver" "^7.5.0"
@@ -1707,9 +1710,9 @@ callsites@^3.0.0:
   integrity sha512-P8BjAsXvZS+VIDUI11hHCQEv74YT67YUi5JJFNWIqL235sBmjX4+qx9Muvls5ivyNENctx46xQLQ3aTuE7ssaQ==
 
 caniuse-lite@^1.0.30001587:
-  version "1.0.30001587"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001587.tgz#a0bce920155fa56a1885a69c74e1163fc34b4881"
-  integrity sha512-HMFNotUmLXn71BQxg8cijvqxnIAofforZOwGsxyXJ0qugTdspUF4sPSJ2vhgprHCB996tIDzEq1ubumPDV8ULA==
+  version "1.0.30001588"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001588.tgz#07f16b65a7f95dba82377096923947fb25bce6e3"
+  integrity sha512-+hVY9jE44uKLkH0SrUTqxjxqNTOWHsbnQDIKjwkZ3lNTzUUVdBLBGXtj/q5Mp5u98r3droaZAewQuEDzjQdZlQ==
 
 chalk@^2.4.2:
   version "2.4.2"
@@ -1875,9 +1878,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.4.668:
-  version "1.4.670"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.670.tgz#0fc5ac92ada8371e898ea72d577ffc888167a017"
-  integrity sha512-hcijYOWjOtjKrKPtNA6tuLlA/bTLO3heFG8pQA6mLpq7dRydSWicXova5lyxDzp1iVJaYhK7J2OQlGE52KYn7A==
+  version "1.4.673"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.673.tgz#1f077d9a095761804aec7ec6346c3f4b69b56534"
+  integrity sha512-zjqzx4N7xGdl5468G+vcgzDhaHkaYgVcf9MqgexcTqsl2UHSCmOj/Bi3HAprg4BZCpC7HyD8a6nZl6QAZf72gw==
 
 enquire.js@^2.1.6:
   version "2.1.6"
@@ -2109,9 +2112,9 @@ flatted@^3.2.9:
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
 
 focus-lock@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-1.2.0.tgz#8a59d4171ba07b2849a7a60f064fc133db21e610"
-  integrity sha512-MGUkR6hFmRNeoQxUtL9jYckpf6DZhlD4crD8FgEO9hS+yXaCg2vi2hat9fB9qUe9YsLa6eE9ykldqaqLU0kYKg==
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/focus-lock/-/focus-lock-1.3.1.tgz#16e14f2dbe4ba940d9cf889edefe5d07aa031b5f"
+  integrity sha512-TquiyunxlOpQQslNX7U+perD5XE/rNR8ljFUW0Yn3nQcYpYEtQyWi4soGf7dZEJUQEmEL2FaMDMl8/fBPJ0e6w==
   dependencies:
     tslib "^2.0.3"
 
@@ -2239,6 +2242,7 @@ hasown@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/hasown/-/hasown-2.0.1.tgz#26f48f039de2c0f8d3356c223fb8d50253519faa"
   integrity sha512-1/th4MHjnwncwXsIW6QMzlvYL9kG5e/CpVvLRZe4XPa8TOUNbCELqmvhDmnkNsAjwaG4+I8gJJL0JBvTTLO9qA==
+  dependencies:
     function-bind "^1.1.2"
 
 hoist-non-react-statics@^3.3.1:
@@ -2671,9 +2675,9 @@ react-fast-compare@3.2.2:
   integrity sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==
 
 react-focus-lock@^2.9.4:
-  version "2.10.1"
-  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.10.1.tgz#d047219d428e933c7041339000ea42f4c37b29f7"
-  integrity sha512-40zZ/Cvl3eMRoHrpcc11WmY+Md/kbjWofNLoGKvt+bti/mAeLZXkqbSIhhVlgXfdV1wD5puopcep5l4KX22Xvg==
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/react-focus-lock/-/react-focus-lock-2.11.0.tgz#7d3b0c6a87af5d6574c11d001653dfcc12c4a10a"
+  integrity sha512-y6Amxjo3T67R/7tYPSS2HMUEjW4IIfDAnpc6sBZ3Nm8gkFhgEGwTP7Zw/vkYOyvOZly0EwT9oc5ZM2XmknTGgw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     focus-lock "^1.2.0"
@@ -2681,6 +2685,11 @@ react-focus-lock@^2.9.4:
     react-clientside-effect "^1.2.6"
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
+
+react-ga4@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-ga4/-/react-ga4-2.1.0.tgz#56601f59d95c08466ebd6edfbf8dede55c4678f9"
+  integrity sha512-ZKS7PGNFqqMd3PJ6+C2Jtz/o1iU9ggiy8Y8nUeksgVuvNISbmrQtJiZNvC/TjDsqD0QlU5Wkgs7i+w9+OjHhhQ==
 
 react-github-calendar@^4.0.1:
   version "4.1.2"

@@ -12,6 +12,7 @@ import { sendMail } from "../../api/mail.api";
 import { VscError } from "react-icons/vsc";
 import { mailDataType } from "../../TYPES";
 import { socialBtnDataCreator } from "../../sources/SocialButtonsDataGen";
+import ReactGA from "react-ga4";
 
 const Contact = () => {
   const context = useContext(ScrollContext);
@@ -45,6 +46,7 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     setStatus("loading");
     const resData = await sendMail(data);
     if (resData.status) {
@@ -56,6 +58,10 @@ const Contact = () => {
       });
     } else {
       setStatus("failed");
+      ReactGA.event({
+        category: "contactformsubmit",
+        action: `send failed: ${resData.message}`,
+      });
     }
   };
 
@@ -63,6 +69,19 @@ const Contact = () => {
     const { name, value } = e.target;
     setData((prev) => ({ ...prev, [name]: value }));
   };
+
+  const handleFocus = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
+    const { name } = e.target;
+    ReactGA.event({
+      category: "contactform",
+      action: `Input handled: ${name}`,
+    });
+  };
+
+  ReactGA.event({
+    category: "pagevisit",
+    action: `Viewed Contact Page`,
+  });
 
   return (
     <>
@@ -109,6 +128,7 @@ const Contact = () => {
               required
               autoComplete="name"
               onChange={handleChange}
+              onFocus={handleFocus}
             />
             <Input
               color={"text"}
@@ -127,6 +147,7 @@ const Contact = () => {
               required
               autoComplete="email"
               onChange={handleChange}
+              onFocus={handleFocus}
             />
             <Textarea
               color={"text"}
@@ -144,6 +165,7 @@ const Contact = () => {
               rows={5}
               required
               onChange={handleChange}
+              onFocus={handleFocus}
             />
             <Flex w={"100%"} pos={"relative"}>
               <Button

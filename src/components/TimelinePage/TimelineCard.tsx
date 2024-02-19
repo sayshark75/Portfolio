@@ -5,12 +5,21 @@ import { TimelineCardProps } from "../../TYPES";
 import { RefObject, useRef } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObs";
 import { fadeBottom, fadeLeft } from "../../animations/FadeAnimations";
+import ReactGA from "react-ga4";
 
 const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, dateStart, dateEnd }: TimelineCardProps) => {
   const handleVisitLinkedIn = (type: string) => {
     if (type === "linkedin") {
+      ReactGA.event({
+        category: "timelinecard",
+        action: `Visited LinkedIn of ${title}`,
+      });
       window.open(linkedin, "_blank");
     } else if (type === "website") {
+      ReactGA.event({
+        category: "timelinecard",
+        action: `Visited Website of ${title}`,
+      });
       window.open(website, "_blank");
     }
   };

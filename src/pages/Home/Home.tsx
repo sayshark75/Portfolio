@@ -7,6 +7,7 @@ import DescHome from "../../components/HomePage/DescHome";
 import BigHeading from "../../components/Headings/BigHeading";
 import ThemeContainer from "../../components/ThemesComponent/ThemeContainer";
 import { socialBtnDataCreator } from "../../sources/SocialButtonsDataGen";
+import ReactGA from "react-ga4";
 
 const Home = () => {
   const scrollContext = useContext(ScrollContext);
@@ -19,6 +20,11 @@ const Home = () => {
   const { HomeRef } = scrollContext;
 
   const SocialButtonsData = socialBtnDataCreator(onOpen);
+
+  ReactGA.event({
+    category: "pagevisit",
+    action: `Viewed Home Page`,
+  });
 
   return (
     <>

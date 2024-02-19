@@ -3,6 +3,7 @@ import { ContextProviderProps, ThemeContextProps, ThemeFunction } from "../TYPES
 import { ChakraProvider, ThemeConfig } from "@chakra-ui/react";
 import { blueTheme } from "../themes/BlueTheme";
 import changeThemeMeta from "../helpers/MobileChromeTheme";
+import ReactGA from "react-ga4";
 
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
@@ -19,6 +20,10 @@ const ThemeContextProvider: React.FC<ContextProviderProps> = ({ children }) => {
     setTheme(config);
     changeThemeMeta(metaColor);
     setThemeName(name);
+    ReactGA.event({
+      category: "themeButtons",
+      action: `Clicked Theme Button: ${name}`,
+    });
   };
 
   return (

@@ -1,8 +1,21 @@
 import { Button, Flex, Highlight, Text } from "@chakra-ui/react";
 import { ProjectDataProps } from "../../TYPES";
 import SmHeading from "../Headings/SmHeading";
+import ReactGA from "react-ga4";
 
 const ProjectsCard = ({ live, github, image, workType, heading1, heading2, status, summary, TStack }: ProjectDataProps) => {
+  const handlePageVisit = () => {
+    ReactGA.event({
+      category: "projectvisit",
+      action: `Viewed Project: ${heading1} ${heading2}`,
+    });
+  };
+  const handleGithubVisit = () => {
+    ReactGA.event({
+      category: "projectvisit",
+      action: `Viewed Github: ${heading1} ${heading2}`,
+    });
+  };
   return (
     <Flex
       pos={"relative"}
@@ -157,6 +170,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                   border: "0px solid",
                   borderColor: "accent",
                 }}
+                onClick={handlePageVisit}
               >
                 View Page
               </Button>
@@ -201,6 +215,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                     border: "0px solid",
                     borderColor: "accent",
                   }}
+                  onClick={handleGithubVisit}
                 >
                   Github
                 </Button>
