@@ -15,7 +15,7 @@ const About = () => {
 
   ReactGA.event({
     category: "pagevisit",
-    action: `Viewed About me Page`,
+    action: `Viewed About Page`,
   });
 
   return (

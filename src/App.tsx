@@ -9,7 +9,7 @@ import Contact from "./pages/Contact/Contact.tsx";
 import Footer from "./components/Footer/Footer.tsx";
 import ReactGA from "react-ga4";
 
-ReactGA.initialize(import.meta.env.VITE_GA_TAG);
+ReactGA.initialize("G-PLC3VZSS76");
 
 function App() {
   return (
