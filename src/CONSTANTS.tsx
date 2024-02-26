@@ -33,17 +33,16 @@ export const ContributionData: ContributionDataType[] = [
 export const TopBarQuery = [
   "JavaScript",
   "React",
-  "Axios",
   "TypeScript",
   "Scss",
-  "API's",
-  "Node",
   "Express",
   "MongoDB",
   "ChakraUI",
-  "AWS EC2 ",
+  "AWS EC2",
   "AWS S3",
   "Docker",
+  "Strapi",
+  "Razorpay",
 ];
 export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
 export const MasaiQuery = [

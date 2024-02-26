@@ -24,6 +24,6 @@ export const SkillsData: SkillsDataProps[] = [
   {
     title1: "CMS & Other",
     title2: "Skills",
-    skills: ["Shopify", "Razorpay", "Linux", "Ubuntu", "VS Code", "Postman", "Graphic Designing"],
+    skills: ["Shopify", "Strapi", "Razorpay", "Linux", "Ubuntu", "VS Code", "Postman", "Graphic Designing"],
   },
 ];
