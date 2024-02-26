@@ -37,7 +37,7 @@ const DesktopNav = ({ buttonData }: Props) => {
           borderColor={`accent`}
           _hover={{
             _after: {
-              color: "light",
+              color: "text",
               w: "100%",
               left: "50px",
               top: "0px",
