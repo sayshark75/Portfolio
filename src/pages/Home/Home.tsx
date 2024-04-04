@@ -1,5 +1,5 @@
 import { Flex, useDisclosure } from "@chakra-ui/react";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "../../contexts/ScrollContext";
 import EmailModal from "../../components/EmailModal/EmailModal";
 import IconButtonComp from "../../components/HomePage/IconButtonComp";
@@ -13,6 +13,10 @@ const Home = () => {
   const scrollContext = useContext(ScrollContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: "/", title: "Visited Portfolio" });
+  }, []);
+
   if (!scrollContext) {
     return;
   }
@@ -20,11 +24,6 @@ const Home = () => {
   const { HomeRef } = scrollContext;
 
   const SocialButtonsData = socialBtnDataCreator(onOpen);
-
-  ReactGA.event({
-    category: "pagevisit",
-    action: `Viewed Home Page`,
-  });
 
   return (
     <>

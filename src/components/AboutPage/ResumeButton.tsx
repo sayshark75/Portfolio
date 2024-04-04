@@ -1,9 +1,14 @@
 import { Button, Flex } from "@chakra-ui/react";
 import { ScalePing } from "../../animations/ScaleAnimations";
 import { resumeDownload, resumelink } from "../../sources/Links";
+import ReactGA from "react-ga4";
 
 const ResumeButton = () => {
   const handleResumeDownload = () => {
+    ReactGA.event({
+      category: "Resume",
+      action: "Downloaded the Resume",
+    });
     window.open(resumelink, "_blank");
   };
   return (

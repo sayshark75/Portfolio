@@ -3,7 +3,6 @@ import { Flex } from "@chakra-ui/react";
 import { ScrollContext } from "../../contexts/ScrollContext";
 import MdHeading from "../../components/Headings/MdHeading";
 import AboutCard from "../../components/AboutPage/AboutCard";
-import ReactGA from "react-ga4";
 
 const About = () => {
   const context = useContext(ScrollContext);
@@ -12,11 +11,6 @@ const About = () => {
     return;
   }
   const { AboutRef } = context;
-
-  ReactGA.event({
-    category: "pagevisit",
-    action: `Viewed About Page`,
-  });
 
   return (
     <>
