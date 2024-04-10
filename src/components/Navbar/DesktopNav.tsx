@@ -36,30 +36,11 @@ const DesktopNav = ({ buttonData }: Props) => {
           border={`3px solid`}
           borderColor={`accent`}
           _hover={{
-            _after: {
-              color: "text",
-              w: "100%",
-              left: "50px",
-              top: "0px",
-              h: "100%",
-            },
+            transform: "scaleX(-1)",
           }}
           ml={3}
           as={"b"}
           fontSize={"2xl"}
-          _after={{
-            content: '"Sharuk Sayyed"',
-            w: "100%",
-            h: "0px",
-            color: "transparent",
-            pos: "absolute",
-            top: "-100%",
-            left: "50px",
-            zIndex: -1,
-            transition: "500ms cubic-bezier(0.18, 0.89, 0.32, 1.28)",
-            borderBottom: "2px solid",
-            borderBottomColor: "accent",
-          }}
         >
           &sect;
         </Text>
