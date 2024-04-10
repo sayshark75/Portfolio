@@ -63,3 +63,5 @@ export const EquationsLLCWebsite: string = "https://equations-llc.vercel.app/";
 export const TruptiWebsite: string = "https://www.trupti.co.in/";
 
 export const yogiInternationalWebsite: string = "https://yogis-international.myshopify.com/";
+
+export const diogoLouisWebsite = "https://www.diogolouis.com/";

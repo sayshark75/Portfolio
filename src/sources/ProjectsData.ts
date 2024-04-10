@@ -9,6 +9,7 @@ import glamazonImg from "../assets/projects/glamazon.webp";
 import indExpImg from "../assets/projects/iexpress.webp";
 import equationsImg from "../assets/projects/equations.webp";
 import yogiImg from "../assets/projects/yogi.webp";
+import diogoImg from "../assets/projects/diogolouis.webp";
 
 import {
   APrimeGithub,
@@ -20,6 +21,7 @@ import {
   KoovsGithub,
   KoovsLive,
   TruptiWebsite,
+  diogoLouisWebsite,
   glamazonGithub,
   glamazonLive,
   indianExpressGithub,
@@ -29,6 +31,17 @@ import {
 
 export const ProjectsData: ProjectDataProps[] = [
   {
+    live: diogoLouisWebsite,
+    github: "",
+    image: diogoImg,
+    heading1: "Diogo Louis",
+    heading2: "Fashion",
+    status: ProjectStatus.Completed,
+    workType: "Team of 3 Members",
+    summary: "Sell Wrist Watches, and Fashion related products.",
+    TStack: ["Shopify", "Liquid", "CSS"],
+  },
+  {
     live: yogiInternationalWebsite,
     github: "",
     image: yogiImg,
@@ -36,7 +49,7 @@ export const ProjectsData: ProjectDataProps[] = [
     heading2: "international",
     status: ProjectStatus.Building,
     workType: "Team of 2 Members",
-    summary: "Sell Ayurvedic and Pranic food, cosmetic products.",
+    summary: "Sell Ayurvedic and Pranic food, Cosmetic products.",
     TStack: ["Shopify", "Liquid", "CSS"],
   },
   {
