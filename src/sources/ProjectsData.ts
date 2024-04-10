@@ -10,6 +10,7 @@ import indExpImg from "../assets/projects/iexpress.webp";
 import equationsImg from "../assets/projects/equations.webp";
 import yogiImg from "../assets/projects/yogi.webp";
 import diogoImg from "../assets/projects/diogolouis.webp";
+import codeBankImg from "../assets/projects/code-bank.webp";
 
 import {
   APrimeGithub,
@@ -21,6 +22,8 @@ import {
   KoovsGithub,
   KoovsLive,
   TruptiWebsite,
+  codeBankGithub,
+  codeBankWebsite,
   diogoLouisWebsite,
   glamazonGithub,
   glamazonLive,
@@ -84,6 +87,17 @@ export const ProjectsData: ProjectDataProps[] = [
     workType: "Team of 4 Members",
     summary: "Sells and repairs electronic projects and Labkits.",
     TStack: ["React", "NextJS", "MongoDB", "Tailwind"],
+  },
+  {
+    live: codeBankWebsite,
+    github: codeBankGithub,
+    image: codeBankImg,
+    heading1: "Code",
+    heading2: "Bank",
+    status: ProjectStatus.Development,
+    workType: "Team of 2 Members",
+    summary: "Use frequently required code snippets and tools",
+    TStack: ["React", "NextJS", "Express", "TypeScript", "MongoDB", "Chakra UI"],
   },
   {
     live: KoovsLive,

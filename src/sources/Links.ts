@@ -65,3 +65,7 @@ export const TruptiWebsite: string = "https://www.trupti.co.in/";
 export const yogiInternationalWebsite: string = "https://yogis-international.myshopify.com/";
 
 export const diogoLouisWebsite = "https://www.diogolouis.com/";
+
+export const codeBankWebsite = "https://code-bank-hub.vercel.app/";
+
+export const codeBankGithub = "https://github.com/sayshark75/code-bank";
