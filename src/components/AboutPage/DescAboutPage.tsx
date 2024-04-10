@@ -20,9 +20,9 @@ const DescAboutPage = () => {
       fontSize={["12px", "14px"]}
       mt={["60px", "60px", "0px"]}
     >
-      Full-stack developer with a focus on building and deploying user-friendly, high-performance web applications. Expertise in both
-      front-end and back-end development, with a strong understanding of design patterns and best practices. Ability to work independently
-      and as part of a team to deliver high-quality products.
+      Hello, I'm Sayyed Sharuk, a professional Full Stack Developer based in Ahmednagar, Maharashtra. I specialize in web app development,
+      leveraging a diverse skill set to create robust solutions. Outside of my professional endeavors, I enjoy immersing myself in travel,
+      culinary adventures, and the peaceful ambiance of rural landscapes. I'm excited to collaborate and contribute to innovative projects.
     </Text>
   );
 };
