@@ -19,9 +19,10 @@ const SkillsMapper = () => {
           <Highlight
             query={data.skills}
             styles={{
-              color: "text",
+              color: "#fff",
               border: "1px solid",
               borderColor: "accent",
+              bgColor: "accent",
               fontWeight: "500",
               rounded: "full",
               px: "12px",

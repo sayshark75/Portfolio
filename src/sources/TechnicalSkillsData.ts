@@ -9,7 +9,7 @@ export const SkillsData: SkillsDataProps[] = [
   {
     title1: "Frontend",
     title2: "Skills",
-    skills: ["React", "Vite", "NextJS 13/14", "React Native", "Redux", "Tailwind", "Chakra UI", "Material UI", "Bootstrap"],
+    skills: ["Vite", "NextJS 13/14", "React Native", "Redux", "Tailwind", "Chakra UI", "Material UI", "Bootstrap"],
   },
   {
     title1: "Backend",
