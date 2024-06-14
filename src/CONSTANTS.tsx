@@ -3,6 +3,7 @@ import { ContributionDataType, ThemeIconsProps, TimelineCardProps } from "./TYPE
 import { RiGraduationCapFill } from "react-icons/ri";
 import {
   AutotronLinkedIn,
+  AutotronLocation,
   AutotronLogo,
   AutotronWebsite,
   MasaiLinkedIn,
@@ -92,6 +93,7 @@ export const TimelineData: TimelineCardProps[] = [
     logo: AutotronLogo,
     linkedin: AutotronLinkedIn,
     website: AutotronWebsite,
+    location: AutotronLocation,
     role: "Embedded Developer",
     query: AutotronQuery,
     highlight: AutotronQuery.join(" "),

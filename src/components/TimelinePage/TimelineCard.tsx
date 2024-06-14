@@ -6,8 +6,9 @@ import { RefObject, useRef } from "react";
 import useIntersectionObserver from "../../hooks/useIntersectionObs";
 import { fadeBottom, fadeLeft } from "../../animations/FadeAnimations";
 import ReactGA from "react-ga4";
+import { FaLocationDot } from "react-icons/fa6";
 
-const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, dateStart, dateEnd }: TimelineCardProps) => {
+const TimelineCard = ({ linkedin, website, location, logo, title, role, query, highlight, dateStart, dateEnd }: TimelineCardProps) => {
   const handleVisitLinkedIn = (type: string) => {
     if (type === "linkedin") {
       ReactGA.event({
@@ -21,6 +22,12 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, 
         action: `Visited Website of ${title}`,
       });
       window.open(website, "_blank");
+    } else if (type === "location") {
+      ReactGA.event({
+        category: "timelinecard",
+        action: `Visited Website of ${title}`,
+      });
+      window.open(location, "_blank");
     }
   };
 
@@ -125,6 +132,19 @@ const TimelineCard = ({ linkedin, website, logo, title, role, query, highlight, 
               _hover={{}}
               icon={<BsGlobeAmericas />}
               onClick={() => handleVisitLinkedIn("website")}
+              aria-label="Globe Icon, to Visit Web Page of TopBar Company"
+            />
+          )}
+          {location && (
+            <IconButton
+              size={"xs"}
+              rounded={"full"}
+              bgColor={"primary"}
+              color={"accent"}
+              _active={{ color: "text", bgColor: "accent" }}
+              _hover={{}}
+              icon={<FaLocationDot />}
+              onClick={() => handleVisitLinkedIn("location")}
               aria-label="Globe Icon, to Visit Web Page of TopBar Company"
             />
           )}

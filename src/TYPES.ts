@@ -65,6 +65,7 @@ export type HeadingProps = {
 export type TimelineCardProps = {
   linkedin: string;
   website: string;
+  location?: string;
   logo: string;
   title: string;
   role: string;

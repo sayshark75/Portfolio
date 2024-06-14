@@ -1,3 +1,5 @@
+import autotronLogo from "../assets/icons/autotronIcon.png";
+
 export const githubLink: string = "https://github.com/sayshark75";
 
 export const mailLink: string = "mailto:sayyedsharuk75@gmail.com";
@@ -8,9 +10,10 @@ export const mailLinkTemplate: string =
 export const TopBarLogo: string = "https://www.topbar.in/images/logo.png";
 export const TopBarLinkedIn: string = "https://www.linkedin.com/company/topbar-company";
 export const TopBarWebsite: string = "https://www.topbar.in/";
-export const AutotronLogo: string = "https://www.autotron.tech/logo.png";
+export const AutotronLogo: string = autotronLogo;
 export const AutotronWebsite: string = "https://www.autotron.tech/";
 export const AutotronLinkedIn: string = "";
+export const AutotronLocation: string = "https://maps.app.goo.gl/CrPdcjBR9xL1sGmYA";
 export const MasaiLogo: string = "https://masai-website-images.s3.ap-south-1.amazonaws.com/logo.png";
 export const MasaiWebsite: string = "https://www.masaischool.com/";
 export const MasaiLinkedIn: string = "https://www.linkedin.com/school/masai-school/";
