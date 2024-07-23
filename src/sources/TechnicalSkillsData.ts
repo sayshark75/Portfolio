@@ -4,7 +4,7 @@ export const SkillsData: SkillsDataProps[] = [
   {
     title1: "Coding",
     title2: "Languages",
-    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "C++", "C#", "Python Basics"],
+    skills: ["HTML5", "CSS3", "JavaScript", "TypeScript", "Java"],
   },
   {
     title1: "Frontend",
@@ -19,7 +19,7 @@ export const SkillsData: SkillsDataProps[] = [
   {
     title1: "DevOps",
     title2: "Skills",
-    skills: ["AWS Basics", "Docker", "Git", "JEST", "NVM"],
+    skills: ["AWS Essentials", "Docker", "Git", "JEST", "NVM"],
   },
   {
     title1: "CMS & Other",

@@ -1,4 +1,5 @@
 import autotronLogo from "../assets/icons/autotronIcon.png";
+import modulaLogo from "../assets/icons/modulaIcon.png";
 
 export const githubLink: string = "https://github.com/sayshark75";
 
@@ -10,6 +11,8 @@ export const mailLinkTemplate: string =
 export const TopBarLogo: string = "https://www.topbar.in/images/logo.png";
 export const TopBarLinkedIn: string = "https://www.linkedin.com/company/topbar-company";
 export const TopBarWebsite: string = "https://www.topbar.in/";
+export const ModulaLogo: string = modulaLogo;
+export const ModulaWebsite = "https://modula.in/";
 export const AutotronLogo: string = autotronLogo;
 export const AutotronWebsite: string = "https://www.autotron.tech/";
 export const AutotronLinkedIn: string = "";

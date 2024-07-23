@@ -11,6 +11,7 @@ import equationsImg from "../assets/projects/equations.webp";
 import yogiImg from "../assets/projects/yogi.webp";
 import diogoImg from "../assets/projects/diogolouis.webp";
 import codeBankImg from "../assets/projects/code-bank.webp";
+import modulaImg from "../assets/projects/modula.webp";
 
 import {
   APrimeGithub,
@@ -21,6 +22,7 @@ import {
   GadgetRamboLive,
   KoovsGithub,
   KoovsLive,
+  ModulaWebsite,
   TruptiWebsite,
   codeBankGithub,
   codeBankWebsite,
@@ -33,6 +35,17 @@ import {
 } from "./Links";
 
 export const ProjectsData: ProjectDataProps[] = [
+  {
+    live: ModulaWebsite,
+    github: "",
+    image: modulaImg,
+    heading1: "Modula",
+    heading2: "Kitchen",
+    status: ProjectStatus.Completed,
+    workType: "Team of 2 Members",
+    summary: "Build Kitchen and Robust Interior Designing",
+    TStack: ["React", "NextJs", "Framer Motion", "GoogleAPI", "SendGrid", "Notion", "ChakraUI"],
+  },
   {
     live: diogoLouisWebsite,
     github: "",
