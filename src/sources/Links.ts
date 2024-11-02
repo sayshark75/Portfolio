@@ -13,6 +13,7 @@ export const TopBarLinkedIn: string = "https://www.linkedin.com/company/topbar-c
 export const TopBarWebsite: string = "https://www.topbar.in/";
 export const ModulaLogo: string = modulaLogo;
 export const ModulaWebsite = "https://modula.in/";
+export const EquitreeWebsite = "https://equitree.vercel.app/";
 export const AutotronLogo: string = autotronLogo;
 export const AutotronWebsite: string = "https://www.autotron.tech/";
 export const AutotronLinkedIn: string = "";

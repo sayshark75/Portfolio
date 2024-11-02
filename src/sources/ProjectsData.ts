@@ -12,12 +12,14 @@ import yogiImg from "../assets/projects/yogi.webp";
 import diogoImg from "../assets/projects/diogolouis.webp";
 import codeBankImg from "../assets/projects/code-bank.webp";
 import modulaImg from "../assets/projects/modula.webp";
+import equitreeImg from "../assets/projects/equitree.webp";
 
 import {
   APrimeGithub,
   APrimeLive,
   AutotronWebsite,
   EquationsLLCWebsite,
+  EquitreeWebsite,
   GadgetRamboGithub,
   GadgetRamboLive,
   KoovsGithub,
@@ -35,6 +37,17 @@ import {
 } from "./Links";
 
 export const ProjectsData: ProjectDataProps[] = [
+  {
+    live: EquitreeWebsite,
+    github: "",
+    image: equitreeImg,
+    heading1: "Equitree",
+    heading2: "Capital",
+    status: ProjectStatus.Development,
+    workType: "Team of 2 Members",
+    summary: "Fundamental investors applying a private equity approach to public markets.",
+    TStack: ["React", "NextJs", "Framer Motion", "GoogleAPI", "SendGrid", "ChakraUI"],
+  },
   {
     live: ModulaWebsite,
     github: "",
