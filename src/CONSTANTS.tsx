@@ -16,19 +16,21 @@ import {
   UOPLogo,
   UOPWebsite,
 } from "./sources/Links";
-import { MdWork } from "react-icons/md";
+import { MdCodeOff, MdOutlineStar, MdWork } from "react-icons/md";
 import { blueTheme } from "./themes/BlueTheme";
 import { redTheme } from "./themes/RedTheme";
 import { greenTheme } from "./themes/GreenTheme";
 import { violetTheme } from "./themes/VioletTheme";
 import { orangeTheme } from "./themes/OrangeTheme";
 import { yellowTheme } from "./themes/YellowTheme";
+import { CgWebsite } from "react-icons/cg";
+import { IoMdGitCommit } from "react-icons/io";
 
 export const ContributionData: ContributionDataType[] = [
-  { title: "1800+ Hours of Coding Experience", delay: "200ms" },
-  { title: "830+ DSA Problems Solved", delay: "400ms" },
-  { title: "6+ Ongoing Projects", delay: "600ms" },
-  { title: "1200+ Github Contributions", delay: "800ms" },
+  { icon: <MdOutlineStar />, value: "1800+", title: "Hours of Coding Experience", delay: "200ms" },
+  { icon: <MdCodeOff />, value: "920+", title: "DSA Problems Solved", delay: "400ms" },
+  { icon: <CgWebsite />, value: "8+", title: "Ongoing Projects", delay: "600ms" },
+  { icon: <IoMdGitCommit />, value: "1950+", title: "Github Contribution", delay: "800ms" },
 ];
 
 export const TopBarQuery = [

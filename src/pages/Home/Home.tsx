@@ -34,6 +34,8 @@ const Home = () => {
         justifyContent={"center"}
         alignItems={"center"}
         w={"100%"}
+        maxW={"1440px"}
+        mx={"auto"}
         minH={"100vh"}
         gap={["6", "12"]}
       >

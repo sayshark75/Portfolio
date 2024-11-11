@@ -17,19 +17,16 @@ const AboutCard = () => {
       bgColor={"transparent"}
       pos={"relative"}
       justifyContent={"center"}
-      alignItems={"flex-start"}
+      alignItems={{ base: "center", md: "flex-end" }}
       opacity={0}
       animation={isIntersecting ? `${fadeBottom} 500ms ease forwards` : "none"}
       minW={"240px"}
       direction={["column", "column", "row"]}
-      w={"100%"}
-      maxW={{ lg: "900px", xl: "1000px" }}
-      mt={"60px"}
+      w={{ base: "100%", xl: "70%" }}
+      maxW={"1240px"}
       gap={"16px"}
       border={"2px solid"}
       borderColor={["transparent"]}
-      borderTop={["2px solid", "2px solid", "2px solid"]}
-      borderTopColor={["accent", "accent", "transparent"]}
     >
       <ProfilePic />
       <Flex p={4} direction={["column"]} gap={4} justifyContent={"flex-start"} alignItems={["stretch", "stretch", "flex-start"]}>
@@ -71,8 +68,8 @@ const AboutCard = () => {
         opacity={"0.4"}
         pos={"absolute"}
         transition={"400ms"}
-        bottom={["35px", "35px", "-20%", "-35px", "-25"]}
-        left={["280px", "280px", "58%", "58px", "28px"]}
+        bottom={["35px", "35px", "-20%", "-35px", "-35"]}
+        left={["280px", "280px", "58%", "58px", "-28px"]}
       ></Flex>
       <Flex
         w={"80px"}
@@ -83,8 +80,8 @@ const AboutCard = () => {
         opacity={"0.4"}
         transition={"400ms"}
         pos={"absolute"}
-        top={["15px", "15px", "-35%", "15px", "15px"]}
-        left={["-40px", "-40px", "20%", "-40px", "-40px"]}
+        top={["15px", "15px", "-35%", "15px", "-55px"]}
+        left={["-40px", "-40px", "20%", "-40px", "40px"]}
       ></Flex>
     </Flex>
   );

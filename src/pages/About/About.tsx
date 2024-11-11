@@ -21,6 +21,8 @@ const About = () => {
         w={"100%"}
         px={3}
         minH={"70vh"}
+        maxW={"1440px"}
+        mx={"auto"}
         justifyContent={"center"}
         alignItems={"center"}
       >

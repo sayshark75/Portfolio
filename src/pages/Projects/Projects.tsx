@@ -23,6 +23,8 @@ const Projects = () => {
   return (
     <>
       <Flex
+        maxW={"1440px"}
+        mx={"auto"}
         ref={ProjectsRef}
         transition={"500ms"}
         justifyContent={"center"}

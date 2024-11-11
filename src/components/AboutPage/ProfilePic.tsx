@@ -43,26 +43,8 @@ const ProfilePic = () => {
   };
 
   return (
-    <Flex overflow={"hidden"}>
-      <Image
-        rounded={["full"]}
-        pos={["absolute", "absolute", "static"]}
-        w={["130px", "130px", "480px"]}
-        border={"2px solid"}
-        borderColor={"transparent"}
-        borderX={["2px solid", "2px solid", "none"]}
-        borderLeftColor={["accent", "accent", "none"]}
-        borderRightColor={["accent", "accent", "none"]}
-        top={"0%"}
-        left={"50%"}
-        transition={"400ms"}
-        zIndex={5}
-        transform={["translate(-50%,-50%)", "translate(-50%,-50%)", "translate(0%,0%)"]}
-        bgColor={["primaryLighter", "primaryLighter", "primaryLighter"]}
-        opacity={[1, 1, 1]}
-        src={pictureGenerator()}
-        alt={"Image of Full Stack Web Developer, Sayyed Sharuk"}
-      />
+    <Flex overflow={"hidden"} minW={["180px", "240px", "320px"]} maxW={["180px", "240px", "240px"]}>
+      <Image src={pictureGenerator()} alt={"Image of Full Stack Web Developer, Sayyed Sharuk"} />
     </Flex>
   );
 };

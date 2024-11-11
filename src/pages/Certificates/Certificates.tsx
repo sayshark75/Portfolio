@@ -10,6 +10,8 @@ const Certificates = () => {
       direction={"column"}
       w={"100%"}
       minH={"60vh"}
+      maxW={"1440px"}
+      mx={"auto"}
       mt={"12"}
       h={"100%"}
       gap={"9"}

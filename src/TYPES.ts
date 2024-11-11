@@ -107,6 +107,8 @@ export type CopyButtonProps = {
 export type ContributionDataType = {
   title: string;
   delay: string;
+  value: string;
+  icon: JSX.Element;
 };
 
 export type CarouselTypes = {

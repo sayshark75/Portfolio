@@ -16,13 +16,11 @@ const DescAboutPage = () => {
       letterSpacing={"2px"}
       fontWeight={"400"}
       fontFamily={"Poppins"}
+      whiteSpace={"pre-wrap"}
       textAlign={["justify"]}
-      fontSize={["12px", "14px"]}
-      mt={["60px", "60px", "0px"]}
+      fontSize={["12px", "12px", "12px", "12px", "14px"]}
     >
-      Hello, I'm Sayyed Sharuk, a professional Full Stack Developer based in Ahmednagar, Maharashtra. I specialize in web app development,
-      leveraging a diverse skill set to create robust solutions. Outside of my professional endeavors, I enjoy immersing myself in travel,
-      culinary adventures, and the peaceful ambiance of rural landscapes. I'm excited to collaborate and contribute to innovative projects.
+      {`Hello, I'm Sayyed Sharuk—a dedicated Full Stack Developer based in Ahmednagar, Maharashtra. I specialize in building high-performance web applications with a versatile skill set. Beyond coding, I enjoy travel, culinary experiences, and the tranquility of rural landscapes. I'm always eager to collaborate on innovative projects.`}
     </Text>
   );
 };

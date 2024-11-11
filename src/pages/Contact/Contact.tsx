@@ -90,6 +90,8 @@ const Contact = () => {
         transition={"500ms"}
         direction={"column"}
         p={4}
+        maxW={"1440px"}
+        mx={"auto"}
         justifyContent={"center"}
         alignItems={"center"}
         minH={"100vh"}
@@ -99,18 +101,7 @@ const Contact = () => {
       >
         <MdHeading title1="Get In" title2="Touch" />
         <form style={{ width: "100%" }} onSubmit={handleSubmit}>
-          <Flex
-            minW={"280px"}
-            w={"100%"}
-            m={"auto"}
-            maxW={"480px"}
-            p={4}
-            shadow={"lg"}
-            color={"light"}
-            rounded={"xl"}
-            direction={"column"}
-            gap={4}
-          >
+          <Flex minW={"280px"} w={"100%"} m={"auto"} maxW={"480px"} p={4} shadow={"lg"} color={"light"} rounded={"xl"} direction={"column"} gap={4}>
             <Input
               color={"text"}
               name="name"
