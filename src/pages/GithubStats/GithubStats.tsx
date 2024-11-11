@@ -29,7 +29,6 @@ const GithubStats = () => {
         animation={`${fadeTop} 300mss ease`}
         bgColor={"primary"}
         mx={[2, 2, 2, 4]}
-        maxW={"1440px"}
         justifyContent={"center"}
         alignItems={"center"}
       >
