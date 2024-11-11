@@ -22,6 +22,7 @@ const TechnicalSkills = () => {
   });
   return (
     <Flex
+      w={"100%"}
       maxW={"1440px"}
       mx={"auto"}
       ref={SkillsRef}
