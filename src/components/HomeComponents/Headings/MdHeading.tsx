@@ -5,8 +5,8 @@ import { useInView } from "framer-motion";
 import { MotionText } from "@/libs/motionComponents";
 
 const MdHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
-  const animRef: RefObject<HTMLParagraphElement> = useRef(null);
-  const isIntersecting = useInView(animRef, { once: true });
+  const animRef = useRef<HTMLParagraphElement>(null);
+  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
   return (
     <Flex>
       <MotionText

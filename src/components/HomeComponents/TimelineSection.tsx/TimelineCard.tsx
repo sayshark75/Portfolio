@@ -22,8 +22,8 @@ const TimelineCard = ({
   dateStart,
   dateEnd,
 }: TimelineCardProps & { index: number }) => {
-  const animRef: RefObject<HTMLParagraphElement> = useRef(null);
-  const isIntersecting = useInView(animRef, { once: true });
+  const animRef = useRef<HTMLParagraphElement>(null);
+  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
 
   return (
     <MotionFlex

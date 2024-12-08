@@ -1,11 +1,10 @@
-import { Text } from "@chakra-ui/react";
 import { RefObject, useRef } from "react";
 import { useInView } from "framer-motion";
 import { MotionText } from "@/libs/motionComponents";
 
 const DescAboutPage = () => {
-  const animRef: RefObject<HTMLParagraphElement> = useRef(null);
-  const isIntersecting = useInView(animRef, { once: true });
+  const animRef = useRef<HTMLParagraphElement>(null);
+  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
   return (
     <MotionText
       initial={{ opacity: 0, y: "-80px" }}
