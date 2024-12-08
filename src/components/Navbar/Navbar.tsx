@@ -1,40 +1,28 @@
-import { Show } from "@chakra-ui/react";
-import { useContext } from "react";
+"use client";
+import { Links } from "@/resources/CONSTANTS";
 
-import { resumeDownload, resumelink } from "../../sources/Links";
-import { ScrollContext } from "../../contexts/ScrollContext";
-import DesktopNav from "./DesktopNav";
 import MobileNav from "./MobileNav";
-import { NavbarButtonProps } from "../../TYPES";
-import ThemeChanger from "./ThemeChanger";
-import { getNavbarButtonsData } from "../../sources/NavbarButtonDataGen";
+import useWindowSize from "@/hooks/useWindowSize";
+import { useScrollContext } from "@/context/ScrollContext";
+import DesktopNav, { NavButtonType } from "./DesktopNav";
+import { getNavbarButtonsData } from "@/resources/NavbarButtonsGenerator";
 
 const Navbar = () => {
-  const context = useContext(ScrollContext);
-  if (!context) {
-    return null;
-  }
+  const { width } = useWindowSize();
+
+  const isMobile = width < 768;
+
+  const scrollPoints = useScrollContext();
+
+  const { resumeDownload, resumelink } = Links;
 
   const handleClick = () => {
     window.open(resumelink, "_blank");
   };
 
-  const NavButtonsData: NavbarButtonProps[] = getNavbarButtonsData(context, resumeDownload, handleClick);
+  const NavButtonsData: NavButtonType[] = getNavbarButtonsData(scrollPoints, resumeDownload, handleClick);
 
-  return (
-    <>
-      <Show above="769px">
-        <DesktopNav buttonData={NavButtonsData} />
-      </Show>
-      {/* Theme Preferences */}
-      <ThemeChanger />
-
-      {/* Mobile Navbar */}
-      <Show below="768px">
-        <MobileNav buttonsData={NavButtonsData} />
-      </Show>
-    </>
-  );
+  return isMobile ? <MobileNav buttonData={NavButtonsData} /> : <DesktopNav buttonData={NavButtonsData} />;
 };
 
 export default Navbar;

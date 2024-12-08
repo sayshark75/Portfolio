@@ -1,27 +1,27 @@
-import { Flex, IconButton } from "@chakra-ui/react";
-import { fadeBottom } from "../../animations/FadeAnimations";
+import { MotionIconButton } from "@/libs/motionComponents";
+import { Flex } from "@chakra-ui/react";
 
 type Props = {
   icon: JSX.Element;
   alt: string;
   onClick: () => void;
-  delay: string;
+  delay: number;
 };
 
 const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
   return (
     <Flex pos={"relative"}>
-      <IconButton
+      <MotionIconButton
+        initial={{ opacity: 0, y: "-80px" }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay }}
         pos={"relative"}
-        icon={icon}
         p={2}
         bg={"primaryLight"}
         border={"2px solid "}
         borderColor={"transparent"}
         rounded={"full"}
         color={"text"}
-        opacity={0}
-        animation={`${fadeBottom} 500ms ease ${delay} forwards`}
         aria-label={alt}
         onClick={onClick}
         shadow={"xl"}
@@ -46,7 +46,9 @@ const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
           bgColor: "accent",
           zIndex: -1,
         }}
-      />
+      >
+        {icon}
+      </MotionIconButton>
     </Flex>
   );
 };

@@ -1,16 +1,17 @@
-import { Flex, Show } from "@chakra-ui/react";
-import { NavbarButtonProps } from "../../TYPES";
+"use client";
+import { Flex } from "@chakra-ui/react";
 import NavButton from "./NavButton";
 import NavIcon from "./NavIcon";
 import React from "react";
-import useScrolling from "../../hooks/useScrolling";
+import { NavButtonType } from "./DesktopNav";
+import useCheckScrolling from "@/hooks/useCheckScrolling";
+import useWindowSize from "@/hooks/useWindowSize";
+import Link from "next/link";
 
-type Props = {
-  buttonsData: NavbarButtonProps[];
-};
-
-const MobileNav = ({ buttonsData }: Props) => {
-  const { isScrolling } = useScrolling();
+const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
+  const { isScrolling } = useCheckScrolling();
+  const { width } = useWindowSize();
+  const isMobile = width < 480;
   return (
     <Flex
       transition={"500ms"}
@@ -24,25 +25,25 @@ const MobileNav = ({ buttonsData }: Props) => {
       color={"text"}
       justifyContent={"space-evenly"}
     >
-      {buttonsData.map((button, index) => {
+      {buttonData.map((button, index) => {
         return button.link ? (
-          <a key={index} href={button.link} onClick={button.refFunction}>
-            <Show above="sm">
-              <NavButton title={button.title} onClick={button.refFunction} delay={button.delay} />
-            </Show>
-            <Show below="sm">
-              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} delay={button.delay} />
-            </Show>
-          </a>
+          <Link key={`link-button-${index}`} href={button.link} onClick={button.refFunction}>
+            {isMobile ? (
+              <NavIcon icon={button.icon as JSX.Element} alt={button.alt as string} onClick={button.refFunction} delay={button.delay} />
+            ) : (
+              <NavButton title={button.title} refFunction={button.refFunction} delay={button.delay} />
+            )}
+          </Link>
+        ) : isMobile ? (
+          <NavIcon
+            key={`button-with-icon-${index}`}
+            icon={button.icon as JSX.Element}
+            alt={button.alt as string}
+            onClick={button.refFunction}
+            delay={button.delay}
+          />
         ) : (
-          <React.Fragment key={index}>
-            <Show above="sm">
-              <NavButton title={button.title} onClick={button.refFunction} delay={button.delay} />
-            </Show>
-            <Show below="sm">
-              <NavIcon icon={button.icon} alt={button.alt} onClick={button.refFunction} delay={button.delay} />
-            </Show>
-          </React.Fragment>
+          <NavButton key={`button-with-text-${index}`} title={button.title} refFunction={button.refFunction} delay={button.delay} />
         );
       })}
     </Flex>

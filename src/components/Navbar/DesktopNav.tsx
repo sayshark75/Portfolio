@@ -1,15 +1,19 @@
 import { Flex, Text } from "@chakra-ui/react";
-import { NavbarButtonProps } from "../../TYPES";
 import NavButton from "./NavButton";
-import useScrolling from "../../hooks/useScrolling";
+import useCheckScrolling from "../../hooks/useCheckScrolling";
+import Link from "next/link";
 
-type Props = {
-  buttonData: NavbarButtonProps[];
+export type NavButtonType = {
+  link?: string;
+  refFunction: () => void;
+  title: string;
+  icon?: JSX.Element;
+  alt?: string;
+  delay: number;
 };
 
-const DesktopNav = ({ buttonData }: Props) => {
-  const { isScrolling } = useScrolling();
-
+const DesktopNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
+  const { isScrolling } = useCheckScrolling();
   return (
     <Flex
       transition={"500ms"}
@@ -48,11 +52,11 @@ const DesktopNav = ({ buttonData }: Props) => {
       <Flex justifyContent={"flex-end"} gap={2} pr={4} flex={4} alignItems={"center"}>
         {buttonData.map((button, index) => {
           return button.link ? (
-            <a key={index} href={button.link} onClick={button.refFunction}>
-              <NavButton title={button.title} onClick={() => {}} delay={button.delay} />
-            </a>
+            <Link key={index} href={button.link} onClick={button.refFunction}>
+              <NavButton title={button.title} refFunction={() => {}} delay={button.delay} />
+            </Link>
           ) : (
-            <NavButton key={index} title={button.title} onClick={button.refFunction} delay={button.delay} />
+            <NavButton key={index} title={button.title} refFunction={button.refFunction} delay={button.delay} />
           );
         })}
       </Flex>

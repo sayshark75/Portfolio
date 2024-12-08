@@ -1,20 +1,21 @@
-import { Button, Flex } from "@chakra-ui/react";
-import { fadeTop } from "../../animations/FadeAnimations";
-import { NavButtonProps } from "../../TYPES";
+import { Button } from "@chakra-ui/react";
+import { NavButtonType } from "./DesktopNav";
+import { MotionFlex } from "@/libs/motionComponents";
 
-const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
+const NavButton = ({ title, refFunction, delay }: NavButtonType) => {
   return (
-    <Flex
+    <MotionFlex
+      initial={{ opacity: 0, y: "-80px" }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay }}
       pos={"relative"}
       w={"min-content"}
-      animation={`${fadeTop} 500ms ease ${delay} forwards`}
       overflow={"hidden"}
-      opacity={0}
       rounded={"full"}
       shadow={"xl"}
     >
       <Button
-        onClick={onClick}
+        onClick={refFunction}
         bgColor={"primaryLight"}
         color={"text"}
         rounded={"full"}
@@ -48,7 +49,7 @@ const NavButton = ({ title, onClick, delay }: NavButtonProps) => {
       >
         {title}
       </Button>
-    </Flex>
+    </MotionFlex>
   );
 };
 
