@@ -3,8 +3,8 @@ import { useInView } from "framer-motion";
 import { MotionText } from "@/libs/motionComponents";
 
 const DescHome = () => {
-  const animRef: RefObject<HTMLDivElement> = useRef(null);
-  const isInView = useInView(animRef);
+  const animRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(animRef as RefObject<Element>, { once: true });
   return (
     <MotionText
       initial={{ opacity: 0, y: "-80px" }}

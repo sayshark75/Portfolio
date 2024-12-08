@@ -13,9 +13,9 @@ import { useScrollContext } from "@/context/ScrollContext";
 const AboutCard = () => {
   const { AboutRef } = useScrollContext();
 
-  const animRef: RefObject<HTMLDivElement> = useRef(null);
+  const animRef = useRef<HTMLDivElement>(null);
 
-  const isIntersecting = useInView(animRef, { once: true });
+  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
   return (
     <Box w={"100%"} bgColor={"white"}>
       <Flex
@@ -35,11 +35,11 @@ const AboutCard = () => {
         <MdHeading title1="About" title2="Me" />
         {/* My About Card */}
         <MotionFlex
+          ref={animRef}
           initial={{ opacity: 0, y: "80px" }}
           animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: "80px" }}
           transition={{ duration: 0.5 }}
           rounded={"md"}
-          ref={animRef}
           bgColor={"transparent"}
           pos={"relative"}
           justifyContent={"center"}

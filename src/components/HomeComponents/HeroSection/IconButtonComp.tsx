@@ -17,8 +17,8 @@ const IconButtonComp = ({ link, tooltip, label, icon, delay }: SocialBtnType) =>
 export default IconButtonComp;
 
 const IconButtonHome = ({ label, icon, tooltip, delay }: SocialBtnType) => {
-  const animRef: RefObject<HTMLDivElement> = useRef(null);
-  const isInView = useInView(animRef, { once: true });
+  const animRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(animRef as RefObject<Element>, { once: true });
   const IconComponent = icon;
   return (
     <Tooltip content={tooltip}>

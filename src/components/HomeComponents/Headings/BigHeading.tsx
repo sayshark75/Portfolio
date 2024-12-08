@@ -4,8 +4,8 @@ import { useInView } from "framer-motion";
 import { RefObject, useRef } from "react";
 
 const BigHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
-  const animRef: RefObject<HTMLDivElement> = useRef(null);
-  const isInView = useInView(animRef, { once: true });
+  const animRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(animRef as RefObject<Element>, { once: true });
   return (
     <Flex ref={animRef} direction={{ base: "column", sm: "row" }}>
       <Flex pos={"relative"}>
