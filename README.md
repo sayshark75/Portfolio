@@ -37,6 +37,8 @@ The website utilizes Framer Motion for:
 ## Deployment
 
 The application can be deployed on platforms like **Vercel**, which provides seamless integration with Next.js.
+- Visit deployment [here](https://sayyed-sharuk-portfolio.vercel.app/)
+
 
 ## License
 
