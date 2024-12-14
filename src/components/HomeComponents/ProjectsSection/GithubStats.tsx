@@ -1,6 +1,5 @@
 "use client";
 import GitHubCalendar from "react-github-calendar";
-import { CustomThemeType } from "@/resources/TYPES";
 import { useCustomTheme } from "@/context/ThemeProvider";
 import { MotionFlex } from "@/libs/motionComponents";
 import { useTheme } from "next-themes";
@@ -14,28 +13,6 @@ const GithubStats = () => {
   const _accent =
     // @ts-ignore
     theme === "dark" ? config.theme?.semanticTokens?.colors?.accent.value._dark : config.theme?.semanticTokens?.colors?.accent.value.base;
-
-  // @ts-ignore
-  const _text = theme === "dark" ? config.theme?.semanticTokens?.colors?.text.value._dark : config.theme?.semanticTokens?.colors?.text.value.base;
-  const _primaryLight =
-    // @ts-ignore
-    theme === "dark" ? config.theme?.semanticTokens?.colors?.primaryLight.value._dark : config.theme?.semanticTokens?.colors?.primaryLight.value.base;
-  const _darker =
-    // @ts-ignore
-    theme === "dark" ? config.theme?.semanticTokens?.colors?.darker.value._dark : config.theme?.semanticTokens?.colors?.darker.value.base;
-  const __primary = _primary.split("#")[1];
-  const __accent = _accent.split("#")[1];
-  const githubTheme: CustomThemeType = {
-    customTheme: {
-      light: [_primary, _accent],
-    },
-    _text,
-    _accent,
-    __primary,
-    __accent,
-    _primaryLight,
-    _darker,
-  };
 
   return (
     <MotionFlex
@@ -51,7 +28,16 @@ const GithubStats = () => {
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <GitHubCalendar fontSize={16} theme={githubTheme.customTheme} blockSize={15} blockMargin={5} hideTotalCount username="sayshark75" />
+      <GitHubCalendar
+        fontSize={16}
+        theme={{
+          light: [_primary, _accent],
+        }}
+        blockSize={15}
+        blockMargin={5}
+        hideTotalCount
+        username="sayshark75"
+      />
     </MotionFlex>
   );
 };

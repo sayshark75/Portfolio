@@ -32,7 +32,7 @@ export const ThemeContextProvider = (props: ColorModeProviderProps) => {
         },
       })
     );
-
+    setConfig(newConfig);
     setTheme(createSystem(newConfig));
   }, [currentColor]); // Re-run when `currentColor` changes
 
