@@ -13,7 +13,7 @@ const DescAboutPage = () => {
       opacity={0}
       ref={animRef}
       color={"text"}
-      letterSpacing={"2px"}
+      letterSpacing={"1.5px"}
       fontWeight={"400"}
       fontFamily={"Poppins"}
       whiteSpace={"pre-wrap"}

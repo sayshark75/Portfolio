@@ -62,7 +62,7 @@ export const Links = {
   TopBarLinkedIn: "https://www.linkedin.com/company/topbar-company",
   TopBarWebsite: "https://www.topbar.in/",
   ModulaWebsite: "https://modula.in/",
-  EquitreeWebsite: "https://equitree.vercel.app/",
+  EquitreeWebsite: "https://equitreecapital.com/",
   AutotronWebsite: "https://www.autotron.tech/",
   AutotronLinkedIn: "",
   AutotronLogo: autotronLogoIcon.src,
@@ -114,7 +114,7 @@ export const Links = {
 
   KoovsLive: "https://frontend-mohit-6164.vercel.app/",
 
-  EquationsLLCWebsite: "https://equations-llc.vercel.app/",
+  EquationsLLCWebsite: "https://www.equationsllc.com/",
 
   TruptiWebsite: "https://www.trupti.co.in/",
 

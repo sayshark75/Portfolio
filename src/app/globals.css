@@ -37,3 +37,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* Google Recaptcha Hidden */
+
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

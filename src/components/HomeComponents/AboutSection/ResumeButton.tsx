@@ -20,7 +20,7 @@ const ResumeButton = () => {
           fontFamily={"Poppins"}
           fontSize={["12px", "14px"]}
           fontWeight={400}
-          letterSpacing={"2px"}
+          letterSpacing={"1.5px"}
           bgColor={"accent"}
           opacity={0}
           rounded={"base"}

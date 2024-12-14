@@ -22,7 +22,7 @@ const BigHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
           fontSize={["34px", "40px", "64px", "86px", "108px"]}
           color={"text"}
           textShadow={["none", "none", "4px 4px 0px #4a4a4a"]}
-          letterSpacing={"2px"}
+          letterSpacing={"1.5px"}
           _hover={{
             color: "primary",
             _after: {
@@ -61,7 +61,7 @@ const BigHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: "80px" }}
         fontSize={["34px", "40px", "64px", "86px", "108px"]}
         color={"accent"}
-        letterSpacing={"2px"}
+        letterSpacing={"1.5px"}
         textShadow={["none", "none", "4px 4px 0px #fff"]}
       >
         {title2}

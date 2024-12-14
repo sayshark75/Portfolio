@@ -18,7 +18,7 @@ const DescHome = () => {
       textAlign={"justify"}
       fontSize={["12px", "14px", "16px", "18px"]}
       m={["4", "8"]}
-      letterSpacing={"2px"}
+      letterSpacing={"1.5px"}
       opacity={0}
     >
       A Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can develop

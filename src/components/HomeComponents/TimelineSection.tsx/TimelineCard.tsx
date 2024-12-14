@@ -92,7 +92,7 @@ const TimelineCard = ({
           fontSize={"12px"}
           fontWeight={"500"}
           color={"text"}
-          letterSpacing={"2px"}
+          letterSpacing={"1.5px"}
           mb={"2px"}
           _after={{
             content: '"."',
@@ -120,7 +120,7 @@ const TimelineCard = ({
         {/* Logo of Company */}
         <Flex flex={4} justifyContent={"flex-start"} alignItems={"center"} gap={4}>
           <Image w={["35px", "50px"]} bgColor={"white"} p={[1, 2]} rounded={"full"} src={logo} alt="Autotron Tech Website Logo" />
-          <Text fontFamily={"Poppins"} fontSize={"14px"} letterSpacing={"2px"} fontWeight={600} color={"text"}>
+          <Text fontFamily={"Poppins"} fontSize={"14px"} letterSpacing={"1.5px"} fontWeight={600} color={"text"}>
             {title}
           </Text>
         </Flex>
@@ -182,7 +182,7 @@ const TimelineCard = ({
           <Text style={{ fontFamily: "Poppins", fontSize: "12px", letterSpacing: "2px", fontWeight: 400 }} color={"text"}>
             Skills:
           </Text>
-          <Text fontFamily={"Poppins"} fontSize={"12px"} letterSpacing={"2px"} fontWeight={400}>
+          <Text fontFamily={"Poppins"} fontSize={"12px"} letterSpacing={"1.5px"} fontWeight={400}>
             <Highlight
               query={query}
               styles={{

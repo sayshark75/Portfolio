@@ -51,7 +51,7 @@ const CopyButton = ({ title }: { title: string }) => {
           bgColor: "primary",
         }}
       >
-        <Text transition={"500ms"} as={"b"} fontWeight={"500"} fontSize={["10px", "11px", "12px", "12px", "12px"]} letterSpacing={"2px"}>
+        <Text transition={"500ms"} as={"b"} fontWeight={"500"} fontSize={["10px", "11px", "12px", "12px", "12px"]} letterSpacing={"1.5px"}>
           {title}
         </Text>
         <Flex color={"white"} bgColor={"accent"} rounded={"full"} p={"8px"}>
