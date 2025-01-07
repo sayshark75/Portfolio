@@ -7,18 +7,18 @@ const CarouselComp = ({ mapperFunction, slides }: { mapperFunction: () => JSX.El
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: slides,
     slidesToScroll: 1,
     initialSlide: 0,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 7000,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
           dots: true,
@@ -35,7 +35,7 @@ const CarouselComp = ({ mapperFunction, slides }: { mapperFunction: () => JSX.El
     ],
   };
   return (
-    <Box w={"90%"}>
+    <Box w={"90%"} pos={"relative"} zIndex={2}>
       <Slider {...settings}>{mapperFunction()}</Slider>
     </Box>
   );

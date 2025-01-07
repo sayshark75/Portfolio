@@ -104,8 +104,9 @@ const Contact = () => {
         ref={ContactRef}
         transition={"500ms"}
         direction={"column"}
-        p={4}
         maxW={"1440px"}
+        mx={"auto"}
+        p={4}
         justifyContent={"center"}
         alignItems={"center"}
         gap={["3", "4", "6", "8", "10"]}

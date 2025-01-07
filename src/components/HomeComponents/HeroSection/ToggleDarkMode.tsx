@@ -8,6 +8,7 @@ const ToggleDarkMode = () => {
   return (
     <Box
       pos={"fixed"}
+      zIndex={100}
       onClick={toggleColorMode}
       bottom={{ base: 24, lg: 5 }}
       right={0}

@@ -17,7 +17,7 @@ const AboutCard = () => {
 
   const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
   return (
-    <Box w={"100%"} bgColor={"white"}>
+    <Box w={"100%"} bgColor={"white"} overflow={"hidden"}>
       <Flex
         ref={AboutRef}
         transition={"500ms"}

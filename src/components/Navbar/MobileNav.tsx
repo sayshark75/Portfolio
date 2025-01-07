@@ -1,17 +1,17 @@
 "use client";
-import { Flex } from "@chakra-ui/react";
-import NavButton from "./NavButton";
-import NavIcon from "./NavIcon";
-import React from "react";
+import { Flex, IconButton, Text } from "@chakra-ui/react";
+import React, { useState } from "react";
 import { NavButtonType } from "./DesktopNav";
 import useCheckScrolling from "@/hooks/useCheckScrolling";
-import useWindowSize from "@/hooks/useWindowSize";
+import { FaHamburger } from "react-icons/fa";
+import { PopoverArrow, PopoverBody, PopoverContent, PopoverRoot, PopoverTitle, PopoverTrigger } from "@/components/ui/popover";
 import Link from "next/link";
+import NavIcon from "./NavIcon";
+import NavMenuButton from "./NavMenuButton";
 
 const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
   const { isScrolling } = useCheckScrolling();
-  const { width } = useWindowSize();
-  const isMobile = width < 480;
+  const [open, setOpen] = useState(false);
   return (
     <Flex
       transition={"500ms"}
@@ -22,30 +22,30 @@ const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
       w={"100%"}
       transform={isScrolling ? "translateY(200%)" : "none"}
       bgColor={"transparent"}
-      color={"text"}
-      justifyContent={"space-evenly"}
+      justifyContent={"flex-start"}
     >
-      {buttonData.map((button, index) => {
-        return button.link ? (
-          <Link key={`link-button-${index}`} href={button.link} onClick={button.refFunction}>
-            {isMobile ? (
-              <NavIcon icon={button.icon as JSX.Element} alt={button.alt as string} onClick={button.refFunction} delay={button.delay} />
-            ) : (
-              <NavButton title={button.title} refFunction={button.refFunction} delay={button.delay} />
-            )}
-          </Link>
-        ) : isMobile ? (
-          <NavIcon
-            key={`button-with-icon-${index}`}
-            icon={button.icon as JSX.Element}
-            alt={button.alt as string}
-            onClick={button.refFunction}
-            delay={button.delay}
-          />
-        ) : (
-          <NavButton key={`button-with-text-${index}`} title={button.title} refFunction={button.refFunction} delay={button.delay} />
-        );
-      })}
+      <PopoverRoot open={open} onOpenChange={(e) => setOpen(e.open)}>
+        <PopoverTrigger asChild>
+          <IconButton color={"#fff"} bgColor={"accent"} rounded={"full"} ml={6}>
+            <FaHamburger />
+          </IconButton>
+        </PopoverTrigger>
+        <PopoverContent maxW={"160px"}>
+          <PopoverBody p={2} rounded={"md"} bgColor={"accent"} color={"#fff"}>
+            <Flex w={"100%"} direction={"column"} gap={1}>
+              {buttonData.map((button, index) => {
+                return button.link ? (
+                  <Link key={`link-button-${index}`} href={button.link} onClick={button.refFunction}>
+                    <NavMenuButton {...button} closePopover={() => setOpen(false)} />
+                  </Link>
+                ) : (
+                  <NavMenuButton key={`button-${index}`} {...button} closePopover={() => setOpen(false)} />
+                );
+              })}
+            </Flex>
+          </PopoverBody>
+        </PopoverContent>
+      </PopoverRoot>
     </Flex>
   );
 };

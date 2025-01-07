@@ -118,7 +118,7 @@ export const Links = {
 
   TruptiWebsite: "https://www.trupti.co.in/",
 
-  yogiInternationalWebsite: "https://yogis-international.myshopify.com/",
+  terractiveWebsite: "https://terractive.in/",
 
   diogoLouisWebsite: "https://www.diogolouis.com/",
 

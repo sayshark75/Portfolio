@@ -13,34 +13,14 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
       direction={["column"]}
       rounded={"lg"}
       overflow={"hidden"}
+      bgColor={"primaryLight"}
       minH={"100%"}
-      _hover={{
-        _after: {
-          w: "100%",
-          minH: "100%",
-          rounded: "none",
-        },
-      }}
-      _after={{
-        content: '"."',
-        w: "0px",
-        minH: "0px",
-        color: "transparent",
-        transition: "500ms",
-        bgColor: "primaryLight",
-        rounded: "full",
-        pos: "absolute",
-        bottom: "0px",
-        left: "0px",
-        zIndex: -1,
-      }}
     >
       {/* Image of Project */}
       <Image
         src={image}
         w={"100%"}
         h={["160px", "230px", "160px", "170px", "230px"]}
-        mb={4}
         transition={"7s"}
         objectFit={"cover"}
         objectPosition={"top"}
@@ -120,17 +100,18 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
           {status}
         </Text>
         <Flex transition={"500ms"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"} mb={"8px"}>
-          <Link href={live} target={"_blank"} rel="noreferrer">
-            <Flex pos={"relative"}>
+          <Link href={live} target={"_blank"} rel="noreferrer" style={{ width: "100%" }}>
+            <Flex pos={"relative"} width={"100%"}>
               <Button
                 pos={"relative"}
                 zIndex={2}
                 transition={"500ms"}
-                rounded={"base"}
+                rounded={"full"}
                 fontSize={["14px", "16px"]}
-                width={"7rem"}
+                width={!github ? "100%" : "7rem"}
                 fontWeight={["300", "400"]}
                 color={"#fff"}
+                overflow={"hidden"}
                 letterSpacing={"1.5px"}
                 _active={{ transform: "translateY(10px)" }}
                 bgColor={"accent"}
@@ -154,7 +135,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                   zIndex: -1,
                   transition: "500ms",
                   bgColor: "primary",
-                  rounded: "base",
+                  rounded: "full",
                   border: "0px solid",
                   borderColor: "accent",
                 }}
@@ -170,7 +151,8 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                   pos={"relative"}
                   zIndex={2}
                   transition={"500ms"}
-                  rounded={"base"}
+                  rounded={"full"}
+                  overflow={"hidden"}
                   fontSize={["14px", "16px"]}
                   width={"7rem"}
                   fontWeight={["300", "400"]}
@@ -198,7 +180,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                     zIndex: -1,
                     transition: "500ms",
                     bgColor: "primary",
-                    rounded: "base",
+                    rounded: "full",
                     border: "0px solid",
                     borderColor: "accent",
                   }}

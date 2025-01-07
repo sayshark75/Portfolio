@@ -21,6 +21,7 @@ const {
 export const TopBarQuery = [
   "JavaScript",
   "React",
+  "NextJs",
   "TypeScript",
   "Scss",
   "Express",
@@ -29,7 +30,7 @@ export const TopBarQuery = [
   "AWS EC2",
   "AWS S3",
   "Docker",
-  "Strapi",
+  "Shopify",
   "Razorpay",
 ];
 export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];

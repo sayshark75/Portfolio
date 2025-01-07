@@ -5,7 +5,7 @@ import { MotionFlex } from "@/libs/motionComponents";
 const ContributionList = () => {
   return (
     <Grid
-      templateColumns={{ base: "repeat(2, minmax(100px, 1fr))", lg: "repeat(4, minmax(160px, 1fr))", xl: "repeat(4, minmax(200px, 1fr))" }}
+      templateColumns={{ base: "repeat(2, minmax(100px, 1fr))", lg: "repeat(4, minmax(120px, 1fr))", xl: "repeat(4, minmax(200px, 1fr))" }}
       w={"100%"}
       gap={4}
       mt={4}

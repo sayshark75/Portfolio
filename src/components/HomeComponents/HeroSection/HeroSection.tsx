@@ -7,6 +7,8 @@ import ThemeContainer from "./ThemeContainer";
 import IconButtonComp from "./IconButtonComp";
 import { SocialButtonsData } from "@/resources/CONSTANTS";
 import useWindowSize from "@/hooks/useWindowSize";
+import { FaLeaf } from "react-icons/fa6";
+import { GiMapleLeaf } from "react-icons/gi";
 
 const HeroSection = () => {
   const { HomeRef } = useScrollContext();
@@ -15,7 +17,19 @@ const HeroSection = () => {
   const isMobile = width < 768;
 
   return (
-    <Box w={"100%"} bgColor={"white"}>
+    <Box w={"100%"} bgColor={"white"} overflow={"hidden"} pos={"relative"} zIndex={1}>
+      <Box fontSize={"120px"} color={"accent"} pos={"absolute"} zIndex={1} bottom={"0px"} left={"-20px"} opacity={0.3}>
+        <FaLeaf />
+      </Box>
+      <Box fontSize={"120px"} color={"accent"} pos={"absolute"} zIndex={1} top={"0px"} right={"-20px"} transform={"rotate(180deg)"} opacity={0.3}>
+        <FaLeaf />
+      </Box>
+      <Box fontSize={"120px"} color={"accent"} pos={"absolute"} zIndex={1} bottom={"0px"} right={"-20px"} opacity={0.3}>
+        <GiMapleLeaf />
+      </Box>
+      <Box fontSize={"120px"} color={"accent"} pos={"absolute"} zIndex={1} top={"0px"} left={"-20px"} transform={"rotate(180deg)"} opacity={0.3}>
+        <GiMapleLeaf />
+      </Box>
       <Flex
         ref={HomeRef}
         transition={"500ms"}
@@ -27,6 +41,8 @@ const HeroSection = () => {
         mx={"auto"}
         minH={"100vh"}
         gap={["6", "12"]}
+        pos={"relative"}
+        zIndex={5}
       >
         <BigHeading title1="Hi I'm" title2="Sharuk Sayyed" />
         <Flex w={{ base: "95%", sm: "90%", md: "85%", lg: "70%" }}>

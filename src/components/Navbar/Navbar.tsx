@@ -10,7 +10,7 @@ import { getNavbarButtonsData } from "@/resources/NavbarButtonsGenerator";
 const Navbar = () => {
   const { width } = useWindowSize();
 
-  const isMobile = width < 768;
+  const isMobile = width < 568;
 
   const scrollPoints = useScrollContext();
 

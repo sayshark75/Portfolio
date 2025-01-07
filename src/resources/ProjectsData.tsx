@@ -6,21 +6,17 @@ import koovsImg from "@/assets/projects/koovs.webp";
 import glamazonImg from "@/assets/projects/glamazon.webp";
 import indExpImg from "@/assets/projects/iexpress.webp";
 import equationsImg from "@/assets/projects/equations.webp";
-import yogiImg from "@/assets/projects/yogi.webp";
+import terractiveImg from "@/assets/projects/terractive.webp";
 import diogoImg from "@/assets/projects/diogolouis.webp";
 import codeBankImg from "@/assets/projects/code-bank.webp";
 import modulaImg from "@/assets/projects/modula.webp";
 import equitreeImg from "@/assets/projects/equitree.webp";
 import { Links } from "./CONSTANTS";
 import { ProjectDataProps, ProjectStatus } from "./TYPES";
-import { FaReact } from "react-icons/fa";
-import { SiChakraui, SiGooglecloud, SiNextdotjs } from "react-icons/si";
-import { TbBrandFramer } from "react-icons/tb";
 
 const {
   APrimeGithub,
   APrimeLive,
-  AutotronWebsite,
   EquationsLLCWebsite,
   EquitreeWebsite,
   GadgetRamboGithub,
@@ -36,87 +32,10 @@ const {
   glamazonLive,
   indianExpressGithub,
   indianExpressLive,
-  yogiInternationalWebsite,
+  terractiveWebsite,
 } = Links;
 
-export const ProjectsData: ProjectDataProps[] = [
-  {
-    live: EquitreeWebsite,
-    github: "",
-    image: equitreeImg.src,
-    heading1: "Equitree",
-    heading2: "Capital",
-    status: ProjectStatus.Development,
-    workType: "Team of 2 Members",
-    summary: "Fundamental investors applying a private equity approach to public markets.",
-    TStack: ["React", "NextJS", "Framer Motion", "Chakra UI", "Google API", "SendGrid"],
-  },
-  {
-    live: ModulaWebsite,
-    github: "",
-    image: modulaImg.src,
-    heading1: "Modula",
-    heading2: "Kitchen",
-    status: ProjectStatus.Completed,
-    workType: "Team of 2 Members",
-    summary: "Build Kitchen and Robust Interior Designing, with the help of Professionals.",
-    TStack: ["React", "NextJs", "Framer Motion", "GoogleAPI", "SendGrid", "Notion", "ChakraUI"],
-  },
-  {
-    live: diogoLouisWebsite,
-    github: "",
-    image: diogoImg.src,
-    heading1: "Diogo Louis",
-    heading2: "Fashion",
-    status: ProjectStatus.Completed,
-    workType: "Team of 3 Members",
-    summary: "Sell Wrist Watches, and Fashion related products.",
-    TStack: ["Shopify", "Liquid", "CSS"],
-  },
-  {
-    live: yogiInternationalWebsite,
-    github: "",
-    image: yogiImg.src,
-    heading1: "Yogi's",
-    heading2: "international",
-    status: ProjectStatus.Building,
-    workType: "Team of 2 Members",
-    summary: "Sell Ayurvedic and Pranic food, Cosmetic products.",
-    TStack: ["Shopify", "Liquid", "CSS"],
-  },
-  {
-    live: EquationsLLCWebsite,
-    github: "",
-    image: equationsImg.src,
-    heading1: "Equations",
-    heading2: "(Virtual CFO)",
-    status: ProjectStatus.Development,
-    workType: "Team of 2 Members",
-    summary: "Provides financial strategy and accounting solutions for startups.",
-    TStack: ["React", "NextJs", "SSR", "Express", "ChakraUI"],
-  },
-  {
-    live: TruptiWebsite,
-    github: "",
-    image: truptiImg.src,
-    heading1: "Trupti",
-    status: ProjectStatus.Completed,
-    heading2: "Treats",
-    workType: "Team of 4 Members",
-    summary: "Sells Sweet and Snacks across all Cities in India.",
-    TStack: ["React", "ViteJS", "Express", "Scss"],
-  },
-  // {
-  //   live: AutotronWebsite,
-  //   github: "",
-  //   image: autotronImg.src,
-  //   heading1: "Autotron",
-  //   heading2: "Electronics",
-  //   status: ProjectStatus.Completed,
-  //   workType: "Team of 4 Members",
-  //   summary: "Sells and repairs electronic projects and Labkits.",
-  //   TStack: ["React", "NextJS", "MongoDB", "Tailwind"],
-  // },
+export const PersonalProjectsData: ProjectDataProps[] = [
   {
     live: codeBankWebsite,
     github: codeBankGithub,
@@ -126,7 +45,7 @@ export const ProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Development,
     workType: "Team of 2 Members",
     summary: "Use frequently required code snippets and tools",
-    TStack: ["React", "NextJS", "Express", "TypeScript", "MongoDB", "Chakra UI"],
+    TStack: ["React", "NextJS", "TypeScript", "MongoDB", "Chakra UI", "NextAuth"],
   },
   {
     live: KoovsLive,
@@ -183,4 +102,84 @@ export const ProjectsData: ProjectDataProps[] = [
     summary: "An online and offline news platform with a mix of news and information.",
     TStack: ["JavaScript", "HTML", "CSS"],
   },
+];
+
+export const LiveProjectsData: ProjectDataProps[] = [
+  {
+    live: EquitreeWebsite,
+    github: "",
+    image: equitreeImg.src,
+    heading1: "Equitree",
+    heading2: "Capital",
+    status: ProjectStatus.Completed,
+    workType: "Team of 2 Members",
+    summary: "Fundamental investors applying a private equity approach to public markets.",
+    TStack: ["React", "NextJS", "Framer Motion", "Chakra UI", "Google API", "SendGrid"],
+  },
+  {
+    live: ModulaWebsite,
+    github: "",
+    image: modulaImg.src,
+    heading1: "Modula",
+    heading2: "Kitchen",
+    status: ProjectStatus.Completed,
+    workType: "Team of 2 Members",
+    summary: "Build Kitchen and Robust Interior Designing Professionally.",
+    TStack: ["React", "NextJs", "Framer Motion", "GoogleAPI", "SendGrid", "ChakraUI"],
+  },
+  {
+    live: diogoLouisWebsite,
+    github: "",
+    image: diogoImg.src,
+    heading1: "Diogo Louis",
+    heading2: "Fashion",
+    status: ProjectStatus.Completed,
+    workType: "Team of 3 Members",
+    summary: "Sell Wrist Watches, and Fashion related products.",
+    TStack: ["Shopify", "Liquid", "CSS"],
+  },
+  {
+    live: terractiveWebsite,
+    github: "",
+    image: terractiveImg.src,
+    heading1: "Terractive",
+    heading2: "Merch",
+    status: ProjectStatus.Development,
+    workType: "Team of 2 Members",
+    summary: "Sells Clothing and Accessories across all Cities in India.",
+    TStack: ["Shopify", "Liquid", "CSS"],
+  },
+  {
+    live: EquationsLLCWebsite,
+    github: "",
+    image: equationsImg.src,
+    heading1: "Equations",
+    heading2: "(Virtual CFO)",
+    status: ProjectStatus.Development,
+    workType: "Team of 2 Members",
+    summary: "Provides financial strategy and accounting solutions for startups.",
+    TStack: ["React", "NextJs", "SSR", "Express", "ChakraUI"],
+  },
+  {
+    live: TruptiWebsite,
+    github: "",
+    image: truptiImg.src,
+    heading1: "Trupti",
+    status: ProjectStatus.Completed,
+    heading2: "Treats",
+    workType: "Team of 4 Members",
+    summary: "Sells Sweet and Snacks across all Cities in India.",
+    TStack: ["React", "ViteJS", "Express", "Scss"],
+  },
+  // {
+  //   live: AutotronWebsite,
+  //   github: "",
+  //   image: autotronImg.src,
+  //   heading1: "Autotron",
+  //   heading2: "Electronics",
+  //   status: ProjectStatus.Completed,
+  //   workType: "Team of 4 Members",
+  //   summary: "Sells and repairs electronic projects and Labkits.",
+  //   TStack: ["React", "NextJS", "MongoDB", "Tailwind"],
+  // },
 ];
