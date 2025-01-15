@@ -1,4 +1,5 @@
 import getCurrentDateInTimeZone from "@/utils/getCurrentDatetime";
+import { googleSheetsUtil } from "@/utils/googleSheetsUtil";
 import { verifyRecaptcha } from "@/utils/recaptchaUtils";
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
@@ -56,8 +57,10 @@ export async function POST(req: NextRequest) {
       text: `From:\nUser - ${name}, \nEmail - ${email},\n\nMessage - ${message}\n\n${getCurrentDateInTimeZone("Asia/Kolkata")}`,
       html: "",
     });
+    await googleSheetsUtil("A1:C1", [[name, email, message]]);
     return NextResponse.json({ message: "mail sent successfully", status: true, data: info });
   } catch (error) {
+    console.log("error: ", error);
     return NextResponse.json({ message: "mail not sent", status: false, data: null });
   }
 }
