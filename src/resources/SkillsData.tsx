@@ -1,4 +1,5 @@
 import { BiLogoVisualStudio } from "react-icons/bi";
+import { BsTerminalFill } from "react-icons/bs";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaNodeJs, FaAws, FaDocker, FaGit, FaShopify } from "react-icons/fa";
 import {
   SiTypescript,
@@ -23,6 +24,9 @@ import {
   SiPostman,
   SiAdobecreativecloud,
   SiMui,
+  SiIntellijidea,
+  SiOpenai,
+  SiVercel,
 } from "react-icons/si";
 
 export const SkillsData = [
@@ -32,7 +36,7 @@ export const SkillsData = [
     skills: [
       { title: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", icon: <FaHtml5 />, color: "#E34F26" },
       { title: "CSS3", link: "https://developer.mozilla.org/en-US/docs/Web/CSS", icon: <FaCss3Alt />, color: "#1572B6" },
-      { title: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: <FaJs />, color: "#F7DF1E" },
+      { title: "JavaScript", link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: <FaJs />, color: "#FCC624" },
       { title: "TypeScript", link: "https://www.typescriptlang.org/", icon: <SiTypescript />, color: "#3178C6" },
       { title: "Java", link: "https://www.java.com/", icon: <FaJava />, color: "#007396" },
     ],
@@ -60,7 +64,7 @@ export const SkillsData = [
       { title: "Express", link: "https://expressjs.com/", icon: <SiExpress />, color: "darker" },
       { title: "MongoDB", link: "https://www.mongodb.com/", icon: <SiMongodb />, color: "#47A248" },
       { title: "Firebase", link: "https://firebase.google.com/", icon: <SiFirebase />, color: "#FFCA28" },
-      { title: "WebSockets", link: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", icon: <FaJs />, color: "#F7DF1E" },
+      { title: "WebSockets", link: "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API", icon: <FaJs />, color: "#FCC624" },
       { title: "Prisma", link: "https://www.prisma.io/", icon: <SiPrisma />, color: "darker" },
       { title: "Sequelize", link: "https://sequelize.org/", icon: <SiSequelize />, color: "#52B0E7" },
     ],
@@ -70,6 +74,7 @@ export const SkillsData = [
     title2: "Skills",
     skills: [
       { title: "AWS Essentials", link: "https://aws.amazon.com/", icon: <FaAws />, color: "#FF9900" },
+      { title: "Vercel", link: "https://vercel.com/home", icon: <SiVercel />, color: "darker" },
       { title: "Docker", link: "https://www.docker.com/", icon: <FaDocker />, color: "#2496ED" },
       { title: "Git", link: "https://git-scm.com/", icon: <FaGit />, color: "#F05032" },
       { title: "JEST", link: "https://jestjs.io/", icon: <SiJest />, color: "#C21325" },
@@ -78,15 +83,23 @@ export const SkillsData = [
   },
   {
     title1: "CMS & Other",
-    title2: "Skills",
+    title2: "Tools",
     skills: [
       { title: "Shopify", link: "https://www.shopify.com/", icon: <FaShopify />, color: "#96BF48" },
       { title: "Strapi", link: "https://strapi.io/", icon: <SiStrapi />, color: "#2E7EEA" },
       { title: "Razorpay", link: "https://razorpay.com/", icon: <SiRazorpay />, color: "#02042B" },
       { title: "Linux", link: "https://www.linux.org/", icon: <SiLinux />, color: "#FCC624" },
       { title: "Ubuntu", link: "https://ubuntu.com/", icon: <SiUbuntu />, color: "#E95420" },
+      {
+        title: "CLI",
+        link: "https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands",
+        icon: <BsTerminalFill />,
+        color: "darker",
+      },
+      { title: "IntelliJ IDEA", link: "https://www.jetbrains.com/idea/", icon: <SiIntellijidea />, color: "#b83aca" },
       { title: "VS Code", link: "https://code.visualstudio.com/", icon: <BiLogoVisualStudio />, color: "#007ACC" },
       { title: "Postman", link: "https://www.postman.com/", icon: <SiPostman />, color: "#FF6C37" },
+      { title: "ChatGPT", link: "https://chatgpt.com/", icon: <SiOpenai />, color: "darker" },
       { title: "Graphic Designing", link: "https://www.adobe.com/creativecloud.html", icon: <SiAdobecreativecloud />, color: "#FF0000" },
     ],
   },

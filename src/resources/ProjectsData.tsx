@@ -2,6 +2,7 @@ import truptiImg from "@/assets/projects/trupti.webp";
 import autotronImg from "@/assets/projects/autotron.webp";
 import aPrimeImg from "@/assets/projects/aprime.webp";
 import gRamboImg from "@/assets/projects/gadgetRambo.webp";
+import devboardImg from "@/assets/projects/devboard.png";
 import koovsImg from "@/assets/projects/koovs.webp";
 import glamazonImg from "@/assets/projects/glamazon.webp";
 import indExpImg from "@/assets/projects/iexpress.webp";
@@ -11,6 +12,7 @@ import diogoImg from "@/assets/projects/diogolouis.webp";
 import codeBankImg from "@/assets/projects/code-bank.webp";
 import modulaImg from "@/assets/projects/modula.webp";
 import equitreeImg from "@/assets/projects/equitree.webp";
+import appleburyImg from "@/assets/projects/applebury.webp";
 import { Links } from "./CONSTANTS";
 import { ProjectDataProps, ProjectStatus } from "./TYPES";
 
@@ -33,9 +35,22 @@ const {
   indianExpressGithub,
   indianExpressLive,
   terractiveWebsite,
+  AppleBuryWebsite,
+  DevBoardWebsite,
 } = Links;
 
 export const PersonalProjectsData: ProjectDataProps[] = [
+  {
+    live: DevBoardWebsite,
+    github: "",
+    image: devboardImg.src,
+    heading1: "Dev",
+    heading2: "Board",
+    status: ProjectStatus.Development,
+    workType: "Individual",
+    summary: "A Productivity Platform, to manage browser tabs and projects",
+    TStack: ["React", "NextJS", "TypeScript", "Prisma ORM", "MongoDB", "Chakra UI", "NextAuth"],
+  },
   {
     live: codeBankWebsite,
     github: codeBankGithub,
@@ -45,7 +60,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Development,
     workType: "Team of 2 Members",
     summary: "Use frequently required code snippets and tools",
-    TStack: ["React", "NextJS", "TypeScript", "MongoDB", "Chakra UI", "NextAuth"],
+    TStack: ["React", "NextJS", "TypeScript", "Prisma ORM", "MongoDB", "Chakra UI", "NextAuth"],
   },
   {
     live: KoovsLive,
@@ -105,6 +120,17 @@ export const PersonalProjectsData: ProjectDataProps[] = [
 ];
 
 export const LiveProjectsData: ProjectDataProps[] = [
+  {
+    live: AppleBuryWebsite,
+    github: "",
+    image: appleburyImg.src,
+    heading1: "AppleBury",
+    heading2: "B.A.",
+    status: ProjectStatus.Building,
+    workType: "Team of 2 Members",
+    summary: "Empowering children to enhance Communication, Daily Living Skills, and Socialization.",
+    TStack: ["NextJS", "Framer Motion", "Chakra UI", "Google API", "TypeScript"],
+  },
   {
     live: EquitreeWebsite,
     github: "",

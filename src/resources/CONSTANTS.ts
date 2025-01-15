@@ -51,6 +51,10 @@ export const SocialButtonsData = [
 ];
 
 export const Links = {
+  DevBoardWebsite: "https://developmentpanel.vercel.app/",
+
+  AppleBuryWebsite: "https://appleburybehaviorassociates.com/",
+
   githubLink: "https://github.com/sayshark75",
 
   mailLink: "mailto:sayyedsharuk75@gmail.com",
