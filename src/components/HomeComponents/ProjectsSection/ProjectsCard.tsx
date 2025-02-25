@@ -2,6 +2,7 @@ import { Box, Button, Flex, Highlight, Image, Text } from "@chakra-ui/react";
 import SmHeading from "../Headings/SmHeading";
 import { ProjectDataProps } from "@/resources/TYPES";
 import Link from "next/link";
+import { MdLock } from "react-icons/md";
 
 const ProjectsCard = ({ live, github, image, workType, heading1, heading2, status, summary, TStack }: ProjectDataProps) => {
   return (
@@ -108,7 +109,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                 transition={"500ms"}
                 rounded={"full"}
                 fontSize={["14px", "16px"]}
-                width={!github ? "100%" : "7rem"}
+                width={"7rem"}
                 fontWeight={["300", "400"]}
                 color={"#fff"}
                 overflow={"hidden"}
@@ -144,52 +145,52 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
               </Button>
             </Flex>
           </Link>
-          {github && (
-            <Link href={github} target={"_blank"} rel="noreferrer">
-              <Flex pos={"relative"}>
-                <Button
-                  pos={"relative"}
-                  zIndex={2}
-                  transition={"500ms"}
-                  rounded={"full"}
-                  overflow={"hidden"}
-                  fontSize={["14px", "16px"]}
-                  width={"7rem"}
-                  fontWeight={["300", "400"]}
-                  color={"#fff"}
-                  letterSpacing={"1.5px"}
-                  _active={{ transform: "translateY(10px)" }}
-                  bgColor={"accent"}
-                  _hover={{
-                    color: "accent",
-                    _after: {
-                      w: "100%",
-                      left: "0px",
-                      border: "1px solid",
-                      borderColor: "accent",
-                    },
-                  }}
-                  _after={{
-                    content: '"."',
-                    color: "transparent",
-                    w: "0px",
-                    minH: "100%",
-                    pos: "absolute",
-                    top: "0px",
-                    right: "0px",
-                    zIndex: -1,
-                    transition: "500ms",
-                    bgColor: "primary",
-                    rounded: "full",
-                    border: "0px solid",
+
+          <Link href={github ? github : "#"} target={"_blank"} rel="noreferrer">
+            <Flex pos={"relative"}>
+              <Button
+                disabled={!github}
+                pos={"relative"}
+                zIndex={2}
+                transition={"500ms"}
+                rounded={"full"}
+                overflow={"hidden"}
+                fontSize={["14px", "16px"]}
+                width={"7rem"}
+                fontWeight={["300", "400"]}
+                color={"#fff"}
+                letterSpacing={"1.5px"}
+                _active={{ transform: "translateY(10px)" }}
+                bgColor={"accent"}
+                _hover={{
+                  color: "accent",
+                  _after: {
+                    w: "100%",
+                    left: "0px",
+                    border: "1px solid",
                     borderColor: "accent",
-                  }}
-                >
-                  Github
-                </Button>
-              </Flex>
-            </Link>
-          )}
+                  },
+                }}
+                _after={{
+                  content: '"."',
+                  color: "transparent",
+                  w: "0px",
+                  minH: "100%",
+                  pos: "absolute",
+                  top: "0px",
+                  right: "0px",
+                  zIndex: -1,
+                  transition: "500ms",
+                  bgColor: "primary",
+                  rounded: "full",
+                  border: "0px solid",
+                  borderColor: "accent",
+                }}
+              >
+                Github {github ? "" : <MdLock />}
+              </Button>
+            </Flex>
+          </Link>
         </Flex>
       </Flex>
     </Flex>

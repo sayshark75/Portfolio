@@ -1,6 +1,9 @@
-import { BiLogoVisualStudio } from "react-icons/bi";
+import { BiCodeCurly, BiLogoVisualStudio } from "react-icons/bi";
 import { BsTerminalFill } from "react-icons/bs";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaJava, FaNodeJs, FaAws, FaDocker, FaGit, FaShopify } from "react-icons/fa";
+import { FaBook, FaCircleQuestion, FaClock, FaMessage, FaStar, FaUserGroup, FaUserTie } from "react-icons/fa6";
+import { PiPlantFill } from "react-icons/pi";
+import { RiRobot3Fill } from "react-icons/ri";
 import {
   SiTypescript,
   SiVite,
@@ -27,11 +30,16 @@ import {
   SiIntellijidea,
   SiOpenai,
   SiVercel,
+  SiClaude,
+  SiHuggingface,
+  SiGooglegemini,
+  SiLeetcode,
+  SiNotion,
 } from "react-icons/si";
 
 export const SkillsData = [
   {
-    title1: "Coding",
+    title1: "Coding & Markup",
     title2: "Languages",
     skills: [
       { title: "HTML5", link: "https://developer.mozilla.org/en-US/docs/Web/HTML", icon: <FaHtml5 />, color: "#E34F26" },
@@ -99,8 +107,68 @@ export const SkillsData = [
       { title: "IntelliJ IDEA", link: "https://www.jetbrains.com/idea/", icon: <SiIntellijidea />, color: "#b83aca" },
       { title: "VS Code", link: "https://code.visualstudio.com/", icon: <BiLogoVisualStudio />, color: "#007ACC" },
       { title: "Postman", link: "https://www.postman.com/", icon: <SiPostman />, color: "#FF6C37" },
-      { title: "ChatGPT", link: "https://chatgpt.com/", icon: <SiOpenai />, color: "darker" },
+
       { title: "Graphic Designing", link: "https://www.adobe.com/creativecloud.html", icon: <SiAdobecreativecloud />, color: "#FF0000" },
+    ],
+  },
+  {
+    title1: "AI",
+    title2: "Tools",
+    skills: [
+      { title: "ChatGPT", link: "https://chatgpt.com/", icon: <SiOpenai />, color: "darker" },
+      { title: "Claude AI", link: "https://claude.ai/new", icon: <SiClaude />, color: "#feb248" },
+      { title: "Grok AI", link: "https://grok.com/", icon: <RiRobot3Fill />, color: "darker" },
+      { title: "Codium", link: "https://codeium.com/", icon: <BiCodeCurly />, color: "#09b6a2" },
+      { title: "Gemini", link: "https://gemini.google.com/app?hl=en-IN", icon: <SiGooglegemini />, color: "#2aadfe" },
+      { title: "Hugging Face", link: "https://huggingface.co/", icon: <SiHuggingface />, color: "#fee14d" },
+    ],
+  },
+  {
+    title1: "Soft",
+    title2: "Skills",
+    skills: [
+      {
+        title: "Teamwork",
+        link: "#",
+        icon: <FaUserGroup />,
+        color: "darker",
+      },
+      {
+        title: "Leadership",
+        link: "#",
+        icon: <FaStar />,
+        color: "darker",
+      },
+      {
+        title: "Problem Solving",
+        link: "#",
+        icon: <FaCircleQuestion />,
+        color: "darker",
+      },
+      {
+        title: "Time Management",
+        link: "#",
+        icon: <FaClock />,
+        color: "darker",
+      },
+      {
+        title: "Adaptability",
+        link: "#",
+        icon: <FaBook />,
+        color: "darker",
+      },
+      {
+        title: "Communication",
+        link: "#",
+        icon: <FaMessage />,
+        color: "darker",
+      },
+      {
+        title: "Growth Mindset",
+        link: "#",
+        icon: <PiPlantFill />,
+        color: "darker",
+      },
     ],
   },
 ];

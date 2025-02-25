@@ -22,7 +22,7 @@ const TechnicalSkills = () => {
         justifyContent={"center"}
         alignItems={"center"}
       >
-        <MdHeading title1="Technical" title2="Skills" />
+        <MdHeading title1="Professional" title2="Skills" />
         <CarouselComp mapperFunction={SkillsMapper} slides={3} />
       </Flex>
     </Box>

@@ -58,7 +58,7 @@ const Projects = () => {
             direction={"column"}
             pos={"relative"}
           >
-            <SubHeading title1="Individual" title2="Projects" />
+            <SubHeading title1="Hobby" title2="Projects" />
             <CarouselComp mapperFunction={PersonalProjectMapper} slides={1} />
           </Flex>
         </Flex>

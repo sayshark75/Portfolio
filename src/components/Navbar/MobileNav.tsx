@@ -8,6 +8,7 @@ import { PopoverArrow, PopoverBody, PopoverContent, PopoverRoot, PopoverTitle, P
 import Link from "next/link";
 import NavIcon from "./NavIcon";
 import NavMenuButton from "./NavMenuButton";
+import { MdMenu } from "react-icons/md";
 
 const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
   const { isScrolling } = useCheckScrolling();
@@ -27,7 +28,7 @@ const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
       <PopoverRoot open={open} onOpenChange={(e) => setOpen(e.open)}>
         <PopoverTrigger asChild>
           <IconButton color={"#fff"} bgColor={"accent"} rounded={"full"} ml={6}>
-            <FaHamburger />
+            <MdMenu />
           </IconButton>
         </PopoverTrigger>
         <PopoverContent maxW={"160px"}>

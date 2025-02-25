@@ -21,8 +21,9 @@ const DescHome = () => {
       letterSpacing={"1.5px"}
       opacity={0}
     >
-      A Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can develop
-      robust and efficient products. Keep up with the latest advancements in the field, and work well with teams to deliver the best possible results.
+      An AI driven Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can
+      develop robust and efficient products. Keep up with the latest advancements in the field, and work well with teams to deliver the best possible
+      results.
     </MotionText>
   );
 };

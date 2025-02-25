@@ -48,7 +48,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     heading2: "Board",
     status: ProjectStatus.Development,
     workType: "Individual",
-    summary: "A Productivity Platform, to manage browser tabs and projects",
+    summary: "A Productivity Platform, to manage daily important browser tabs and projects",
     TStack: ["React", "NextJS", "TypeScript", "Prisma ORM", "MongoDB", "Chakra UI", "NextAuth"],
   },
   {
@@ -59,7 +59,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     heading2: "Bank",
     status: ProjectStatus.Development,
     workType: "Team of 2 Members",
-    summary: "Use frequently required code snippets and tools",
+    summary: "Use frequently required code snippets and tools, help other people to develop faster",
     TStack: ["React", "NextJS", "TypeScript", "Prisma ORM", "MongoDB", "Chakra UI", "NextAuth"],
   },
   {
@@ -70,7 +70,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Completed,
     heading2: "(Clone)",
     workType: "Team of 4 Members",
-    summary: "An Ecommerce website for fashion-related products.",
+    summary: "A Clone of Ecommerce website for Masai school's construct week. made in 5 days.",
     TStack: ["React", "Node", "ChakraUI", "Express", "MongoDB"],
   },
   {
@@ -81,7 +81,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Completed,
     heading2: "(Youtube App)",
     workType: "Individual",
-    summary: "A simple video platform to watch YouTube videos Online.",
+    summary: "A simple video platform to watch YouTube videos Online. practicing youtube API's.",
     TStack: ["React", "TypeScript", "Redux", "YouTube API", "ChakraUI"],
   },
   {
@@ -92,7 +92,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     heading2: "(Clone)",
     status: ProjectStatus.Completed,
     workType: "Team of 5 members",
-    summary: "A tech gadgets website with specifications of electronic gadgets.",
+    summary: "A tech website with specs of electronic gadgets. Practicing firebase in Masai school.",
     TStack: ["React", "NextJS", "Firebase", "Redux", "ChakraUI"],
   },
   {
@@ -103,7 +103,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Completed,
     heading2: "(Clone)",
     workType: "Individual",
-    summary: "An Ecommerce website for cosmetics and beauty products.",
+    summary: "An Ecommerce website for beauty products. Construct week project in Masai school.",
     TStack: ["React", "ChakraUI"],
   },
   {
@@ -114,7 +114,7 @@ export const PersonalProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Completed,
     heading2: "(Clone)",
     workType: "Individual",
-    summary: "An online and offline news platform with a mix of news and information.",
+    summary: "A practice for core HTML, CSS and JS. Construct week project in Masai school.",
     TStack: ["JavaScript", "HTML", "CSS"],
   },
 ];
@@ -126,9 +126,9 @@ export const LiveProjectsData: ProjectDataProps[] = [
     image: appleburyImg.src,
     heading1: "AppleBury",
     heading2: "B.A.",
-    status: ProjectStatus.Building,
+    status: ProjectStatus.Completed,
     workType: "Team of 2 Members",
-    summary: "Empowering children to enhance Communication, Daily Living Skills, and Socialization.",
+    summary: "Helping children to enhance communication, daily living skills and socialization.",
     TStack: ["NextJS", "Framer Motion", "Chakra UI", "Google API", "TypeScript"],
   },
   {
@@ -150,7 +150,7 @@ export const LiveProjectsData: ProjectDataProps[] = [
     heading2: "Kitchen",
     status: ProjectStatus.Completed,
     workType: "Team of 2 Members",
-    summary: "Build Kitchen and Robust Interior Designing Professionally.",
+    summary: "Build Kitchen and Robust Interior Designing Professionally in Mumbai India.",
     TStack: ["React", "NextJs", "Framer Motion", "GoogleAPI", "SendGrid", "ChakraUI"],
   },
   {
@@ -161,7 +161,7 @@ export const LiveProjectsData: ProjectDataProps[] = [
     heading2: "Fashion",
     status: ProjectStatus.Completed,
     workType: "Team of 3 Members",
-    summary: "Sell Wrist Watches, and Fashion related products.",
+    summary: "A shopify website for Sell Wrist Watches, and Fashion related products.",
     TStack: ["Shopify", "Liquid", "CSS"],
   },
   {
@@ -170,9 +170,9 @@ export const LiveProjectsData: ProjectDataProps[] = [
     image: terractiveImg.src,
     heading1: "Terractive",
     heading2: "Merch",
-    status: ProjectStatus.Development,
+    status: ProjectStatus.Completed,
     workType: "Team of 2 Members",
-    summary: "Sells Clothing and Accessories across all Cities in India.",
+    summary: "A popular brand which Sells Clothing and Accessories across all Cities in India.",
     TStack: ["Shopify", "Liquid", "CSS"],
   },
   {
@@ -181,9 +181,9 @@ export const LiveProjectsData: ProjectDataProps[] = [
     image: equationsImg.src,
     heading1: "Equations",
     heading2: "(Virtual CFO)",
-    status: ProjectStatus.Development,
+    status: ProjectStatus.Completed,
     workType: "Team of 2 Members",
-    summary: "Provides financial strategy and accounting solutions for startups.",
+    summary: "Provides financial strategy and accounting solutions for startups by remote method.",
     TStack: ["React", "NextJs", "SSR", "Express", "ChakraUI"],
   },
   {
@@ -194,7 +194,7 @@ export const LiveProjectsData: ProjectDataProps[] = [
     status: ProjectStatus.Completed,
     heading2: "Treats",
     workType: "Team of 4 Members",
-    summary: "Sells Sweet and Snacks across all Cities in India.",
+    summary: "A mumbai based brand which Sells Sweet and Snacks across all Cities in India.",
     TStack: ["React", "ViteJS", "Express", "Scss"],
   },
   // {

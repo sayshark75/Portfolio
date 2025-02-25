@@ -20,7 +20,7 @@ const DescAboutPage = () => {
       textAlign={["justify"]}
       fontSize={{ base: "12px", xl: "14px" }}
     >
-      {`Hello, I'm Sayyed Sharuk—a dedicated Full Stack Developer based in Ahmednagar, Maharashtra. I specialize in building high-performance web applications with a versatile skill set. Beyond coding, I enjoy travel, culinary experiences, and the tranquility of rural landscapes. I'm always eager to collaborate on innovative projects.`}
+      {`Hello, I'm Sayyed Sharuk—a dedicated AI driven Frontend Developer based in Ahmednagar, Maharashtra. I specialize in building high-performance, SEO rich web applications with a versatile skill set. Beyond coding, I enjoy travel, culinary experiences, and the tranquility of rural landscapes. I'm always eager to contribute on innovative projects.`}
     </MotionText>
   );
 };
