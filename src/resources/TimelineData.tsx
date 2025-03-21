@@ -61,7 +61,7 @@ export const TimelineData: TimelineCardProps[] = [
     role: "SDE: Fullstack Web Developer",
     query: TopBarQuery,
     highlight: TopBarQuery.join(" "),
-    dateStart: "Aug 2023",
+    dateStart: "Mar 2023",
     dateEnd: "Present",
     icon: <MdWork />,
   },
