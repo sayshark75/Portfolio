@@ -62,7 +62,7 @@ export const TimelineData: TimelineCardProps[] = [
     query: TopBarQuery,
     highlight: TopBarQuery.join(" "),
     dateStart: "Mar 2023",
-    dateEnd: "Present",
+    dateEnd: "Mar 2025",
     icon: <MdWork />,
   },
   {
