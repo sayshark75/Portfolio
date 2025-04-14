@@ -17,13 +17,14 @@ const DescHome = () => {
       fontFamily={"Poppins"}
       textAlign={"justify"}
       fontSize={["12px", "14px", "16px", "18px"]}
-      m={["4", "8"]}
+      m={[4, 8]}
       letterSpacing={"1.5px"}
       opacity={0}
     >
-      An AI driven Full Stack Developer who enjoys solving problems and building quality projects. With a diverse set of skills and technologies, Can
-      develop robust and efficient products. Keep up with the latest advancements in the field, and work well with teams to deliver the best possible
-      results.
+      Full Stack Developer with 4 years of experience, specializing in modern, frontend-focused web solutions. Proficient in Next.js, TypeScript, and
+      Tailwind CSS, with a strong foundation in scalable architecture. Skilled in backend development using Node.js, Prisma, and REST/GraphQL APIs.
+      Committed to delivering high-performance, SEO-optimized applications aligned with business goals. Driven by continuous learning, collaboration,
+      and building impactful digital products.
     </MotionText>
   );
 };

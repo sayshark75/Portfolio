@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Highlight, Image, Text } from "@chakra-ui/react";
+import { Button, Flex, Highlight, Image, Text } from "@chakra-ui/react";
 import SmHeading from "../Headings/SmHeading";
 import { ProjectDataProps } from "@/resources/TYPES";
 import Link from "next/link";

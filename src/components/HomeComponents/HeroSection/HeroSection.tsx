@@ -40,7 +40,7 @@ const HeroSection = () => {
         maxW={"1440px"}
         mx={"auto"}
         minH={"100vh"}
-        gap={["6", "12"]}
+        gap={[6, 8]}
         pos={"relative"}
         zIndex={5}
       >

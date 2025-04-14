@@ -20,7 +20,9 @@ const DescAboutPage = () => {
       textAlign={["justify"]}
       fontSize={{ base: "12px", xl: "14px" }}
     >
-      {`Hello, I'm Sayyed Sharuk—a dedicated AI driven Frontend Developer based in Ahmednagar, Maharashtra. I specialize in building high-performance, SEO rich web applications with a versatile skill set. Beyond coding, I enjoy travel, culinary experiences, and the tranquility of rural landscapes. I'm always eager to contribute on innovative projects.`}
+      {
+        "Hello, I'm Sayyed Sharuk — an AI-driven Full Stack Developer based in Ahmednagar, Maharashtra. I specialize in building high-performance, SEO-friendly web apps with Next.js, TypeScript, and Tailwind CSS. My strength lies in combining clean code with thoughtful UX and modern development practices. I stay current with emerging tech while delivering reliable, scalable solutions. Beyond work, I enjoy travel, food, and the calm rhythm of rural life."
+      }
     </MotionText>
   );
 };

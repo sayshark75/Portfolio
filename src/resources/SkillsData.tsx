@@ -35,6 +35,7 @@ import {
   SiGooglegemini,
   SiLeetcode,
   SiNotion,
+  SiGithubcopilot,
 } from "react-icons/si";
 
 export const SkillsData = [
@@ -121,6 +122,7 @@ export const SkillsData = [
       { title: "Codium", link: "https://codeium.com/", icon: <BiCodeCurly />, color: "#09b6a2" },
       { title: "Gemini", link: "https://gemini.google.com/app?hl=en-IN", icon: <SiGooglegemini />, color: "#2aadfe" },
       { title: "Hugging Face", link: "https://huggingface.co/", icon: <SiHuggingface />, color: "#fee14d" },
+      { title: "GH Copilot", link: "https://github.com/features/copilot", icon: <SiGithubcopilot />, color: "#0123db" },
     ],
   },
   {

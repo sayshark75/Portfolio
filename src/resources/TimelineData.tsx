@@ -19,21 +19,26 @@ const {
 } = Links;
 
 export const TopBarQuery = [
-  "JavaScript",
-  "React",
   "NextJs",
+  "React",
   "TypeScript",
+  "JavaScript",
+  "TailwindCSS",
   "Scss",
-  "Express",
-  "MongoDB",
   "ChakraUI",
+  "NodeJS",
+  "Express",
+  "SQL",
+  "NoSQL",
+  "Prisma",
   "AWS EC2",
   "AWS S3",
   "Docker",
   "Shopify",
+  "Strapi",
   "Razorpay",
 ];
-export const AutotronQuery = ["Programming", "C++", "Circuits", "GCode", "Arduino", "MicroC", "RaspberryPI", "Projects", "Seller"];
+export const AutotronQuery = ["React", "TypeScript", "TailwindCSS", "Chakra UI", "JavaScript", "Node", "Express", "MongoDB"];
 export const MasaiQuery = [
   "JavaScript",
   "HTML",
@@ -53,7 +58,7 @@ export const UOPQuery = ["Electronics", "Arduino", "Raspberry Pi", "C++", "Embed
 
 export const TimelineData: TimelineCardProps[] = [
   {
-    title: "TopBar Company",
+    title: "TopBar Services",
     logo: TopBarLogo,
     linkedin: TopBarLinkedIn,
     website: TopBarWebsite,
@@ -80,12 +85,12 @@ export const TimelineData: TimelineCardProps[] = [
   },
   {
     type: "Work",
-    title: "AutoTron Electronics",
+    title: "AutoTron Services",
     logo: AutotronLogo,
     linkedin: AutotronLinkedIn,
     website: "",
     location: AutotronLocation,
-    role: "Co-Worker: Embedded Developer",
+    role: "Web Developer",
     query: AutotronQuery,
     highlight: AutotronQuery.join(" "),
     dateStart: "Apr 2020",

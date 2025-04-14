@@ -1,4 +1,4 @@
-import { Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { RefObject, useRef } from "react";
@@ -21,6 +21,7 @@ const TimelineCard = ({
   highlight,
   dateStart,
   dateEnd,
+  index,
 }: TimelineCardProps & { index: number }) => {
   const animRef = useRef<HTMLParagraphElement>(null);
   const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
@@ -79,6 +80,22 @@ const TimelineCard = ({
       >
         {type === "Work" ? <MdWork /> : <FaGraduationCap />}
         <Text>{type}</Text>
+      </Flex>
+      <Flex
+        justify={"center"}
+        align={"center"}
+        w={"30px"}
+        h={"30px"}
+        bgColor={"darker"}
+        color={"light"}
+        rounded={"full"}
+        pos={"absolute"}
+        top={2}
+        left={2}
+        border={"5px solid"}
+        borderColor={"accent"}
+      >
+        <Text fontSize={"12px"}>{index + 1}</Text>
       </Flex>
       {/* Time and Date */}
       <MotionFlex
