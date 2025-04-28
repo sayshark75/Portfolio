@@ -2,6 +2,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import NavButton from "./NavButton";
 import useCheckScrolling from "../../hooks/useCheckScrolling";
 import Link from "next/link";
+import { JSX } from "react";
 
 export type NavButtonType = {
   link?: string;

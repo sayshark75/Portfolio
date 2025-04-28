@@ -1,5 +1,6 @@
 import { MotionIconButton } from "@/libs/motionComponents";
 import { Flex } from "@chakra-ui/react";
+import { JSX } from "react";
 
 type Props = {
   icon: JSX.Element;
