@@ -1,4 +1,4 @@
-import { Box, Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
+import { Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { RefObject, useRef } from "react";
