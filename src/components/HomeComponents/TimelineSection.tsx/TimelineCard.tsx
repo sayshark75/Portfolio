@@ -90,8 +90,9 @@ const TimelineCard = ({
         color={"light"}
         rounded={"full"}
         pos={"absolute"}
-        top={2}
-        left={2}
+        top={{ base: 12, md: 2 }}
+        left={{ base: "auto", md: 2 }}
+        right={{ base: 2, md: "auto" }}
         border={"5px solid"}
         borderColor={"accent"}
       >

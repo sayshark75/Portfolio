@@ -4,6 +4,7 @@ import { MdAlternateEmail, MdCall, MdMyLocation } from "react-icons/md";
 import { VscGithub } from "react-icons/vsc";
 import autotronLogoIcon from "@/assets/icons/autotronIcon.png";
 import masaiLogoImg from "@/assets/icons/masai.ico";
+import topbarLogo from "@/assets/icons/topbarIcon.png";
 
 export const SocialButtonsData = [
   {
@@ -62,7 +63,7 @@ export const Links = {
   mailLinkTemplate:
     "mailto:sayyedsharuk75@gmail.com?subject=Subject%20Related%20to%20shortlist%20or%20Job%20Role%20Offer&body=Brief%20Declaration%0A%0ARequirements%20for%20Job%20role%0A%0ASome%20information%20about%20Interview%20Process%0A%0AIf%20Applicable%0ASalary%20Range%0A%20#LPA%20to%20#LPA%0AAny%20CTC%20Related%20Details%0A%0AJob%20Description%0AMy%20Role%20in%20the%20Respected%20Company%0A%0AYour%20Signature%20%0A%0AAny%20Task%20or%20Asignment?",
 
-  TopBarLogo: "https://www.topbar.in/images/logo.png",
+  TopBarLogo: topbarLogo.src,
   TopBarLinkedIn: "https://www.linkedin.com/company/topbar-company",
   TopBarWebsite: "https://www.topbar.in/",
   ModulaWebsite: "https://modula.in/",
