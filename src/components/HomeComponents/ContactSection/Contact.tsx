@@ -56,7 +56,7 @@ const Contact = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ token }),
+      body: JSON.stringify({ ...data, token }),
     });
     if (resData.ok) {
       setProcess({ loading: false, success: true, error: false });
