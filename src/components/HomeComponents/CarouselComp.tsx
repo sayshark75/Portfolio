@@ -2,8 +2,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { Box } from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-const CarouselComp = ({ mapperFunction, slides }: { mapperFunction: () => JSX.Element[]; slides: number }) => {
+const CarouselComp = ({ mapperFunction, slides }: { mapperFunction: () => ReactNode[]; slides: number }) => {
   const settings = {
     dots: true,
     infinite: true,

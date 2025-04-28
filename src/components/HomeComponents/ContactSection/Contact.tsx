@@ -13,6 +13,7 @@ import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { MotionBox, MotionFlex } from "@/libs/motionComponents";
 import { FaRegCircleXmark } from "react-icons/fa6";
 import { FaRegCheckCircle } from "react-icons/fa";
+import { sendEmail } from "@/libs/emailJS";
 
 const Contact = () => {
   const { ContactRef } = useScrollContext();
@@ -55,7 +56,7 @@ const Contact = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ ...data, token }),
+      body: JSON.stringify({ token }),
     });
     if (resData.ok) {
       setProcess({ loading: false, success: true, error: false });
@@ -64,6 +65,7 @@ const Contact = () => {
         name: "",
         message: "",
       });
+      await sendEmail(data.name, data.email, data.message);
     } else {
       setProcess({ loading: false, success: false, error: true });
     }
