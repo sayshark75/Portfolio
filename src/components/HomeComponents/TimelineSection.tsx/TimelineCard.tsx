@@ -1,11 +1,8 @@
 import { Flex, Highlight, IconButton, Image, Text } from "@chakra-ui/react";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { RefObject, useRef } from "react";
 import { FaGraduationCap, FaLocationDot } from "react-icons/fa6";
 import { TimelineCardProps } from "@/resources/TYPES";
-import { useInView } from "framer-motion";
-import { MotionFlex } from "@/libs/motionComponents";
 import Link from "next/link";
 import { MdWork } from "react-icons/md";
 
@@ -23,45 +20,19 @@ const TimelineCard = ({
   dateEnd,
   index,
 }: TimelineCardProps & { index: number }) => {
-  const animRef = useRef<HTMLParagraphElement>(null);
-  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
-
   return (
-    <MotionFlex
-      initial={{ opacity: 0, y: "-80px" }}
-      animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: "-80px" }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+    <Flex
       gap={3}
       rounded={"md"}
       pos={"relative"}
-      ref={animRef}
       direction={"column"}
       minW={"200px"}
       w={"100%"}
-      opacity={0}
       maxW={"600px"}
       shadow={"lg"}
       borderBottom={"3px solid"}
       borderBottomColor={"accent"}
-      p={["12px", "40px"]}
-      _hover={{
-        _after: {
-          w: "100%",
-          minH: "100%",
-        },
-      }}
-      _after={{
-        content: '"."',
-        w: "0px",
-        minH: "0px",
-        color: "transparent",
-        transition: "500ms",
-        bgColor: "primaryLight",
-        pos: "absolute",
-        bottom: "0px",
-        left: "0px",
-        zIndex: -1,
-      }}
+      p={{ base: "12px", sm: "40px" }}
     >
       <Flex
         px={3}
@@ -99,51 +70,29 @@ const TimelineCard = ({
         <Text fontSize={"12px"}>{index + 1}</Text>
       </Flex>
       {/* Time and Date */}
-      <MotionFlex
-        initial={{ opacity: 0, x: "-80px" }}
-        animate={isIntersecting ? { opacity: 1, x: 0 } : { opacity: 0, x: "-80px" }}
-        transition={{ duration: 0.5, delay: 1.2 }}
-        w={"max-content"}
-        pos={"relative"}
-      >
-        <Text
-          fontSize={"12px"}
-          fontWeight={"500"}
-          color={"text"}
-          letterSpacing={"1.5px"}
-          mb={"2px"}
-          _after={{
-            content: '"."',
-            w: "0px",
-            h: "1px",
-            transition: "500ms cubic-bezier(0.6, -0.28, 0.74, 0.05)",
-            color: "transparent",
-            bgColor: "accent",
-            pos: "absolute",
-            bottom: "0px",
-            left: "-6px",
-          }}
-          _hover={{
-            _after: {
-              h: "1px",
-              w: "110%",
-            },
-          }}
-        >
+      <Flex w={"max-content"} pos={"relative"}>
+        <Text fontSize={"12px"} fontWeight={"500"} color={"text"} letterSpacing={"1.5px"} mb={"2px"}>
           <Highlight query={dateEnd} styles={{ color: "accent" }}>{`${dateStart} - ${dateEnd}`}</Highlight>
         </Text>
-      </MotionFlex>
+      </Flex>
       {/* Company info */}
-      <Flex flex={1} gap={2} direction={["column", "row"]}>
+      <Flex flex={1} gap={2} direction={{ base: "column", sm: "row" }}>
         {/* Logo of Company */}
         <Flex flex={4} justifyContent={"flex-start"} alignItems={"center"} gap={4}>
-          <Image w={["35px", "50px"]} bgColor={"white"} p={[1, 2]} rounded={"full"} src={logo} alt="Autotron Tech Website Logo" />
+          <Image
+            w={{ base: "35px", sm: "50px" }}
+            bgColor={"white"}
+            p={{ base: 1, sm: 2 }}
+            rounded={"full"}
+            src={logo}
+            alt="Autotron Tech Website Logo"
+          />
           <Text fontFamily={"Poppins"} fontSize={"14px"} letterSpacing={"1.5px"} fontWeight={600} color={"text"}>
             {title}
           </Text>
         </Flex>
         {/* Details of Company */}
-        <Flex gap={2} flex={1} w={"100%"} justifyContent={["flex-start", "flex-end"]}>
+        <Flex gap={2} flex={1} w={"100%"} justifyContent={{ base: "flex-start", sm: "flex-end" }}>
           {linkedin && (
             <Link href={linkedin} target="_blank">
               <IconButton
@@ -206,13 +155,13 @@ const TimelineCard = ({
               styles={{
                 border: "1px solid",
                 borderColor: "accent",
-                fontSize: ["11px", "12px"],
+                fontSize: { base: "11px", sm: "12px" },
                 fontWeight: "400",
-                lineHeight: ["32px", "32px"],
+                lineHeight: { base: "32px", sm: "32px" },
                 rounded: "full",
-                px: ["8px", "12px"],
-                py: ["2px", "3px"],
-                mr: ["0px", "8px"],
+                px: { base: "8px", sm: "12px" },
+                py: { base: "2px", sm: "3px" },
+                mr: { base: "0px", sm: "8px" },
                 color: "text",
               }}
             >
@@ -221,7 +170,7 @@ const TimelineCard = ({
           </Text>
         </Flex>
       </Flex>
-    </MotionFlex>
+    </Flex>
   );
 };
 

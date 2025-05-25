@@ -8,10 +8,10 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
   return (
     <Flex
       pos={"relative"}
-      transition={"500ms"}
-      mb={["2", "4", "2", "8"]}
-      mx={["1", "4", "1"]}
-      direction={["column"]}
+      transition={"300ms"}
+      mb={{ base: 2, sm: 4, md: 2, lg: 8 }}
+      mx={{ base: 1, sm: 4, md: 1 }}
+      direction={"column"}
       rounded={"lg"}
       overflow={"hidden"}
       bgColor={"primaryLight"}
@@ -21,7 +21,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
       <Image
         src={image}
         w={"100%"}
-        h={["160px", "230px", "160px", "170px", "230px"]}
+        h={{ base: "160px", sm: "230px", md: "160px", lg: "170px", xl: "230px" }}
         transition={"7s"}
         objectFit={"cover"}
         objectPosition={"top"}
@@ -30,13 +30,13 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
       />
 
       {/* Details of Project */}
-      <Flex transition={"500ms"} direction={"column"} gap={1} p={["8px 16px", 4]}>
-        <Flex transition={"500ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
+      <Flex transition={"300ms"} direction={"column"} gap={1} p={{ base: "8px 16px", sm: 4 }}>
+        <Flex transition={"300ms"} justifyContent={"center"} alignItems={"center"} direction={{ base: "column", sm: "column", md: "row" }}>
           <SmHeading title1={heading1} title2={heading2 || ""} />
         </Flex>
         <Text
-          transition={"500ms"}
-          fontSize={["10px", "14px", "12px", "10px", "14px"]}
+          transition={"300ms"}
+          fontSize={{ base: "10px", sm: "14px", md: "12px", lg: "10px", xl: "14px" }}
           as={"b"}
           fontFamily={"Poppins"}
           fontWeight={400}
@@ -46,10 +46,10 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
           {summary}
         </Text>
         <Text
-          transition={"500ms"}
+          transition={"300ms"}
           justifyContent={"center"}
           gap={"2"}
-          fontSize={["10px", "12px", "12px", "10px", "12px"]}
+          fontSize={{ base: "10px", sm: "14px", md: "12px", lg: "10px", xl: "14px" }}
           fontWeight={"semibold"}
           color={"text"}
           minH={"70px"}
@@ -76,7 +76,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
           fontFamily={"Poppins"}
           alignSelf={"flex-start"}
           fontWeight={400}
-          fontSize={["10px", "12px"]}
+          fontSize={{ base: "10px", sm: "12px" }}
           letterSpacing={"1.5px"}
           bgColor={"accent"}
           color={"#fff"}
@@ -90,7 +90,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
           fontFamily={"Poppins"}
           alignSelf={"flex-start"}
           fontWeight={400}
-          fontSize={["10px", "12px"]}
+          fontSize={{ base: "10px", sm: "12px" }}
           letterSpacing={"1.5px"}
           bgColor={"accentLight"}
           color={"#fff"}
@@ -100,17 +100,17 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
         >
           {status}
         </Text>
-        <Flex transition={"500ms"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"} mb={"8px"}>
+        <Flex transition={"300ms"} borderRadius={"5"} justifyContent={"space-between"} mt={"2"} alignItems={"center"} gap={"4"} mb={"8px"}>
           <Link href={live} target={"_blank"} rel="noreferrer" style={{ width: "100%" }}>
             <Flex pos={"relative"} width={"100%"}>
               <Button
                 pos={"relative"}
                 zIndex={2}
-                transition={"500ms"}
+                transition={"300ms"}
                 rounded={"full"}
-                fontSize={["14px", "16px"]}
+                fontSize={{ base: "14px", sm: "16px" }}
+                fontWeight={{ base: "300", sm: "400" }}
                 width={"7rem"}
-                fontWeight={["300", "400"]}
                 color={"#fff"}
                 overflow={"hidden"}
                 letterSpacing={"1.5px"}
@@ -134,7 +134,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                   top: "0px",
                   right: "0px",
                   zIndex: -1,
-                  transition: "500ms",
+                  transition: "300ms",
                   bgColor: "primary",
                   rounded: "full",
                   border: "0px solid",
@@ -152,12 +152,12 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                 disabled={!github}
                 pos={"relative"}
                 zIndex={2}
-                transition={"500ms"}
+                transition={"300ms"}
                 rounded={"full"}
                 overflow={"hidden"}
-                fontSize={["14px", "16px"]}
+                fontSize={{ base: "14px", sm: "16px" }}
+                fontWeight={{ base: "300", sm: "400" }}
                 width={"7rem"}
-                fontWeight={["300", "400"]}
                 color={"#fff"}
                 letterSpacing={"1.5px"}
                 _active={{ transform: "translateY(10px)" }}
@@ -180,7 +180,7 @@ const ProjectsCard = ({ live, github, image, workType, heading1, heading2, statu
                   top: "0px",
                   right: "0px",
                   zIndex: -1,
-                  transition: "500ms",
+                  transition: "300ms",
                   bgColor: "primary",
                   rounded: "full",
                   border: "0px solid",

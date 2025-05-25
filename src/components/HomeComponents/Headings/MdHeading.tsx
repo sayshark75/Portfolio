@@ -1,34 +1,19 @@
-"use client";
-import { Flex, Highlight } from "@chakra-ui/react";
-import { RefObject, useRef } from "react";
-import { useInView } from "framer-motion";
-import { MotionText } from "@/libs/motionComponents";
+import { Highlight, Text } from "@chakra-ui/react";
 
 const MdHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
-  const animRef = useRef<HTMLParagraphElement>(null);
-  const isIntersecting = useInView(animRef as RefObject<Element>, { once: true });
   return (
-    <Flex>
-      <MotionText
-        initial={{ opacity: 0, y: "-80px" }}
-        animate={isIntersecting ? { opacity: 1, y: 0 } : { opacity: 0, y: "-80px" }}
-        transition={{ duration: 0.5 }}
-        fontFamily={"Poppins"}
-        fontSize={["36px", "38px", "42px", "48px", "58px"]}
-        fontWeight={["500", "600"]}
-        color={"accent"}
-        my={"4"}
-        ref={animRef}
-        cursor={"pointer"}
-        rounded={"full"}
-        opacity={0}
-        whileTap={{ scale: 0.9, y: "-20px" }}
-      >
-        <Highlight query={title2} styles={{ color: "text" }}>
-          {`${title1} ${title2}`}
-        </Highlight>
-      </MotionText>
-    </Flex>
+    <Text
+      fontFamily={"Poppins"}
+      fontSize={{ base: "36px", sm: "38px", md: "42px", lg: "48px", xl: "58px" }}
+      fontWeight={{ base: "500", sm: "600" }}
+      color={"accent"}
+      my={"4"}
+      rounded={"full"}
+    >
+      <Highlight query={title2} styles={{ color: "text" }}>
+        {`${title1} ${title2}`}
+      </Highlight>
+    </Text>
   );
 };
 

@@ -1,7 +1,8 @@
+"use client";
 import { Flex } from "@chakra-ui/react";
 import Link from "next/link";
 import { Links } from "@/resources/CONSTANTS";
-import { MotionButton } from "@/libs/motionComponents";
+import { Button } from "@/components/ui/button";
 
 const ResumeButton = () => {
   const { resumeDownload, resumelink } = Links;
@@ -11,18 +12,12 @@ const ResumeButton = () => {
   return (
     <Link href={resumeDownload} onClick={handleResumeDownload}>
       <Flex pos={"relative"}>
-        <MotionButton
-          initial={{ opacity: 0, scale: 0.2 }}
-          animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          transition={{ duration: 0.5 }}
+        <Button
           fontFamily={"Poppins"}
-          fontSize={["12px", "14px"]}
+          fontSize={{ base: "12px", sm: "14px" }}
           fontWeight={400}
           letterSpacing={"1.5px"}
           bgColor={"accent"}
-          opacity={0}
           rounded={"base"}
           color={"light"}
           _hover={{
@@ -52,7 +47,7 @@ const ResumeButton = () => {
           }}
         >
           View Resume
-        </MotionButton>
+        </Button>
       </Flex>
     </Link>
   );

@@ -1,18 +1,12 @@
-import { Flex, Highlight } from "@chakra-ui/react";
-
-import { MotionText } from "@/libs/motionComponents";
+import { Flex, Highlight, Text } from "@chakra-ui/react";
 
 const SubHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
   return (
     <Flex pos={"relative"} zIndex={2}>
-      <MotionText
-        initial={{ opacity: 0, y: "-80px" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        whileTap={{ scale: 0.9, y: "-20px" }}
+      <Text
         fontFamily={"Poppins"}
-        fontSize={["18px", "18px", "22px", "22px", "24px"]}
-        fontWeight={["500", "400", "500"]}
+        fontSize={{ base: "18px", sm: "18px", md: "22px", lg: "22px", xl: "24px" }}
+        fontWeight={{ base: "500", sm: "400", md: "500" }}
         color={"accent"}
         cursor={"pointer"}
         rounded={"full"}
@@ -20,7 +14,7 @@ const SubHeading = ({ title1, title2 }: { title1: string; title2: string }) => {
         <Highlight query={title2} styles={{ color: "text" }}>
           {`${title1} ${title2}`}
         </Highlight>
-      </MotionText>
+      </Text>
     </Flex>
   );
 };

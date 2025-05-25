@@ -1,19 +1,9 @@
-import { Button } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { NavButtonType } from "./DesktopNav";
-import { MotionFlex } from "@/libs/motionComponents";
 
-const NavButton = ({ title, refFunction, delay }: NavButtonType) => {
+const NavButton = ({ title, refFunction }: NavButtonType) => {
   return (
-    <MotionFlex
-      initial={{ opacity: 0, y: "-80px" }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
-      pos={"relative"}
-      w={"min-content"}
-      overflow={"hidden"}
-      rounded={"full"}
-      shadow={"xl"}
-    >
+    <Flex pos={"relative"} w={"min-content"} overflow={"hidden"} rounded={"full"} shadow={"xl"}>
       <Button
         onClick={refFunction}
         bgColor={"primaryLight"}
@@ -36,7 +26,7 @@ const NavButton = ({ title, refFunction, delay }: NavButtonType) => {
         _after={{
           content: '"."',
           w: "0px",
-          transition: "500ms",
+          transition: "300ms",
           minH: "100%",
           rounded: "full",
           color: "transparent",
@@ -49,7 +39,7 @@ const NavButton = ({ title, refFunction, delay }: NavButtonType) => {
       >
         {title}
       </Button>
-    </MotionFlex>
+    </Flex>
   );
 };
 

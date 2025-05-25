@@ -21,8 +21,8 @@ export default function Home() {
       <ClientOnly>
         <Navbar />
         <ToggleDarkMode />
-        <HeroSection />
       </ClientOnly>
+      <HeroSection />
       <AboutCard />
       <Timeline />
       <Projects />

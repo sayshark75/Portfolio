@@ -1,8 +1,8 @@
 "use client";
 import GitHubCalendar from "react-github-calendar";
 import { useCustomTheme } from "@/context/ThemeProvider";
-import { MotionFlex } from "@/libs/motionComponents";
 import { useTheme } from "next-themes";
+import { Flex } from "@chakra-ui/react";
 
 const GithubStats = () => {
   const { config } = useCustomTheme();
@@ -15,30 +15,29 @@ const GithubStats = () => {
     theme === "dark" ? config.theme?.semanticTokens?.colors?.accent.value._dark : config.theme?.semanticTokens?.colors?.accent.value.base;
 
   return (
-    <MotionFlex
-      initial={{ opacity: 0, y: "-80px" }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+    <Flex
       w={"100%"}
       color={"text"}
-      p={["2", "6"]}
+      p={{ base: 2, sm: 6 }}
       borderRadius={"md"}
       bgColor={"primary"}
-      mx={[2, 2, 2, 4]}
+      mx={{ base: 2, sm: 2, md: 2, lg: 4 }}
       justifyContent={"center"}
       alignItems={"center"}
     >
       <GitHubCalendar
+        key={`github-calendar-initialization`}
         fontSize={16}
         theme={{
           light: [_primary, _accent],
+          dark: [_primary, _accent],
         }}
         blockSize={15}
         blockMargin={5}
         hideTotalCount
         username="sayshark75"
       />
-    </MotionFlex>
+    </Flex>
   );
 };
 

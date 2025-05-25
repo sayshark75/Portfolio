@@ -1,21 +1,16 @@
-import { MotionIconButton } from "@/libs/motionComponents";
-import { Flex } from "@chakra-ui/react";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { JSX } from "react";
 
 type Props = {
   icon: JSX.Element;
   alt: string;
   onClick: () => void;
-  delay: number;
 };
 
-const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
+const NavIcon = ({ icon, alt, onClick }: Props) => {
   return (
     <Flex pos={"relative"}>
-      <MotionIconButton
-        initial={{ opacity: 0, y: "-80px" }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay }}
+      <IconButton
         pos={"relative"}
         p={2}
         bg={"primaryLight"}
@@ -49,7 +44,7 @@ const NavIcon = ({ icon, alt, onClick, delay }: Props) => {
         }}
       >
         {icon}
-      </MotionIconButton>
+      </IconButton>
     </Flex>
   );
 };

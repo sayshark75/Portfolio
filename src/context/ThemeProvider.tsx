@@ -3,7 +3,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import colorGroup from "@/styles/colorGroup";
 import { ChakraProvider, createSystem, defineConfig, mergeConfigs, SystemConfig, SystemContext } from "@chakra-ui/react";
-import { initialThemeConfig, systemContextConfig } from "@/styles/theme";
+import { initialThemeConfig } from "@/styles/theme";
+import systemContextConfig from "@/styles/theme";
 import { ColorModeProvider, ColorModeProviderProps } from "@/components/ui/color-mode";
 
 export const ThemeContext = createContext({

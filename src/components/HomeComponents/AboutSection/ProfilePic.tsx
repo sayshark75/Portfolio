@@ -1,11 +1,11 @@
-import { Flex, Image } from "@chakra-ui/react";
+"use client";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import picRed from "@/assets/images/pic-red.png";
 import picYellow from "@/assets/images/pic-yellow.png";
 import picGreen from "@/assets/images/pic-green.png";
 import picViolet from "@/assets/images/pic-violet.png";
 import picOrange from "@/assets/images/pic-orange.png";
 import picBlue from "@/assets/images/pic-blue.png";
-import { useContext } from "react";
 import { useCustomTheme } from "@/context/ThemeProvider";
 
 const ProfilePic = () => {
@@ -38,8 +38,9 @@ const ProfilePic = () => {
   };
 
   return (
-    <Flex overflow={"hidden"} minW={["180px", "240px", "320px"]} maxW={["180px", "240px", "240px"]}>
-      <Image src={pictureGenerator()} alt={"Image of Full Stack Web Developer, Sayyed Sharuk"} />
+    <Flex minW={{ base: "180px", sm: "240px", md: "320px" }} maxW={{ base: "180px", sm: "240px", md: "240px" }} pos={"relative"}>
+      <Box w={"100%"} h={"1px"} bgColor={"darker"} pos={"absolute"} bottom={0} left={0}></Box>
+      <Image src={pictureGenerator()} loading="eager" alt={"A person with specs and a blue professional coat with tie, smiling."} />
     </Flex>
   );
 };

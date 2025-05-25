@@ -2,21 +2,18 @@ import { Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import { NavButtonType } from "./DesktopNav";
 
-const NavMenuButton = ({ refFunction, title, icon, closePopover = () => {} }: NavButtonType & { closePopover?: () => void }) => {
+const NavMenuButton = ({ refFunction, title, icon }: NavButtonType) => {
   return (
     <Flex
+      direction={"column"}
       cursor={"pointer"}
       onClick={() => {
         refFunction();
-        closePopover();
       }}
-      p={1}
-      rounded={"md"}
-      bgColor={"white"}
-      color={"darker"}
-      gap={2}
-      fontSize={"12px"}
+      color={"#fff"}
+      fontSize={"10px"}
       fontFamily={"poppins"}
+      justify={"center"}
       align={"center"}
       w={"100%"}
     >

@@ -1,6 +1,5 @@
-import { Grid, Text } from "@chakra-ui/react";
+import { Flex, Grid, Text } from "@chakra-ui/react";
 import { ContributionData } from "@/resources/ContributionData";
-import { MotionFlex } from "@/libs/motionComponents";
 
 const ContributionList = () => {
   return (
@@ -12,19 +11,15 @@ const ContributionList = () => {
     >
       {ContributionData.map((info, index) => {
         return (
-          <MotionFlex
-            initial={{ opacity: 0, x: "80px" }}
-            animate={{ opacity: 1, x: 0 }}
+          <Flex
             direction={"column"}
             justify={"flex-start"}
             align={"center"}
             gap={1}
             key={`contribution-key-${index}`}
-            transition={{ duration: 0.3 }}
             rounded={"md"}
             px={4}
             py={3}
-            opacity={0}
             fontFamily={"Poppins"}
             fontSize={"11px"}
             fontWeight={"400"}
@@ -40,7 +35,7 @@ const ContributionList = () => {
               {info.value}
             </Text>
             <Text textAlign={"center"}>{info.title}</Text>
-          </MotionFlex>
+          </Flex>
         );
       })}
     </Grid>

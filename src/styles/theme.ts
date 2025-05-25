@@ -1,8 +1,10 @@
 import { createSystem, defaultConfig, defineConfig, mergeConfigs } from "@chakra-ui/react";
 import { fonts } from "./fonts";
+import { breakpoints } from "./breakpoints";
 
 const customConfig = defineConfig({
   theme: {
+    breakpoints,
     tokens: {
       fonts,
     },
@@ -114,4 +116,4 @@ const customConfig = defineConfig({
 
 export const initialThemeConfig = mergeConfigs(defaultConfig, customConfig);
 
-export const systemContextConfig = createSystem(defaultConfig, initialThemeConfig);
+export default createSystem(defaultConfig, initialThemeConfig);

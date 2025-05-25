@@ -10,14 +10,14 @@ export type NavButtonType = {
   title: string;
   icon?: JSX.Element;
   alt?: string;
-  delay: number;
 };
 
 const DesktopNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
   const { isScrolling } = useCheckScrolling();
   return (
     <Flex
-      transition={"500ms"}
+      hideBelow={"small"}
+      transition={"200ms"}
       pos={"fixed"}
       zIndex={100}
       top={"0px"}
@@ -34,7 +34,7 @@ const DesktopNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
           w={"40px"}
           h={"40px"}
           textAlign={"center"}
-          transition={"500ms"}
+          transition={"300ms"}
           color={"text"}
           rounded={"full"}
           cursor={"pointer"}
@@ -54,10 +54,10 @@ const DesktopNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
         {buttonData.map((button, index) => {
           return button.link ? (
             <Link key={index} href={button.link} onClick={button.refFunction}>
-              <NavButton title={button.title} refFunction={() => {}} delay={button.delay} />
+              <NavButton title={button.title} refFunction={() => {}} />
             </Link>
           ) : (
-            <NavButton key={index} title={button.title} refFunction={button.refFunction} delay={button.delay} />
+            <NavButton key={index} title={button.title} refFunction={button.refFunction} />
           );
         })}
       </Flex>

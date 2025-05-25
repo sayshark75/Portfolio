@@ -27,7 +27,6 @@ export type SocialBtnType = {
   icon: IconType;
   tooltip?: string;
   label: string;
-  delay: number;
 };
 
 export type ContributionDataType = {

@@ -1,3 +1,4 @@
+"use client";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -8,7 +9,7 @@ const CarouselComp = ({ mapperFunction, slides }: { mapperFunction: () => JSX.El
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1000,
+    speed: 300,
     slidesToShow: slides,
     slidesToScroll: 1,
     initialSlide: 0,

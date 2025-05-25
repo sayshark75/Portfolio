@@ -1,3 +1,4 @@
+"use client";
 import { Flex, Text } from "@chakra-ui/react";
 import SmHeading from "../Headings/SmHeading";
 import { SkillsData } from "@/resources/SkillsData";
@@ -10,8 +11,8 @@ const SkillsMapper = () => {
         w={"100%"}
         pos={"relative"}
         key={`skill-data-${index}`}
-        minH={["140px", "200px"]}
-        p={["8px", "10px", "12px", "14px", "16px"]}
+        minH={{ base: "140px", sm: "200px" }}
+        p={{ base: "8px", sm: "10px", md: "12px", lg: "14px", xl: "16px" }}
         gap={"24px"}
         direction={"column"}
       >

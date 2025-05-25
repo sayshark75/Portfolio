@@ -12,42 +12,36 @@ export const SocialButtonsData = [
     icon: VscGithub,
     tooltip: "GitHub",
     label: "Visit my GitHub profile!",
-    delay: 0.2,
   },
   {
     link: "mailto:sayyedsharuk75@gmail.com",
     icon: MdAlternateEmail,
     tooltip: "Email",
     label: "Contact me via Email!",
-    delay: 0.4,
   },
   {
     link: "tel:+917588244148",
     icon: MdCall,
     tooltip: "Phone",
     label: "Contact me via a call!",
-    delay: 0.6,
   },
   {
     link: "https://www.linkedin.com/in/sharuk-sayyed-b65a6b137/",
     icon: FaLinkedinIn,
     tooltip: "LinkedIn",
     label: "View my LinkedIn profile",
-    delay: 0.8,
   },
   {
     link: "https://twitter.com/sayyed_sharuk",
     icon: BsTwitterX,
     tooltip: "Twitter",
     label: "Visit my Link of Twitter Profile",
-    delay: 1,
   },
   {
     link: "https://goo.gl/maps/wN3Ftd6UqrDHqG4G6",
     icon: MdMyLocation,
     tooltip: "Location",
     label: "Ahmednagar, Maharashtra",
-    delay: 1.2,
   },
 ];
 
@@ -65,13 +59,10 @@ export const Links = {
 
   TopBarLogo: topbarLogo.src,
   TopBarLinkedIn: "https://www.linkedin.com/company/topbar-company",
-  TopBarWebsite: "https://www.topbar.in/",
   ModulaWebsite: "https://modula.in/",
   EquitreeWebsite: "https://equitreecapital.com/",
   AutotronWebsite: "https://www.autotron.tech/",
-  AutotronLinkedIn: "",
   AutotronLogo: autotronLogoIcon.src,
-  AutotronLocation: "https://maps.app.goo.gl/CrPdcjBR9xL1sGmYA",
   MasaiLogo: masaiLogoImg.src,
   MasaiWebsite: "https://www.masaischool.com/",
   MasaiLinkedIn: "https://www.linkedin.com/school/masai-school/",
@@ -83,9 +74,9 @@ export const Links = {
 
   linkedInLink: "https://www.linkedin.com/in/sharuk-sayyed-b65a6b137/",
 
-  resumelink: "https://drive.google.com/file/d/1EzkfQS_Ki31vmlCLA01OdXSa7mdWq91Q/view?usp=drive_link",
+  resumelink: "https://drive.google.com/file/d/1R-kvNJsdpDIHadKAtqolho80oRww6xmF/view?usp=sharing",
 
-  resumeDownload: "https://drive.google.com/uc?export=download&id=1EzkfQS_Ki31vmlCLA01OdXSa7mdWq91Q",
+  resumeDownload: "https://drive.google.com/uc?export=download&id=1R-kvNJsdpDIHadKAtqolho80oRww6xmF",
 
   twitterLink: "https://twitter.com/sayyed_sharuk",
 

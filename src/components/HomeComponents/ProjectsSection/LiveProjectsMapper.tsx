@@ -1,3 +1,4 @@
+"use client";
 import { LiveProjectsData } from "@/resources/ProjectsData";
 import ProjectsCard from "./ProjectsCard";
 

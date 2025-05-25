@@ -9,4 +9,3 @@ const Loading = () => {
 };
 
 export default Loading;
-/* HTML: <div class="loader"></div> */

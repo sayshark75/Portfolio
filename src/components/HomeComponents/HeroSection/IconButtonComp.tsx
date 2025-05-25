@@ -1,44 +1,28 @@
-import { IconButton } from "@chakra-ui/react";
+import { Flex, IconButton } from "@chakra-ui/react";
 import { SocialBtnType } from "../../../resources/TYPES";
-import { RefObject, useRef } from "react";
 import { Tooltip } from "../../ui/tooltip";
-import { MotionFlex } from "@/libs/motionComponents";
-import { useInView } from "framer-motion";
 import Link from "next/link";
 
-const IconButtonComp = ({ link, tooltip, label, icon, delay }: SocialBtnType) => {
+const IconButtonComp = ({ link, tooltip, label, icon }: SocialBtnType) => {
   return (
     <Link href={link} target={"_blank"} rel="noreferrer">
-      <IconButtonHome link={link} icon={icon} label={label} tooltip={tooltip} delay={delay} />
+      <IconButtonHome link={link} icon={icon} label={label} tooltip={tooltip} />
     </Link>
   );
 };
 
 export default IconButtonComp;
 
-const IconButtonHome = ({ label, icon, tooltip, delay }: SocialBtnType) => {
-  const animRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(animRef as RefObject<Element>, { once: true });
+const IconButtonHome = ({ label, icon, tooltip }: SocialBtnType) => {
   const IconComponent = icon;
   return (
     <Tooltip content={tooltip}>
-      <MotionFlex
-        initial={{ opacity: 0, y: "-80px" }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: "-80px" }}
-        transition={{ duration: 0.5, delay }}
-        ref={animRef}
-        mx={["1px", "2", "3", "5", "6"]}
-        pos={"relative"}
-        rounded={"full"}
-        overflow={"hidden"}
-        shadow={"lg"}
-        opacity={0}
-      >
+      <Flex mx={{ base: "1px", sm: 2, md: 3, lg: 5, xl: 6 }} pos={"relative"} rounded={"full"} overflow={"hidden"} shadow={"lg"}>
         <IconButton
           pos={"relative"}
           zIndex={2}
           rounded={"full"}
-          size={["sm", "sm", "md", "md", "lg"]}
+          size={{ base: "sm", md: "md", xl: "lg" }}
           color={"accent"}
           bgColor={"light"}
           transition={"700ms"}
@@ -50,7 +34,7 @@ const IconButtonHome = ({ label, icon, tooltip, delay }: SocialBtnType) => {
             },
           }}
           _active={{ opacity: "0.5", transform: "translateY(5px)" }}
-          fontSize={["16px", "20px"]}
+          fontSize={{ base: "16px", sm: "20px" }}
           aria-label={label}
           _after={{
             content: '"."',
@@ -59,7 +43,7 @@ const IconButtonHome = ({ label, icon, tooltip, delay }: SocialBtnType) => {
             rounded: "full",
             color: "transparent",
             bgColor: "accent",
-            transition: "500ms",
+            transition: "300ms",
             pos: "absolute",
             zIndex: -1,
             top: "0px",
@@ -68,7 +52,7 @@ const IconButtonHome = ({ label, icon, tooltip, delay }: SocialBtnType) => {
         >
           <IconComponent />
         </IconButton>
-      </MotionFlex>
+      </Flex>
     </Tooltip>
   );
 };

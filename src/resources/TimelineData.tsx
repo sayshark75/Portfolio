@@ -3,20 +3,7 @@ import { TimelineCardProps } from "./TYPES";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { Links } from "./CONSTANTS";
 
-const {
-  AutotronLinkedIn,
-  AutotronLocation,
-  AutotronLogo,
-  MasaiLinkedIn,
-  MasaiLogo,
-  MasaiWebsite,
-  TopBarLinkedIn,
-  TopBarLogo,
-  TopBarWebsite,
-  UOPLinkedIn,
-  UOPLogo,
-  UOPWebsite,
-} = Links;
+const { AutotronLogo, MasaiLinkedIn, MasaiLogo, MasaiWebsite, TopBarLinkedIn, TopBarLogo, UOPLinkedIn, UOPLogo, UOPWebsite } = Links;
 
 export const TopBarQuery = [
   "NextJs",
@@ -61,9 +48,9 @@ export const TimelineData: TimelineCardProps[] = [
     title: "TopBar Services",
     logo: TopBarLogo,
     linkedin: TopBarLinkedIn,
-    website: TopBarWebsite,
+    website: "",
     type: "Work",
-    role: "SDE: Fullstack Web Developer",
+    role: "Software Developer",
     query: TopBarQuery,
     highlight: TopBarQuery.join(" "),
     dateStart: "Mar 2023",
@@ -85,12 +72,12 @@ export const TimelineData: TimelineCardProps[] = [
   },
   {
     type: "Work",
-    title: "AutoTron Services",
+    title: "AutoTron Technologies",
     logo: AutotronLogo,
-    linkedin: AutotronLinkedIn,
+    linkedin: "",
     website: "",
-    location: AutotronLocation,
-    role: "Web Developer",
+    location: "",
+    role: "Associate Web Developer",
     query: AutotronQuery,
     highlight: AutotronQuery.join(" "),
     dateStart: "Apr 2020",
