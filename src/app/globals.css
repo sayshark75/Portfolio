@@ -2,42 +2,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-.loader-container {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  width: 40px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  margin-top: -30px;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  transform-origin: 50% 116.5%;
-  animation: l17 2s infinite linear;
-}
-.loader:before {
-  content: "";
-  min-width: 233%;
-  height: 233%;
-  background: radial-gradient(farthest-side, #006aff 90%, #0000) top, radial-gradient(farthest-side, #2cd61e 90%, #0000) left,
-    radial-gradient(farthest-side, #ff5500 90%, #0000) bottom, radial-gradient(farthest-side, #aa00ff 90%, #0000) right;
-  background-size: 43% 43%;
-  background-repeat: no-repeat;
-  animation: inherit;
-  animation-direction: reverse;
-}
-@keyframes l17 {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /* Google Recaptcha Hidden */
 
 .grecaptcha-badge {
