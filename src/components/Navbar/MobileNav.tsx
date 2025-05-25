@@ -28,10 +28,10 @@ const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
               <NavMenuButton {...button} />
             </Link>
           ) : (
-            <>
-              <NavMenuButton key={`button-${index}`} {...button} />
+            <React.Fragment key={`button-${index}`}>
+              <NavMenuButton {...button} />
               <Text color={"white"}>|</Text>
-            </>
+            </React.Fragment>
           );
         })}
       </Flex>

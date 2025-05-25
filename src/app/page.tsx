@@ -18,8 +18,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <Box w={"100%"} pos={"relative"}>
+      <Navbar />
       <ClientOnly>
-        <Navbar />
         <ToggleDarkMode />
       </ClientOnly>
       <HeroSection />
