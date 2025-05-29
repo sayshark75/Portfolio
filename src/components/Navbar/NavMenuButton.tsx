@@ -10,14 +10,14 @@ const NavMenuButton = ({ refFunction, title, icon }: NavButtonType) => {
       onClick={() => {
         refFunction();
       }}
-      color={"#fff"}
+      color={"darker"}
       fontSize={"10px"}
       fontFamily={"poppins"}
       justify={"center"}
       align={"center"}
       w={"100%"}
     >
-      <Text pl={1} fontSize={"16px"}>
+      <Text color={"darker"} mb={1} fontSize={"16px"}>
         {icon}
       </Text>
       <Text>{title}</Text>

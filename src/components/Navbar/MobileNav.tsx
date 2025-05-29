@@ -16,9 +16,10 @@ const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
       bottom={0}
       alignItems={"center"}
       zIndex={100}
+      shadow={"2xl"}
       w={"100%"}
       transform={isScrolling ? "translateY(200%)" : "none"}
-      bgColor={"accent"}
+      bgColor={"light"}
       justifyContent={"flex-start"}
     >
       <Flex w={"100%"} gap={1} py={2} align={"center"}>
@@ -30,7 +31,9 @@ const MobileNav = ({ buttonData }: { buttonData: NavButtonType[] }) => {
           ) : (
             <React.Fragment key={`button-${index}`}>
               <NavMenuButton {...button} />
-              <Text color={"white"}>|</Text>
+              <Text color={"darker"} opacity={0.1}>
+                |
+              </Text>
             </React.Fragment>
           );
         })}
