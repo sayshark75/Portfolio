@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <Box w={"100%"} pos={"relative"}>
+    <Box w={"100%"} pos={"relative"} bgColor={"white"}>
       <Navbar />
       <ClientOnly>
         <ToggleDarkMode />
