@@ -114,7 +114,7 @@ export const TimelineData: TimelineCardProps[] = [
     query: MasaiQuery,
     highlight: MasaiQuery.join(" "),
     dateStart: "Aug 2022",
-    dateEnd: "Apr 2023",
+    dateEnd: "Feb 2023",
     icon: <RiGraduationCapFill />,
   },
   {
