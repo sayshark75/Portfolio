@@ -3,7 +3,41 @@ import { TimelineCardProps } from "./TYPES";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { Links } from "./CONSTANTS";
 
-const { AutotronLogo, MasaiLinkedIn, MasaiLogo, MasaiWebsite, TopBarLinkedIn, TopBarLogo, UOPLinkedIn, UOPLogo, UOPWebsite } = Links;
+const {
+  AutotronLogo,
+  MasaiLinkedIn,
+  VE3Logo,
+  MasaiLogo,
+  MasaiWebsite,
+  TopBarLinkedIn,
+  TopBarLogo,
+  UOPLinkedIn,
+  UOPLogo,
+  UOPWebsite,
+  VE3LinkedIn,
+  VE3Website,
+} = Links;
+
+export const VE3Query = [
+  "NextJs",
+  "React",
+  "TypeScript",
+  "JavaScript",
+  "TailwindCSS",
+  "ShadCN UI",
+  "Scss",
+  "NodeJS",
+  "Express",
+  "SQL",
+  "NoSQL",
+  "Prisma",
+  "AWS EC2",
+  "AWS S3",
+  "Docker",
+  "Python",
+  "Pandas",
+  "AI Models",
+];
 
 export const TopBarQuery = [
   "NextJs",
@@ -44,6 +78,19 @@ export const MasaiQuery = [
 export const UOPQuery = ["Electronics", "Arduino", "Raspberry Pi", "C++", "Embedded C", "Binary", "Hex", "TTL", "Circuits", "PCL", "Gcode"];
 
 export const TimelineData: TimelineCardProps[] = [
+  {
+    title: "VE3 Global",
+    logo: VE3Logo,
+    linkedin: VE3LinkedIn,
+    website: VE3Website,
+    type: "Work",
+    role: "Full Stack Developer",
+    query: VE3Query,
+    highlight: VE3Query.join(" "),
+    dateStart: "June 2025",
+    dateEnd: "Present",
+    icon: <MdWork />,
+  },
   {
     title: "TopBar Services",
     logo: TopBarLogo,
