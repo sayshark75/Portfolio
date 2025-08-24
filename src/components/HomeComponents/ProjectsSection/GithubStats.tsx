@@ -15,31 +15,6 @@ const GithubStats = () => {
     theme === "dark" ? config.theme?.semanticTokens?.colors?.accent.value._dark : config.theme?.semanticTokens?.colors?.accent.value.base;
 
   return (
-    <>
-    <Flex
-      w={"100%"}
-      color={"text"}
-      p={{ base: 2, sm: 6 }}
-      borderRadius={"md"}
-      bgColor={"primary"}
-      mb={4}
-      mx={{ base: 2, sm: 2, md: 2, lg: 4 }}
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
-      <GitHubCalendar
-        key={`github-calendar-initialization`}
-        fontSize={16}
-        theme={{
-          light: [_primary, _accent],
-          dark: [_primary, _accent],
-        }}
-        blockSize={15}
-        blockMargin={5}
-        hideTotalCount
-        username="Sharuk-VE3"
-      />
-    </Flex>
       <Flex
       w={"100%"}
       color={"text"}
@@ -63,7 +38,6 @@ const GithubStats = () => {
         username="sayshark75"
       />
     </Flex>
-    </>
   );
 };
 
