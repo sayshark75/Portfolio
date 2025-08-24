@@ -37,7 +37,7 @@ const GithubStats = () => {
         blockSize={15}
         blockMargin={5}
         hideTotalCount
-        username="sayshark75"
+        username="Sharuk-VE3"
       />
     </Flex>
       <Flex
