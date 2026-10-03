@@ -40,3 +40,4 @@ pnpm-debug.log*
 # Editor
 .vscode/
 .idea/
+vite.config.d.ts

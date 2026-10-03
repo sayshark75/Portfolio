@@ -1,55 +1,59 @@
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
-import { useRef } from 'react'
-import SectionLabel from '@/components/SectionLabel'
-import { PHILOSOPHY } from '@/data/portfolio'
+import Reveal from '@/components/Reveal'
 
-const HIGHLIGHT = new Set([
-  'systems,', 'demos.', 'data', 'model.', 'component,', 'product.', 'complexity', 'observable.', 'layer', 'abstraction.',
-])
+const PRINCIPLES = [
+  {
+    k: 'Build systems, not demos.',
+    v: 'A demo works once on a happy path. A system handles edge cases, bad input, and the next engineer reading it.',
+  },
+  {
+    k: 'Understand the data before blaming the model.',
+    v: 'Most AI failures aren\'t model failures — they\'re data, context, or retrieval failures. Fix the right layer.',
+  },
+  {
+    k: 'AI is a component, not the product.',
+    v: 'Users don\'t care that there\'s an LLM inside. They care that the product works quickly and correctly.',
+  },
+  {
+    k: 'Make complexity observable.',
+    v: 'Good engineering surfaces what\'s happening — logs, traces, metrics, readable code — so failures can be found.',
+  },
+  {
+    k: 'Learn the layer below the abstraction.',
+    v: 'I started in electronics and carry that habit: understand one layer deeper than you need to.',
+  },
+]
 
 export default function Philosophy() {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
-
   return (
-    <section id="philosophy" ref={ref} className="relative py-40 px-6 md:px-10">
-      <div className="absolute inset-0 grid-bg opacity-20" />
-      <div className="relative max-w-5xl mx-auto">
-        <SectionLabel number="08" label="ENGINEERING PHILOSOPHY" />
+    <section id="philosophy" className="relative py-28 px-6 md:px-10">
+      <div className="max-w-content mx-auto">
+        <Reveal>
+          <div className="font-mono text-xs tracking-widest uppercase text-accent">
+            <span className="text-muted">06 /</span> How I work
+          </div>
+          <h2 className="mt-4 font-sans font-bold text-3xl md:text-5xl tracking-tight max-w-3xl">
+            A few principles I come back to.
+          </h2>
+        </Reveal>
 
-        <div className="mt-10 space-y-16 md:space-y-24">
-          {PHILOSOPHY.map((p, i) => (
-            <PhilosophyRow key={p} text={p} index={i} total={PHILOSOPHY.length} scrollYProgress={scrollYProgress} />
+        <div className="mt-14 space-y-10 md:space-y-14">
+          {PRINCIPLES.map((p, i) => (
+            <Reveal key={p.k} delay={i * 0.05}>
+              <div className="grid md:grid-cols-[80px_1fr] gap-4 md:gap-10 items-start">
+                <div className="font-mono text-xs text-muted tracking-widest">
+                  {String(i + 1).padStart(2, '0')} / 05
+                </div>
+                <div className="border-t border-line pt-5 md:pt-6 -mt-px">
+                  <h3 className="font-sans font-bold text-2xl md:text-4xl tracking-tight leading-tight text-balance">
+                    {p.k}
+                  </h3>
+                  <p className="mt-4 text-lg text-dim leading-relaxed max-w-2xl">{p.v}</p>
+                </div>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
-  )
-}
-
-function PhilosophyRow({ text, index: i, total, scrollYProgress }: { text: string; index: number; total: number; scrollYProgress: MotionValue<number> }) {
-  const start = i / total
-  const end = (i + 1) / total
-  const prog = useTransform(scrollYProgress, [start - 0.1, start + 0.15, end - 0.1, end + 0.05], [0, 1, 1, 0])
-  const y = useTransform(prog, [0, 1], [40, 0])
-  return (
-    <motion.div style={{ opacity: prog, y }} className="relative">
-      <div className="flex items-start gap-6">
-        <div className="font-mono text-[11px] tracking-widest text-accent mt-3 hidden md:block">
-          {String(i + 1).padStart(2, '0')} / 0{total}
-        </div>
-        <p className="font-display font-black tracking-tight leading-[1.05] text-3xl md:text-5xl lg:text-6xl text-balance">
-          {text.split(' ').map((word, wi) => (
-            <span key={wi}>
-              {HIGHLIGHT.has(word) ? <span className="text-accent">{word}</span> : word}{' '}
-            </span>
-          ))}
-        </p>
-      </div>
-      <motion.div
-        style={{ scaleX: prog, originX: 0 }}
-        className="mt-6 h-px bg-gradient-to-r from-accent/60 via-accent/20 to-transparent"
-      />
-    </motion.div>
   )
 }

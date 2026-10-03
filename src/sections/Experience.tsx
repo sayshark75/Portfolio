@@ -1,183 +1,111 @@
-import { motion, useScroll, useTransform, MotionValue } from 'framer-motion'
-import { useRef } from 'react'
-import SectionLabel from '@/components/SectionLabel'
+import Reveal from '@/components/Reveal'
 import { EXPERIENCES, TIMELINE_NODES } from '@/data/portfolio'
-import { Briefcase, Calendar } from 'lucide-react'
+import { Briefcase, Calendar, MapPin } from 'lucide-react'
+
+const NODE_COLORS = ['#8b7cff', '#f28a5c', '#f2b482', '#3da9ff', '#00e5a0', '#00e5a0']
 
 export default function Experience() {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
-
   return (
-    <section id="experience" ref={ref} className="relative py-32 px-6 md:px-10">
-      <div className="max-w-6xl mx-auto">
-        <SectionLabel number="02" label="ENGINEERING TIMELINE / TRANSFORMATION">
-          <h2 className="mt-3 font-display font-black tracking-tighter text-4xl md:text-6xl lg:text-7xl leading-[0.9]">
-            Different technologies.
-            <br />
-            <span className="text-accent">Same engineering mindset.</span>
+    <section id="experience" className="relative py-28 px-6 md:px-10">
+      <div className="max-w-content mx-auto">
+        <Reveal>
+          <div className="font-mono text-xs tracking-widest uppercase text-accent">
+            <span className="text-muted">02 /</span> Experience
+          </div>
+          <h2 className="mt-4 font-sans font-bold text-3xl md:text-5xl tracking-tight max-w-3xl">
+            A path from electronics to AI systems — through shipping product.
           </h2>
-        </SectionLabel>
+          <p className="mt-4 text-lg text-dim max-w-2xl">
+            Different technologies, same engineering mindset: build, understand the system, fix what
+            breaks, and keep shipping.
+          </p>
+        </Reveal>
 
-        {/* Timeline graph */}
-        <TimelineGraph scrollProgress={scrollYProgress} />
+        {/* Timeline */}
+        <Reveal delay={0.1}>
+          <div className="mt-16 relative">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-4">
+              {TIMELINE_NODES.map((n, i) => (
+                <div key={n.year} className="relative">
+                  <div className="flex items-center gap-2 mb-2">
+                    <div
+                      className="h-2.5 w-2.5 rounded-full ring-4 ring-bg"
+                      style={{ backgroundColor: NODE_COLORS[i] }}
+                    />
+                    <span className="font-mono text-xs text-muted">{n.year}</span>
+                  </div>
+                  <div
+                    className="font-sans font-bold text-base md:text-lg tracking-tight"
+                    style={{ color: NODE_COLORS[i] }}
+                  >
+                    {n.title}
+                  </div>
+                </div>
+              ))}
+            </div>
+            {/* connecting line sits behind the dots */}
+            <div
+              className="absolute hidden md:block top-[5px] h-px bg-line-strong pointer-events-none"
+              style={{ left: '5px', right: `calc(${100 / 12}% + 5px)` }}
+            />
+          </div>
+        </Reveal>
 
-        {/* Detailed experience */}
-        <div className="mt-32">
-          <div className="flex items-center gap-3 mb-8 font-mono text-[11px] tracking-[0.3em] text-dim uppercase">
-            <Briefcase size={12} className="text-accent" />
-            Professional Experience
-          </div>
-          <div className="space-y-0">
-            {EXPERIENCES.map((e, i) => (
-              <ExperienceCard key={e.id} exp={e} index={i} />
-            ))}
-          </div>
+        {/* Experience list */}
+        <div className="mt-20 space-y-0">
+          <Reveal>
+            <div className="flex items-center gap-2 font-mono text-xs tracking-widest uppercase text-dim pb-4 border-b border-line mb-2">
+              <Briefcase size={12} className="text-accent" />
+              Professional experience
+            </div>
+          </Reveal>
+
+          {EXPERIENCES.map((e, i) => (
+            <Reveal key={e.id} delay={i * 0.05}>
+              <article className="group grid md:grid-cols-[220px_1fr] gap-4 md:gap-10 py-8 border-b border-line hover:bg-white/[0.015] transition-colors px-3 -mx-3">
+                <div>
+                  <div className="flex items-center gap-2 font-mono text-xs text-muted mb-1">
+                    <Calendar size={11} />
+                    {e.period}
+                  </div>
+                  <h3 className="font-sans font-bold text-xl md:text-2xl tracking-tight" style={{ color: e.color }}>
+                    {e.company}
+                  </h3>
+                  <div className="text-sm text-dim mt-1">{e.role}</div>
+                </div>
+
+                <div>
+                  <ul className="space-y-2 text-ink/85 leading-relaxed">
+                    {e.bullets.map((b) => (
+                      <li key={b} className="flex gap-3">
+                        <span className="mt-2 h-px w-4 flex-shrink-0" style={{ backgroundColor: e.color }} />
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {e.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="font-mono text-[10px] tracking-wider text-dim px-2 py-1 border border-line rounded-sm"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
         </div>
+
+        <Reveal>
+          <div className="mt-8 flex items-center gap-2 font-mono text-xs text-muted italic">
+            <MapPin size={12} />
+            Based in Pune, India — open to remote and hybrid opportunities.
+          </div>
+        </Reveal>
       </div>
     </section>
-  )
-}
-
-function TimelineGraph({ scrollProgress }: { scrollProgress: MotionValue<number> }) {
-  const wrapRef = useRef<HTMLDivElement | null>(null)
-  const smoothProgress = useTransform(scrollProgress, [0.1, 0.4], [0, 1], { clamp: true })
-
-  return (
-    <div ref={wrapRef} className="relative mt-16 md:mt-24">
-      <div className="relative grid grid-cols-2 md:grid-cols-6 gap-6 md:gap-4">
-        {/* connecting line */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none"
-          preserveAspectRatio="none"
-        >
-          <motion.line
-            x1="0%"
-            y1="50%"
-            x2="100%"
-            y2="50%"
-            stroke="rgba(255,255,255,0.1)"
-            strokeWidth="1"
-          />
-          <motion.line
-            x1="0%"
-            y1="50%"
-            x2="100%"
-            y2="50%"
-            stroke="#00e5a0"
-            strokeWidth="1.5"
-            style={{ pathLength: smoothProgress }}
-            custom={{ length: 1 }}
-          />
-        </svg>
-
-        {TIMELINE_NODES.map((n, i) => {
-          const delay = i * 0.08
-          const colors = ['#7c5cff', '#ff6b3d', '#ffb347', '#3da9ff', '#00e5a0', '#00e5a0']
-          return (
-            <motion.div
-              key={n.year}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: '-20%' }}
-              transition={{ duration: 0.6, delay }}
-              className="relative flex flex-col items-start"
-            >
-              <div className="relative flex items-center gap-2 mb-3">
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  viewport={{ once: false, margin: '-20%' }}
-                  transition={{ delay: delay + 0.1, type: 'spring', stiffness: 200 }}
-                  className="h-3 w-3 rounded-full border-2"
-                  style={{ borderColor: colors[i], backgroundColor: 'rgba(10,10,10,1)' }}
-                />
-                <span className="font-mono text-xs text-dim">{n.year}</span>
-              </div>
-              <div
-                className="font-display font-black tracking-tight text-xl md:text-2xl leading-tight"
-                style={{ color: colors[i] }}
-              >
-                {n.title}
-              </div>
-              <ul className="mt-3 space-y-1">
-                {n.items.map((it) => (
-                  <li key={it} className="font-mono text-[10px] tracking-wider text-dim uppercase flex items-start gap-1.5">
-                    <span className="mt-1 h-px w-2 bg-current flex-shrink-0" style={{ color: colors[i] }} />
-                    {it}
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          )
-        })}
-      </div>
-    </div>
-  )
-}
-
-function ExperienceCard({ exp, index }: { exp: (typeof EXPERIENCES)[number]; index: number }) {
-  const ref = useRef<HTMLDivElement | null>(null)
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end center'] })
-  const borderColor = useTransform(scrollYProgress, [0, 1], ['rgba(255,255,255,0.05)', exp.color])
-  const tagBg = useTransform(scrollYProgress, [0, 1], ['rgba(255,255,255,0.02)', `${exp.color}14`])
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, margin: '-15%' }}
-      transition={{ duration: 0.6, delay: (index % 3) * 0.05 }}
-      style={{ borderColor }}
-      className="group relative border-l border-t border-r last:border-b px-5 md:px-8 py-6 md:py-8 bg-panel/40 hover:bg-panel/80 transition-colors duration-500"
-    >
-      <motion.div
-        style={{ backgroundColor: exp.color, opacity: useTransform(scrollYProgress, [0, 1], [0, 1]) }}
-        className="absolute top-0 left-0 h-px w-12"
-      />
-      <div className="grid md:grid-cols-[1fr_2fr] gap-4 md:gap-8">
-        <div>
-          <div className="font-mono text-[11px] tracking-[0.2em] text-dim uppercase flex items-center gap-2 mb-2">
-            <Calendar size={11} />
-            {exp.period}
-          </div>
-          <h3
-            className="font-display font-bold text-2xl md:text-3xl tracking-tight"
-            style={{ color: exp.color }}
-          >
-            {exp.company}
-          </h3>
-          <div className="font-mono text-sm text-ink/80 mt-1">{exp.role}</div>
-          <div className="mt-4 font-mono text-[10px] tracking-widest text-dim uppercase">
-            ID: {String(index).padStart(2, '0')}
-          </div>
-        </div>
-        <div>
-          <ul className="space-y-2">
-            {exp.bullets.map((b) => (
-              <li key={b} className="flex gap-3 text-sm md:text-base text-ink/80 leading-relaxed">
-                <span className="mt-2 h-px w-4 flex-shrink-0" style={{ backgroundColor: exp.color }} />
-                <span>{b}</span>
-              </li>
-            ))}
-          </ul>
-          <motion.div
-            style={{ backgroundColor: tagBg }}
-            className="mt-5 flex flex-wrap gap-2 p-3 border border-border"
-          >
-            {exp.tags.map((t) => (
-              <span
-                key={t}
-                className="font-mono text-[10px] tracking-wider px-2 py-1 border border-border text-ink/70"
-                style={{ borderColor: `${exp.color}40` }}
-              >
-                {t}
-              </span>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-    </motion.div>
   )
 }
