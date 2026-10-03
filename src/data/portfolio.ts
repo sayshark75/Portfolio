@@ -142,7 +142,6 @@ export const PROJECTS: Project[] = [
     role: "Full-stack development",
     status: "PROFESSIONAL",
     image: "/assets/projects/matchx.webp",
-    live: "#",
     year: "2026",
   },
   {
@@ -155,7 +154,6 @@ export const PROJECTS: Project[] = [
     role: "Full-stack development",
     status: "PROFESSIONAL",
     image: "/assets/projects/matchx-admin.webp",
-    live: "#",
     year: "2026",
   },
   {
@@ -168,7 +166,6 @@ export const PROJECTS: Project[] = [
     role: "Frontend development",
     status: "PROFESSIONAL",
     image: "/assets/projects/fuel-finder.webp",
-    live: "#",
     year: "2026",
   },
   {
