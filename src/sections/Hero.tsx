@@ -1,13 +1,10 @@
-import { motion } from 'framer-motion'
-import { ArrowRight, Download } from 'lucide-react'
-import { PERSON } from '@/data/portfolio'
+import { motion } from "framer-motion";
+import { ArrowRight, Download } from "lucide-react";
+import { PERSON } from "@/data/portfolio";
 
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="relative h-screen flex items-center pt-24 pb-10 px-6 md:px-10 overflow-hidden"
-    >
+    <section id="top" className="relative h-screen flex items-center pt-24 pb-10 px-6 md:px-10 overflow-hidden">
       {/* Subtle background glow */}
       <div className="absolute inset-0 subtle-grid opacity-50" />
       <div className="absolute -top-40 -right-20 w-[480px] h-[480px] bg-accent/5 rounded-full blur-[120px]" />
@@ -43,9 +40,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.65 }}
           className="mt-5 md:mt-6 max-w-2xl text-base md:text-lg text-dim leading-relaxed"
         >
-          Software Engineer working across the interface, backend, and AI layers. I build products that
-          actually work — clean UIs, reliable services, data pipelines, and AI systems grounded in real
-          retrieval.
+          Software Engineer working across the interface, backend, and AI layers. I build products that actually work — clean UIs, reliable services,
+          data pipelines, and AI systems grounded in real retrieval.
         </motion.p>
 
         <motion.div
@@ -68,10 +64,7 @@ export default function Hero() {
             <Download size={14} />
             Resume
           </a>
-          <a
-            href={`mailto:${PERSON.email}`}
-            className="inline-flex items-center gap-2 px-4 py-2.5 text-dim hover:text-ink transition-colors text-sm"
-          >
+          <a href={`mailto:${PERSON.email}`} className="inline-flex items-center gap-2 px-4 py-2.5 text-dim hover:text-ink transition-colors text-sm">
             Get in touch →
           </a>
         </motion.div>
@@ -83,28 +76,21 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 1.0 }}
           className="mt-8 md:mt-10 pt-4 md:pt-5 border-t border-line flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] tracking-wider uppercase text-muted"
         >
-          <span><span className="text-ink/80">Role</span> · Software Engineer</span>
-          <span><span className="text-ink/80">Focus</span> · AI / Full Stack</span>
-          <span><span className="text-ink/80">Exp</span> · 5+ years</span>
+          <span>
+            <span className="text-ink/80">Role</span> · Software Engineer
+          </span>
+          <span>
+            <span className="text-ink/80">Focus</span> · AI / Full Stack
+          </span>
+          <span>
+            <span className="text-ink/80">Exp</span> · 5+ years
+          </span>
           <span className="hidden md:inline-flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
             Open to remote & hybrid
           </span>
         </motion.div>
       </div>
-
-      {/* Scroll hint */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 0.5 }}
-        className="absolute bottom-5 left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-widest uppercase text-muted flex flex-col items-center gap-1.5"
-      >
-        <span>Scroll</span>
-        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <div className="w-px h-6 bg-gradient-to-b from-muted to-transparent" />
-        </motion.div>
-      </motion.div>
     </section>
-  )
+  );
 }
