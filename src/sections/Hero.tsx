@@ -4,28 +4,31 @@ import { PERSON } from '@/data/portfolio'
 
 export default function Hero() {
   return (
-    <section id="top" className="relative min-h-screen flex items-center pt-32 pb-20 px-6 md:px-10 overflow-hidden">
+    <section
+      id="top"
+      className="relative h-screen flex items-center pt-24 pb-10 px-6 md:px-10 overflow-hidden"
+    >
       {/* Subtle background glow */}
-      <div className="absolute inset-0 subtle-grid opacity-60" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px]" />
-      <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-ai/5 rounded-full blur-[100px]" />
+      <div className="absolute inset-0 subtle-grid opacity-50" />
+      <div className="absolute -top-40 -right-20 w-[480px] h-[480px] bg-accent/5 rounded-full blur-[120px]" />
+      <div className="absolute -bottom-40 left-1/4 w-[360px] h-[360px] bg-ai/5 rounded-full blur-[100px]" />
 
       <div className="relative max-w-content mx-auto w-full">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex items-center gap-3 font-mono text-xs tracking-widest uppercase text-accent mb-8"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="flex items-center gap-3 font-mono text-[11px] tracking-widest uppercase text-accent mb-5 md:mb-6"
         >
-          <span className="h-px w-8 bg-accent" />
-          Available for new opportunities
+          <span className="h-px w-7 bg-accent" />
+          Available for new opportunities · Pune, India
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="font-sans font-bold tracking-tight text-ink leading-[1.02] text-5xl sm:text-6xl md:text-7xl lg:text-8xl"
+          transition={{ duration: 0.7, delay: 0.4 }}
+          className="font-sans font-bold tracking-tight text-ink leading-[1.02] text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
         >
           Hi, I'm <span className="text-accent">{PERSON.first}.</span>
           <br />
@@ -35,62 +38,58 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.8 }}
-          className="mt-8 max-w-2xl text-lg md:text-xl text-dim leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.65 }}
+          className="mt-5 md:mt-6 max-w-2xl text-base md:text-lg text-dim leading-relaxed"
         >
-          {PERSON.tagline} I work across the stack — from clean, fast interfaces to backend services,
-          data pipelines, and AI systems built with LLMs and retrieval. I care about shipping products
-          that actually work, not just demos.
+          Software Engineer working across the interface, backend, and AI layers. I build products that
+          actually work — clean UIs, reliable services, data pipelines, and AI systems grounded in real
+          retrieval.
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.0 }}
-          className="mt-10 flex flex-wrap gap-4"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-6 md:mt-8 flex flex-wrap items-center gap-3"
         >
           <a
             href="#projects"
-            className="group inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg font-medium hover:bg-accent/90 transition-colors"
+            className="group inline-flex items-center gap-2 px-5 py-2.5 bg-accent text-bg font-medium hover:bg-accent/90 transition-colors text-sm"
           >
             See my work
-            <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+            <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
           </a>
           <a
             href={PERSON.resumeUrl}
-            className="inline-flex items-center gap-2 px-6 py-3 border border-line-strong text-ink hover:border-accent hover:text-accent transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-line-strong text-ink hover:border-accent hover:text-accent transition-colors text-sm"
           >
-            <Download size={16} />
-            Download Resume
+            <Download size={14} />
+            Resume
           </a>
           <a
             href={`mailto:${PERSON.email}`}
-            className="inline-flex items-center gap-2 px-6 py-3 text-dim hover:text-ink transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2.5 text-dim hover:text-ink transition-colors text-sm"
           >
             Get in touch →
           </a>
         </motion.div>
 
-        {/* Quick facts */}
+        {/* Compact meta line */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 1.2 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="mt-8 md:mt-10 pt-4 md:pt-5 border-t border-line flex flex-wrap gap-x-6 gap-y-2 font-mono text-[11px] tracking-wider uppercase text-muted"
         >
-          {[
-            { label: 'Role', value: 'Software Engineer' },
-            { label: 'Focus', value: 'AI / Full Stack' },
-            { label: 'Location', value: 'Pune, India' },
-            { label: 'Experience', value: '5+ years' },
-          ].map((f) => (
-            <div key={f.label} className="border-t border-line pt-4">
-              <div className="font-mono text-[10px] tracking-widest uppercase text-muted mb-1.5">{f.label}</div>
-              <div className="text-ink font-medium text-base md:text-lg">{f.value}</div>
-            </div>
-          ))}
+          <span><span className="text-ink/80">Role</span> · Software Engineer</span>
+          <span><span className="text-ink/80">Focus</span> · AI / Full Stack</span>
+          <span><span className="text-ink/80">Exp</span> · 5+ years</span>
+          <span className="hidden md:inline-flex items-center gap-2">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+            Open to remote & hybrid
+          </span>
         </motion.div>
       </div>
 
@@ -98,12 +97,12 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.8, duration: 0.6 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-widest uppercase text-muted flex flex-col items-center gap-2"
+        transition={{ delay: 1.4, duration: 0.5 }}
+        className="absolute bottom-5 left-1/2 -translate-x-1/2 font-mono text-[10px] tracking-widest uppercase text-muted flex flex-col items-center gap-1.5"
       >
         <span>Scroll</span>
-        <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 2, repeat: Infinity }}>
-          <div className="w-px h-8 bg-gradient-to-b from-muted to-transparent" />
+        <motion.div animate={{ y: [0, 5, 0] }} transition={{ duration: 2, repeat: Infinity }}>
+          <div className="w-px h-6 bg-gradient-to-b from-muted to-transparent" />
         </motion.div>
       </motion.div>
     </section>
